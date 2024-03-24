@@ -1,10 +1,12 @@
 {
   "FolderOrderSettings":[
     {"name":"Game Scene","order":10,"path":"folders/Game Scene.yy",},
-    {"name":"Tiles","order":2,"path":"folders/Game Scene/Tiles.yy",},
+    {"name":"Scrips","order":6,"path":"folders/Game Scene/Scrips.yy",},
     {"name":"Sprites","order":3,"path":"folders/Game Scene/Sprites.yy",},
+    {"name":"Tiles","order":2,"path":"folders/Game Scene/Tiles.yy",},
   ],
   "ResourceOrderSettings":[
-    {"name":"obj_tile_creator","order":1,"path":"objects/obj_tile_creator/obj_tile_creator.yy",},
+    {"name":"obj_tile_manager","order":1,"path":"objects/obj_tile_manager/obj_tile_manager.yy",},
+    {"name":"obj_turn_manager","order":5,"path":"objects/obj_turn_manager/obj_turn_manager.yy",},
   ],
 }

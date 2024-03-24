@@ -1,0 +1,10 @@
+{
+  "FolderOrderSettings":[
+    {"name":"Game Scene","order":10,"path":"folders/Game Scene.yy",},
+    {"name":"Tiles","order":2,"path":"folders/Game Scene/Tiles.yy",},
+    {"name":"Sprites","order":3,"path":"folders/Game Scene/Sprites.yy",},
+  ],
+  "ResourceOrderSettings":[
+    {"name":"obj_tile_creator","order":1,"path":"objects/obj_tile_creator/obj_tile_creator.yy",},
+  ],
+}

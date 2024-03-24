@@ -1,0 +1,39 @@
+{
+  "$GMProject":"",
+  "%Name":"Anime-Chess",
+  "AudioGroups":[
+    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+  ],
+  "configs":{
+    "children":[],
+    "name":"Default",
+  },
+  "defaultScriptType":1,
+  "Folders":[
+    {"$GMFolder":"","%Name":"Game Scene","folderPath":"folders/Game Scene.yy","name":"Game Scene","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Tiles","folderPath":"folders/Game Scene/Tiles.yy","name":"Tiles","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Game Scene/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
+  ],
+  "IncludedFiles":[],
+  "isEcma":false,
+  "LibraryEmitters":[],
+  "MetaData":{
+    "IDEVersion":"2024.2.0.132",
+  },
+  "name":"Anime-Chess",
+  "resources":[
+    {"id":{"name":"obj_tile_creator","path":"objects/obj_tile_creator/obj_tile_creator.yy",},},
+    {"id":{"name":"obj_tile","path":"objects/obj_tile/obj_tile.yy",},},
+    {"id":{"name":"Game_scene","path":"rooms/Game_scene/Game_scene.yy",},},
+    {"id":{"name":"spr_tile","path":"sprites/spr_tile/spr_tile.yy",},},
+  ],
+  "resourceType":"GMProject",
+  "resourceVersion":"2.0",
+  "RoomOrderNodes":[
+    {"roomId":{"name":"Game_scene","path":"rooms/Game_scene/Game_scene.yy",},},
+  ],
+  "templateType":"game",
+  "TextureGroups":[
+    {"$GMTextureGroup":"","%Name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"Default","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+  ],
+}

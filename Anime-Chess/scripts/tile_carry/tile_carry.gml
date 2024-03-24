@@ -7,6 +7,7 @@ function set_tile_carry(position, carry){
 			carrier.carry = carry;
 			carry.x = carrier.x;
 			carry.y = carrier.y;
+			carry.carrier = carrier;
 			show_debug_message("Tile at {0} is now carrying instance: {1}", position, carry);
 		}else{
 			show_debug_message("Tile at {0} attempted to carry {1}, but the tile was already carrying {2}", 

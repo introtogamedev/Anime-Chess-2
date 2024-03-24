@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"scr_create_grid",
+  "%Name":"create_grid",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_create_grid",
+  "name":"create_grid",
   "parent":{
     "name":"Scrips",
     "path":"folders/Game Scene/Scrips.yy",

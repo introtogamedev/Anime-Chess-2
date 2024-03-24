@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_temp_peice",
+  "%Name":"obj_mouse_manager",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_temp_peice",
+  "name":"obj_mouse_manager",
   "overriddenProperties":[],
   "parent":{
-    "name":"Peices",
-    "path":"folders/Game Scene/Peices.yy",
+    "name":"Game Scene",
+    "path":"folders/Game Scene.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -25,16 +25,11 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"","%Name":"carrier","filters":[],"listItems":[],"multiselect":false,"name":"carrier","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"obj_basic_tile","varType":5,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_temp_peice",
-    "path":"sprites/spr_temp_peice/spr_temp_peice.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

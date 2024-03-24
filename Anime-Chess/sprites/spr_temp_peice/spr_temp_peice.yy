@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Anime-Chess",
-    "path":"Anime-Chess.yyp",
+    "name":"Sprites",
+    "path":"folders/Game Scene/Sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

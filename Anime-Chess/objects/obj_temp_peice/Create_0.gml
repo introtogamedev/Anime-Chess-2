@@ -4,3 +4,4 @@ enum action{
 	move
 }
 currentAction = action.idle
+

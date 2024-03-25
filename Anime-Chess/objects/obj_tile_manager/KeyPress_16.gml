@@ -1,4 +1,4 @@
-if (global.mouse_coordinate[0] != MOUSE_OUT_OF_BOUNDS and global.mouse_coordinate[1] != MOUSE_OUT_OF_BOUNDS){
+if (not mouse_check_outOfBounds()){
 	if (get_tile_carry(global.mouse_coordinate) == noone){
 		var carry = instance_create_depth(0, 0, 0, obj_temp_peice)
 		set_tile_carry(global.mouse_coordinate, carry);

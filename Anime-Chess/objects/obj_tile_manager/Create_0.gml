@@ -11,7 +11,7 @@
 #macro TILE_Y_OFFSET 20
 
 
-grid = [HORIZONTAL_GRID_LENGTH,VERTICAL_GRID_HEIGHT];
+grid = []//[HORIZONTAL_GRID_LENGTH][VERTICAL_GRID_HEIGHT];
 create_grid();//code in scr_create_grid
 
 

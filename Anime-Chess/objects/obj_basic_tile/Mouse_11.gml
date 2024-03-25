@@ -1,1 +1,1 @@
-sprite_index = spr_basic_tile;
+//sprite_index = spr_basic_tile;

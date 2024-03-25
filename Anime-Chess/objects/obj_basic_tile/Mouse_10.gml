@@ -1,2 +1,2 @@
-global.mouse_coordinate  = [x_coordinate, y_coordinate];
-sprite_index = spr_basic_tile_1;
+global.mouse_coordinate  = coordinate;
+//sprite_index = spr_basic_tile_1;

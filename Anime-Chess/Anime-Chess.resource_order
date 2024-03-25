@@ -7,11 +7,12 @@
     {"name":"Tiles","order":2,"path":"folders/Game Scene/Tiles.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"obj_mouse_manager","order":8,"path":"objects/obj_mouse_manager/obj_mouse_manager.yy",},
     {"name":"obj_tile_manager","order":1,"path":"objects/obj_tile_manager/obj_tile_manager.yy",},
     {"name":"obj_turn_manager","order":5,"path":"objects/obj_turn_manager/obj_turn_manager.yy",},
-    {"name":"obj_mouse_manager","order":8,"path":"objects/obj_mouse_manager/obj_mouse_manager.yy",},
     {"name":"tile_carry","order":1,"path":"scripts/tile_carry/tile_carry.yy",},
     {"name":"spr_basic_tile_2","order":1,"path":"sprites/spr_basic_tile_2/spr_basic_tile_2.yy",},
     {"name":"spr_temp_peice","order":2,"path":"sprites/spr_temp_peice/spr_temp_peice.yy",},
+    {"name":"spr_empty","order":11,"path":"sprites/spr_empty/spr_empty.yy",},
   ],
 }

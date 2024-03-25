@@ -31,7 +31,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_empty",
+    "path":"sprites/spr_empty/spr_empty.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

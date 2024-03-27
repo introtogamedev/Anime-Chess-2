@@ -15,7 +15,7 @@ grid = []//[HORIZONTAL_GRID_LENGTH][VERTICAL_GRID_HEIGHT];
 create_grid();//code in scr_create_grid
 
 
-global.mouse_coordinate = [0, 0];
+//global.mouse_coordinate = [0, 0];
 /*
 if (not instance_exists(obj_mouse_manager)){//safegard
 	instance_create_depth(x, y, 0, obj_mouse_manager);

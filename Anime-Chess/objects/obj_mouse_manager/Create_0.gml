@@ -7,10 +7,11 @@ global.selectedUnit = noone;//initialize to noone
 global.selectedTiles = ds_list_create();
 
 enum selectState{
+	idle,
 	tileSelect, 
-	unitSelect,
+	//unitSelect,//executed within the unit themselves
 	tilesSelect,
 	deselect
 }
 
-select_state = selectState.tilesSelect 
+select_state = selectState.tileSelect 

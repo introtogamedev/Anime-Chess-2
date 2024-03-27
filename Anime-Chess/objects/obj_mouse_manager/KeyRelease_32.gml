@@ -12,4 +12,15 @@ switch (select_state){
 		}
 	break
 	
+	case (selectState.deselect):
+		deslect_all_tiles();
+	break;
+	
+	default:
+		//do nothing. 
+	break;
+}
+
+if (select_state > selectState.deselect){
+	select_state = selectState.idle;
 }

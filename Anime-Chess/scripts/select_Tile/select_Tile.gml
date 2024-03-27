@@ -52,21 +52,22 @@ function deslect_all_tiles(){
 	deselect_tiles();
 	deselect_tile();
 	deselect_unit();
+	show_debug_message("Cleared All Selections and deselected all tiles");
 }
 
 function deselect_tiles(){
 	ds_list_clear(global.selectedTiles);
-	show_debug_message("Cleared All Selected Tiles");
+	//show_debug_message("Cleared All Selected Tiles");
 }
 
 function deselect_tile(){
 	global.selectedTile.selected = false;
-	show_debug_message("Deselected Tile at position {1}: {0}",global.selectedTile, global.selectedTile.coordinate );
+	//show_debug_message("Deselected Tile at position {1}: {0}",global.selectedTile, global.selectedTile.coordinate );
 	global.selectedTile = noone;
 }
 
 function deselect_unit(){
-	show_debug_message("Cleared Unit Selection at {1}: {0}", global.selectedUnit, global.selectedUnit.carrier.coordinate);
+	//show_debug_message("Cleared Unit Selection at {1}: {0}", global.selectedUnit, global.selectedUnit.carrier.coordinate);
 	global.selectedUnit = noone;
 }
 
@@ -78,5 +79,5 @@ function reset_grid_selectionState(){
 			}
 		}
 	}
-	show_debug_message("Reset Grid Selected State to: {0}", false);
+	//show_debug_message("Reset Grid Selected State to: {0}", false);
 }

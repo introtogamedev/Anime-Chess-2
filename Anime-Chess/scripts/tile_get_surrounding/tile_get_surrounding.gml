@@ -14,7 +14,6 @@ function tile_get_surrounding(position){
                 if (obj_tile_manager.grid[surrounding_x_coordinate][surrounding_y_coordinate] != 0){
                     var tile = obj_tile_manager.grid[surrounding_x_coordinate, surrounding_y_coordinate];
                     array_push(surrounding_coordinates, tile);
-                    show_debug_message("beep");
                 }
             }
         }

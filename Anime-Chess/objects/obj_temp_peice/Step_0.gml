@@ -1,24 +1,24 @@
-if(carrier.selected and global.selectedUnit == noone){
+if(global.selectedTile = carrier and global.selectedUnit == noone){
 	global.selectedUnit = self;
-	sprite_index = spr_temp_peice1;
 	currentAction = action.selectAction;
-}if (carrier.selected == false){//ERROR
-	//currentAction = action.idle
 }
+
 switch(currentAction){
 	case action.idle:
 		return;
 	case action.selectAction:
+		global.select_state = selectState.tilesSelect
 		currentAction = action.move;//temporary
-	break;
+		break;
+	case action.move:
+		if (instance_exists(global.selectedTiles[|0])){
+			move_peice_to(self, global.selectedTiles[|0].coordinate);
+		}
 	default: 
 		
-	break;
+		break;
 }
-
-if (currentAction > action.selectAction){
-}
-
+/*
 if (currentAction = action.move){
 	if (global.selectedTile != carrier){
 		var moveTo = global.selectedTile.coordinate;

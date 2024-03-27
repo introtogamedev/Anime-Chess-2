@@ -1,7 +1,8 @@
 enum action{
 	idle,
 	selectAction,
-	move
+	move,
+	attack
 }
 currentAction = action.idle
 

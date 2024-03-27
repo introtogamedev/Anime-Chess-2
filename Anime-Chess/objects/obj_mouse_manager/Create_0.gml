@@ -14,4 +14,4 @@ enum selectState{
 	deselect
 }
 
-select_state = selectState.tileSelect 
+global.select_state = selectState.idle;

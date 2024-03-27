@@ -1,0 +1,1 @@
+deslect_all_tiles();

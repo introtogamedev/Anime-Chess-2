@@ -16,4 +16,10 @@ create_grid();//code in scr_create_grid
 
 
 global.mouse_coordinate = [0, 0];
-
+/*
+if (not instance_exists(obj_mouse_manager)){//safegard
+	instance_create_depth(x, y, 0, obj_mouse_manager);
+}
+if (not instance_exists(obj_turn_manager)){//safegard
+	instance_create_depth(x, y, 0, obj_turn_manager);
+}

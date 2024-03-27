@@ -12,4 +12,5 @@ function turn_next(){
 	}else{
 		global.currentTurn = 0;
 	}
+	show_debug_message(global.currentTurn);
 }

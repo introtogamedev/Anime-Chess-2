@@ -41,6 +41,8 @@
     {"id":{"name":"spr_basic_tile_1","path":"sprites/spr_basic_tile_1/spr_basic_tile_1.yy",},},
     {"id":{"name":"spr_basic_tile_2","path":"sprites/spr_basic_tile_2/spr_basic_tile_2.yy",},},
     {"id":{"name":"spr_basic_tile","path":"sprites/spr_basic_tile/spr_basic_tile.yy",},},
+    {"id":{"name":"spr_doll1","path":"sprites/spr_doll1/spr_doll1.yy",},},
+    {"id":{"name":"spr_doll2","path":"sprites/spr_doll2/spr_doll2.yy",},},
     {"id":{"name":"spr_empty","path":"sprites/spr_empty/spr_empty.yy",},},
     {"id":{"name":"spr_temp_peice","path":"sprites/spr_temp_peice/spr_temp_peice.yy",},},
     {"id":{"name":"spr_temp_peice1","path":"sprites/spr_temp_peice1/spr_temp_peice1.yy",},},

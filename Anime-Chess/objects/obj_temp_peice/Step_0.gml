@@ -1,6 +1,8 @@
 if(global.selectedTile = carrier and global.selectedUnit == noone){
 	global.selectedUnit = self;
 	currentAction = action.selectAction;
+}else if(carrier.selected == false and global.selectedUnit == self){
+	//do something
 }
 
 switch(currentAction){
@@ -12,7 +14,7 @@ switch(currentAction){
 		break;
 	case action.move:
 		if (instance_exists(global.selectedTiles[|0])){
-			move_peice_to(self, global.selectedTiles[|0].coordinate);
+			move_peice_to(self, global.selectedTiles[|0].coordinate, tile_get_lines(carrier.coordinate));
 		}
 	default: 
 		

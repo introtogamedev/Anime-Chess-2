@@ -1,4 +1,4 @@
-function move_peice_to(peice, position, movementRestrictionFunction = function (position){return -1}){
+function move_peice_to(peice, position, movementRestriction = -1){
 	var x_coordinate = position[0];
     var y_coordinate = position[1];
     if (not instance_exists(obj_tile_manager)){
@@ -8,8 +8,6 @@ function move_peice_to(peice, position, movementRestrictionFunction = function (
 	var moveTo = position;
 	var moveFrom = peice.carrier.coordinate;
 	
-	var movementRestriction =[];
-		movementRestriction = movementRestrictionFunction(peice.carrier.coordinate);
 	var canMove = false;
 		
 	if (movementRestriction = -1){

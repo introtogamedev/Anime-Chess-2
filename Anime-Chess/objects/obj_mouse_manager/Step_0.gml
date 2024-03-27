@@ -7,4 +7,14 @@ if (place_meeting(mouse_x, mouse_y, obj_basic_tile) && mouse_check_button_presse
 	for(var h = 0; h <  array_length(places_to_go); h++){
 		places_to_go[h].image_angle += 180;
 	}
+
+switch(global.select_state){
+	case (selectState.deselect):
+		deslect_all_tiles();
+		global.select_state++;
+		break;
+}
+
+if (global.select_state >= selectState.deselect){
+	global.select_state = selectState.idle;
 }

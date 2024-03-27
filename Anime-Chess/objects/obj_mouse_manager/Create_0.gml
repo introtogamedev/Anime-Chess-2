@@ -4,4 +4,14 @@ global.mouse_coordinate = [0, 0];
 global.selectedTile = noone;//initialize to noone
 global.selectedUnit = noone;//initialize to noone
 
-selected_Tiles = ds_list_create();
+global.selectedTiles = ds_list_create();
+
+enum selectState{
+	idle,
+	tileSelect, 
+	//unitSelect,//executed within the unit themselves
+	tilesSelect,
+	deselect
+}
+
+global.select_state = selectState.idle;

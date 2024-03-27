@@ -12,6 +12,7 @@
     {"name":"obj_tile_manager","order":1,"path":"objects/obj_tile_manager/obj_tile_manager.yy",},
     {"name":"obj_turn_manager","order":4,"path":"objects/obj_turn_manager/obj_turn_manager.yy",},
     {"name":"mouse_check_outOfBounds","order":2,"path":"scripts/mouse_check_outOfBounds/mouse_check_outOfBounds.yy",},
+    {"name":"Script6","order":5,"path":"scripts/Script6/Script6.yy",},
     {"name":"select_Tile","order":3,"path":"scripts/select_Tile/select_Tile.yy",},
     {"name":"tile_carry","order":1,"path":"scripts/tile_carry/tile_carry.yy",},
     {"name":"tile_get_surrounding","order":4,"path":"scripts/tile_get_surrounding/tile_get_surrounding.yy",},

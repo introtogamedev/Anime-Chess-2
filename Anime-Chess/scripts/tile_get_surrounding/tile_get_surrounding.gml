@@ -7,7 +7,10 @@ function tile_get_surrounding(position){
         for (var i = 0; i < 6; i++){
             surrounding_x_coordinate = x_coordinate + relative_coordinates_to_check[i][0];
             surrounding_y_coordinate = y_coordinate + relative_coordinates_to_check[i][1];
-            if (surrounding_x_coordinate < array_length(obj_tile_manager.grid) && surrounding_x_coordinate >= 0 && surrounding_y_coordinate < array_length(obj_tile_manager.grid[surrounding_x_coordinate]) && surrounding_y_coordinate >= 0){
+            if (surrounding_x_coordinate < array_length(obj_tile_manager.grid)
+			&& surrounding_x_coordinate >= 0
+			&& surrounding_y_coordinate < array_length(obj_tile_manager.grid[surrounding_x_coordinate])
+			&& surrounding_y_coordinate >= 0){
                 if (obj_tile_manager.grid[surrounding_x_coordinate][surrounding_y_coordinate] != 0){
                     var tile = obj_tile_manager.grid[surrounding_x_coordinate, surrounding_y_coordinate];
                     array_push(surrounding_coordinates, tile);

@@ -1,4 +1,4 @@
-function move_peice_to(peice, position, movementRestriction = -1){
+function move_peice_to(peice, position, movementRestriction = tile_get_surrounding(peice.carrier.coordinate)){
 	var x_coordinate = position[0];
     var y_coordinate = position[1];
     if (not instance_exists(obj_tile_manager)){
@@ -9,10 +9,6 @@ function move_peice_to(peice, position, movementRestriction = -1){
 	var moveFrom = peice.carrier.coordinate;
 	
 	var canMove = false;
-		
-	if (movementRestriction = -1){
-		movementRestriction = tile_get_surrounding(peice.carrier.coordinate);
-	}
 	
 	for (var i = 0; i < array_length(movementRestriction); i ++){
 		if (moveToTILE == movementRestriction[i]){

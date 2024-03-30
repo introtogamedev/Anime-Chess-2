@@ -1,49 +1,67 @@
-function tile_get_lines(position){
+enum line_axis{
+	X, Y, Z
+	//Z axis is the horizontal axis with coordinates, (x,y) -> (x+1, y+1)
+}
+function tile_get_lines(position, axis){
     var x_coordinate = position[0];
     var y_coordinate = position[1];
+	var line_coordinates = [];
     if (instance_exists(obj_tile_manager)){
-        var line_coordinates = [];
-		//get tiles with increasing x
-		for (var h = 0; h < array_length(obj_tile_manager.grid); h++){
-			if (h < array_length(obj_tile_manager.grid) && y_coordinate < array_length(obj_tile_manager.grid[h])){
-				if (obj_tile_manager.grid[h][y_coordinate] != 0 && h != x_coordinate){
-					var tile = obj_tile_manager.grid[h][y_coordinate];
-					array_push(line_coordinates, tile);
+		var grid = obj_tile_manager.grid;
+       
+		switch(axis){
+			case(line_axis.X):
+				for (var h = 0; h < array_length(grid); h++){
+					//if the y axis have the x position in the grid
+					if (y_coordinate < array_length(grid[h])){
+						//if grid index is not empty & is not the current position
+						if (grid[h][y_coordinate] != 0 && h != x_coordinate){
+							var tile = grid[h][y_coordinate];
+							array_push(line_coordinates, tile);
+						}
+					}
 				}
-			}
-		}
-		//get tiles with increasing y
-		for (var p = 0; p < array_length(obj_tile_manager.grid[x_coordinate]); p++){
-			if (obj_tile_manager.grid[x_coordinate][p] != 0 && p != y_coordinate){
-				var tile = obj_tile_manager.grid[x_coordinate][p];
-				array_push(line_coordinates, tile);
-			}
+				break;
+				
+			case(line_axis.Y):
+				for (var p = 0; p < array_length(grid[x_coordinate]); p++){
+					//if grid index is not empty & is not the current position
+					if (grid[x_coordinate][p] != 0 && p != y_coordinate){
+						var tile = grid[x_coordinate][p];
+						array_push(line_coordinates, tile);
+					}
+				}
+				break;
+				
+			case(line_axis.Z):
+				var index_shift = -1;
+				var rightbound = false;
+				while(true){
+					if(x_coordinate + index_shift >= array_length(grid) ||
+						x_coordinate + index_shift < 0 ||
+						y_coordinate + index_shift >= array_length(grid[x_coordinate+index_shift]) ||
+						y_coordinate +index_shift<0){
+						break;	
+					}else{
+						var tile = grid[x_coordinate + index_shift][y_coordinate+index_shift]
+						if (tile!= 0 ){
+							array_push(line_coordinates, tile)
+							show_debug_message(tile.coordinate)
+							index_shift += sign(index_shift);
+						}else{
+							if (rightbound == true){
+								break;
+							}
+							index_shift = 1;
+							rightbound = true;
+							//show_debug_message("switched sides")
+						}
+					}
+				}
+				break;
 		}
 		
-		var low = min(x_coordinate, y_coordinate);
-		for (var u = 1; u <= low; u++){
-			if (x_coordinate - u < array_length(obj_tile_manager.grid) && y_coordinate - u < array_length(obj_tile_manager.grid[x_coordinate - u])){
-				if (obj_tile_manager.grid[x_coordinate - u][y_coordinate - u] != 0){
-					var tile = obj_tile_manager.grid[x_coordinate - u][y_coordinate - u];
-					array_push(line_coordinates, tile);
-					show_debug_message("ehehe");
-				}
-			}else{
-				show_debug_message(array_length(obj_tile_manager.grid));
-				show_debug_message(y_coordinate - u);
-			}
-		}
-		
-		var high = max(x_coordinate, y_coordinate);
-		for (var w = 1; w < 12 - high; w++){
-			if (x_coordinate + w < array_length(obj_tile_manager.grid) && y_coordinate + w < array_length(obj_tile_manager.grid[x_coordinate + w])){
-				if (obj_tile_manager.grid[x_coordinate + w][y_coordinate + w] != 0){
-					var tile = obj_tile_manager.grid[x_coordinate + w][y_coordinate + w];
-					array_push(line_coordinates, tile);
-				}
-			}
-		}
-		
-        return line_coordinates;
+       
     }
+	 return line_coordinates;
 }

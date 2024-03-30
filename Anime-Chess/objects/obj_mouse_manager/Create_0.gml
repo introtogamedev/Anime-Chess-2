@@ -1,4 +1,5 @@
 #macro MOUSE_OUT_OF_BOUNDS -1
+#macro MOUSE_DESELECT_TIMER 10
 global.mouse_coordinate = [0, 0];
 
 global.selectedTile = noone;//initialize to noone

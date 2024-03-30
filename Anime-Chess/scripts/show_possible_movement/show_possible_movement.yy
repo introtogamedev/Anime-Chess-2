@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"tile_get_lines",
+  "%Name":"show_possible_movement",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"tile_get_lines",
+  "name":"show_possible_movement",
   "parent":{
     "name":"Scrips",
     "path":"folders/Game Scene/Scrips.yy",

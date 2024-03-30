@@ -2,7 +2,10 @@ enum action{
 	idle,
 	selectAction,
 	move,
-	attack
+	attack,
+	reset
 }
 currentAction = action.idle
+
+movementRestriction = []
 

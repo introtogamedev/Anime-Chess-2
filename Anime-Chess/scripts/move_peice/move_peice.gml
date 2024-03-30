@@ -20,18 +20,21 @@ function move_peice_to(peice, position, movementRestriction = tile_get_surroundi
 	if (canMove){
 		if (get_tile_carry(moveTo) == noone){
 			set_tile_carry(moveFrom, noone);
-			set_tile_carry(moveTo, self);
-			show_debug_message("Sucessfully moved peice at {1} to {2}. {0}", peice, moveFrom, moveTo);
-			peice.currentAction = action.idle;
+			set_tile_carry(moveTo, peice);
+
+			if (DEBUG_MODE_MOVE){show_debug_message("Sucessfully moved peice at {1} to {2}. {0}", peice, moveFrom, moveTo);}
 		}else{
-			show_debug_message("Failed to move peice at {1} due to tile {2} being occupied.{0} "
-								, peice, moveFrom, moveTo)
+			if (DEBUG_MODE_MOVE){show_debug_message("Failed to move peice at {1} due to tile {2} being occupied.{0} "
+								, peice, moveFrom, moveTo)}
 		}
 	}else{
-		show_debug_message("Cannot move peice at {1} because Movement Restriction." +
+		if (DEBUG_MODE_MOVE){show_debug_message("Cannot move peice at {1} because Movement Restriction." +
 							"Peice can move to {2} instead. {0}", 
-							peice, moveFrom, movementRestriction);
+							peice, moveFrom, movementRestriction);}
 	}
-	global.select_state = selectState.deselect;
+	peice.currentAction = action.idle;
+	deslect_all_tiles();
+	global.select_state = selectState.idle;
+	
 }
 	

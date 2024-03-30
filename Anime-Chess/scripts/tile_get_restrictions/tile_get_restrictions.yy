@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"tile_get_surrounding",
+  "%Name":"tile_get_restrictions",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"tile_get_surrounding",
+  "name":"tile_get_restrictions",
   "parent":{
     "name":"Scrips",
     "path":"folders/Game Scene/Scrips.yy",

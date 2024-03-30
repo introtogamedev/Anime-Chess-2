@@ -3,9 +3,9 @@ if(global.selectedTile = carrier and global.selectedUnit == noone){
 	currentAction = action.selectAction;
 }
 
-/*else if(carrier.selected == false and global.selectedUnit == self){
-	//do something
-}*/
+else if(carrier.selected == false and global.selectedUnit == self){
+	currentAction = action.reset
+}
 
 switch(currentAction){
 	case action.idle:
@@ -13,11 +13,20 @@ switch(currentAction){
 	case action.selectAction:
 		global.select_state = selectState.tilesSelect
 		currentAction = action.move;//temporary
+			movementRestriction = array_union(tile_get_lines(carrier.coordinate, line_axis.X),
+												tile_get_lines(carrier.coordinate, line_axis.Y),
+												tile_get_lines(carrier.coordinate, line_axis.Z));
+			highlight_possible_movement(movementRestriction);
 		break;
 	case action.move:
 		if (instance_exists(global.selectedTiles[|0])){
-			move_peice_to(self, global.selectedTiles[|0].coordinate, tile_get_lines(carrier.coordinate, line_axis.Z));
+			move_peice_to(self, global.selectedTiles[|0].coordinate, movementRestriction);
 		}
+		break;
+	case action.reset:
+		global.select_state = selectState.deselect;
+		currentAction = action.idle;
+		break;
 	default: 
 		
 		break;

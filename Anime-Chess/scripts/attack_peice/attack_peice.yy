@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"show_possible_movement",
+  "%Name":"attack_peice",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"show_possible_movement",
+  "name":"attack_peice",
   "parent":{
     "name":"Scrips",
     "path":"folders/Game Scene/Scrips.yy",

@@ -4,8 +4,8 @@ function selectionButton(icon, action_representation) constructor{
 }
 
 function buttonGroup(association) constructor{
-	self.associate = association;
-	group = [];
+	associate = association;
+	group = array_create(0);
 	buttonInstances = [0];
 	
 	addToButtonGroup = function(button){

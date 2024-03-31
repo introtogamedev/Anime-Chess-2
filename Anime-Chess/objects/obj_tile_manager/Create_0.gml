@@ -10,21 +10,5 @@
 #macro TILE_HEIGHT 90 
 #macro TILE_Y_OFFSET 20
 
-#macro DEBUG_MODE_MOVE false
-#macro DEBUG_MODE_SELECT false
-#macro DEBUG_MODE_CARRY false
-
-#macro DEBUG_MODE_DISPLAY false
-
 grid = []//[HORIZONTAL_GRID_LENGTH][VERTICAL_GRID_HEIGHT];
 create_grid();//code in scr_create_grid
-
-
-//global.mouse_coordinate = [0, 0];
-/*
-if (not instance_exists(obj_mouse_manager)){//safegard
-	instance_create_depth(x, y, 0, obj_mouse_manager);
-}
-if (not instance_exists(obj_turn_manager)){//safegard
-	instance_create_depth(x, y, 0, obj_turn_manager);
-}

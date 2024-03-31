@@ -1,6 +1,8 @@
 if(global.selectedTile = carrier and global.selectedUnit == noone){
 	global.selectedUnit = self;
 	currentAction = action.selectAction;
+		buttongroup.createButtonObjects();
+		buttongroup.createButtonObjects();
 }
 
 else if(carrier.selected == false and global.selectedUnit == self){
@@ -11,12 +13,16 @@ switch(currentAction){
 	case action.idle:
 		return;
 	case action.selectAction:
-		global.select_state = selectState.tilesSelect
+		//currentAction = action.attack
+	/*
 		currentAction = action.move;//temporary
-			movementRestriction = array_union(tile_get_lines(carrier.coordinate, line_axis.X),
-												tile_get_lines(carrier.coordinate, line_axis.Y),
-												tile_get_lines(carrier.coordinate, line_axis.Z));
+		global.select_state = selectState.tilesSelect
+			movementRestriction = array_union(tile_get_restriction(carrier.coordinate, tileRestriction.X),
+												tile_get_restriction(carrier.coordinate, tileRestriction.Y),
+												tile_get_restriction(carrier.coordinate, tileRestriction.Z));
+			//movementRestriction = tile_get_surrounding(carrier.coordinate);
 			highlight_possible_movement(movementRestriction);
+			*/
 		break;
 	case action.move:
 		if (instance_exists(global.selectedTiles[|0])){
@@ -30,25 +36,4 @@ switch(currentAction){
 	default: 
 		
 		break;
-}
-/*
-if (currentAction = action.move){
-	if (global.selectedTile != carrier){
-		var moveTo = global.selectedTile.coordinate;
-		var moveFrom = carrier.coordinate;
-		carrier.selected = false;
-		set_tile_carry(moveFrom, noone);
-		set_tile_carry(moveTo, self);	
-		carrier.selected = false;
-		global.selectedTile = noone;
-		global.selectedUnit = noone;
-		currentAction = action.idle;
-	}
-}
-
-
-else if (carrier.selected == false and global.selectedUnit == self){
-	
-	global.selectedUnit = noone;//reset the selected unit if the tile is unselcted	
-	sprite_index = spr_temp_peice;
 }

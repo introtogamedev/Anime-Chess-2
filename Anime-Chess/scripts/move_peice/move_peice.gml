@@ -27,14 +27,15 @@ function move_peice_to(peice, position, movementRestriction = tile_get_surroundi
 			if (DEBUG_MODE_MOVE){show_debug_message("Failed to move peice at {1} due to tile {2} being occupied.{0} "
 								, peice, moveFrom, moveTo)}
 		}
+		peice.currentAction = action.reset;
+		global.select_state = selectState.deselect;
 	}else{
 		if (DEBUG_MODE_MOVE){show_debug_message("Cannot move peice at {1} because Movement Restriction." +
 							"Peice can move to {2} instead. {0}", 
 							peice, moveFrom, movementRestriction);}
+		peice.currentAction = action.idle;
+		global.select_state = selectState.deselect;
 	}
-	peice.currentAction = action.idle;
-	deslect_all_tiles();
-	global.select_state = selectState.idle;
 	
 }
 	

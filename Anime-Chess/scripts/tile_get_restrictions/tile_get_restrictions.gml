@@ -1,39 +1,40 @@
-enum line_axis{
-	X, Y, Z
+enum tileRestriction{
+	X, Y, Z,
 	//Z axis is the horizontal axis with coordinates, (x,y) -> (x+1, y+1)
+	surrounding
 }
-function tile_get_lines(position, axis){
+function tile_get_restriction(position, restriction){
     var x_coordinate = position[0];
     var y_coordinate = position[1];
-	var line_coordinates = [];
+	var restriction_coordinates = [];
     if (instance_exists(obj_tile_manager)){
 		var grid = obj_tile_manager.grid;
        
-		switch(axis){
-			case(line_axis.X):
+		switch(restriction){
+			case(tileRestriction.X):
 				for (var h = 0; h < array_length(grid); h++){
 					//if the y axis have the x position in the grid
 					if (y_coordinate < array_length(grid[h])){
 						//if grid index is not empty & is not the current position
 						if (grid[h][y_coordinate] != 0 && h != x_coordinate){
 							var tile = grid[h][y_coordinate];
-							array_push(line_coordinates, tile);
+							array_push(restriction_coordinates, tile);
 						}
 					}
 				}
 				break;
 				
-			case(line_axis.Y):
+			case(tileRestriction.Y):
 				for (var p = 0; p < array_length(grid[x_coordinate]); p++){
 					//if grid index is not empty & is not the current position
 					if (grid[x_coordinate][p] != 0 && p != y_coordinate){
 						var tile = grid[x_coordinate][p];
-						array_push(line_coordinates, tile);
+						array_push(restriction_coordinates, tile);
 					}
 				}
 				break;
 				
-			case(line_axis.Z):
+			case(tileRestriction.Z):
 				var index_shift = -1;
 				var rightbound = false;
 				while(true){
@@ -50,7 +51,7 @@ function tile_get_lines(position, axis){
 					}else{
 						var tile = grid[x_coordinate + index_shift][y_coordinate+index_shift]
 						if (tile!= 0 ){
-							array_push(line_coordinates, tile)
+							array_push(restriction_coordinates, tile)
 							index_shift += sign(index_shift) ;
 						}else{
 							if (rightbound == true){
@@ -62,31 +63,28 @@ function tile_get_lines(position, axis){
 					}
 				}
 				break;
+				
+			case(tileRestriction.surrounding):
+				var relative_coordinates_to_check = [[-1, 0], [-1, -1], [0, -1], [1, 0], [1, 1], [0, 1]];
+		        for (var i = 0; i < 6; i++){
+					var surrounding_x_coordinate = x_coordinate + relative_coordinates_to_check[i][0];
+		            var surrounding_y_coordinate = y_coordinate + relative_coordinates_to_check[i][1];
+		            if (surrounding_x_coordinate < array_length(obj_tile_manager.grid)
+						&& surrounding_x_coordinate >= 0
+						&& surrounding_y_coordinate < array_length(obj_tile_manager.grid[surrounding_x_coordinate])
+						&& surrounding_y_coordinate >= 0){
+		                if (obj_tile_manager.grid[surrounding_x_coordinate][surrounding_y_coordinate] != 0){
+		                    var tile = obj_tile_manager.grid[surrounding_x_coordinate, surrounding_y_coordinate];
+		                    array_push(restriction_coordinates, tile);
+		                }
+		            }
+		        } 
+				break;
+				
+			default:
+				//do nothing
+			break;
 		}
     }
-	 return line_coordinates;
-}
-
-function tile_get_surrounding(position){
-    var x_coordinate = position[0];
-    var y_coordinate = position[1];
-	var surrounding_coordinates = [];
-    if (instance_exists(obj_tile_manager)){
-        
-        var relative_coordinates_to_check = [[-1, 0], [-1, -1], [0, -1], [1, 0], [1, 1], [0, 1]];
-        for (var i = 0; i < 6; i++){
-			var surrounding_x_coordinate = x_coordinate + relative_coordinates_to_check[i][0];
-            var surrounding_y_coordinate = y_coordinate + relative_coordinates_to_check[i][1];
-            if (surrounding_x_coordinate < array_length(obj_tile_manager.grid)
-			&& surrounding_x_coordinate >= 0
-			&& surrounding_y_coordinate < array_length(obj_tile_manager.grid[surrounding_x_coordinate])
-			&& surrounding_y_coordinate >= 0){
-                if (obj_tile_manager.grid[surrounding_x_coordinate][surrounding_y_coordinate] != 0){
-                    var tile = obj_tile_manager.grid[surrounding_x_coordinate, surrounding_y_coordinate];
-                    array_push(surrounding_coordinates, tile);
-                }
-            }
-        } 
-    }
-	return surrounding_coordinates;
+	 return restriction_coordinates;
 }

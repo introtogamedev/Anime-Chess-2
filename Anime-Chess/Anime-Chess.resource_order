@@ -1,10 +1,10 @@
 {
   "FolderOrderSettings":[
     {"name":"Game Scene","order":10,"path":"folders/Game Scene.yy",},
+    {"name":"Constructors","order":9,"path":"folders/Game Scene/Constructors.yy",},
     {"name":"Peices","order":6,"path":"folders/Game Scene/Peices.yy",},
     {"name":"Scrips","order":5,"path":"folders/Game Scene/Scrips.yy",},
     {"name":"Sprites","order":3,"path":"folders/Game Scene/Sprites.yy",},
-    {"name":"Constructors","order":9,"path":"folders/Game Scene/Constructors.yy",},
     {"name":"Tiles","order":2,"path":"folders/Game Scene/Tiles.yy",},
   ],
   "ResourceOrderSettings":[

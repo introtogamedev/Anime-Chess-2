@@ -1,1 +1,1 @@
-show_debug_message("HI");
+sprite_index = icon;

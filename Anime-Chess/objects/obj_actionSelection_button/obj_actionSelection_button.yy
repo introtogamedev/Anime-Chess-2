@@ -34,7 +34,7 @@
         "GMObject",
       ],"listItems":[],"multiselect":false,"name":"associate","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"obj_temp_peice","varType":5,},
     {"$GMObjectProperty":"","%Name":"action_representation","filters":[],"listItems":[],"multiselect":false,"name":"action_representation","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"action.move","varType":4,},
-    {"$GMObjectProperty":"","%Name":"buttonGroup","filters":[],"listItems":[],"multiselect":true,"name":"buttonGroup","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":6,},
+    {"$GMObjectProperty":"","%Name":"button_group","filters":[],"listItems":[],"multiselect":true,"name":"button_group","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":6,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

@@ -11,10 +11,10 @@
   "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"Game Scene","folderPath":"folders/Game Scene.yy","name":"Game Scene","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Constructors","folderPath":"folders/Game Scene/Constructors.yy","name":"Constructors","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Peices","folderPath":"folders/Game Scene/Peices.yy","name":"Peices","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scrips","folderPath":"folders/Game Scene/Scrips.yy","name":"Scrips","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Game Scene/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Constructors","folderPath":"folders/Game Scene/Constructors.yy","name":"Constructors","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Tiles","folderPath":"folders/Game Scene/Tiles.yy","name":"Tiles","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "IncludedFiles":[],

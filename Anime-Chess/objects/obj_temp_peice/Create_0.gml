@@ -1,8 +1,3 @@
-if (global.currentTurn == turn.BLUE_TURN){
-	sprite_index = spr_temp_peice;
-} else {
-	sprite_index = spr_temp_peice1;
-}
 
 enum action{
 	idle,

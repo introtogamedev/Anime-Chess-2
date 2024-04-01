@@ -6,7 +6,6 @@ switch(global.select_state){
 		deslect_all_tiles();
 		global.select_state++;
 		break;
-
 }
 
 if (global.select_state >= selectState.deselect){

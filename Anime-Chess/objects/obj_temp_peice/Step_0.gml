@@ -3,9 +3,6 @@ if(global.selectedUnit == self and carrier.selected == false){
 	currentAction = action.reset;
 }
 
-
-
-
 switch(currentAction){
 	case action.idle:
 		if(global.selectedUnit == noone and global.selectedTile = carrier){

@@ -1,3 +1,9 @@
+if (global.currentTurn == turn.BLUE_TURN){
+	sprite_index = spr_temp_peice;
+} else {
+	sprite_index = spr_temp_peice1;
+}
+
 enum action{
 	idle,
 	selectAction,
@@ -6,6 +12,7 @@ enum action{
 	special,
 	reset
 }
+
 currentAction = action.idle
 plannedAction = action.idle
 
@@ -16,7 +23,7 @@ buttongroup = new buttonGroup(self);
 	 buttongroup.addToButtonGroup(new selectionButton(spr_actionSelectionButton, action.move));
 	 buttongroup.addToButtonGroup(new selectionButton(spr_actionSelectionButton1, action.attack));
 	 buttongroup.addToButtonGroup(new selectionButton(spr_actionSelectionButton2, action.special));
-	 
+
 
 initiateAction = function (_action){
 	switch(_action){

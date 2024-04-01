@@ -1,10 +1,16 @@
 enum turn{
-	PLAYER_1_TURN,
-	PLAYER_2_TURN,
-	SYSTEM_TURN = 1
+	BLUE_TURN,
+	RED_TURN,
+	SYSTEM_TURN
+}
+
+enum team{
+	TEAM_BLUE,
+	TEAM_RED
 }
 
 global.currentTurn = turn.SYSTEM_TURN;
+global.team = team.TEAM_BLUE;
 
 function turn_next(){
 	if (global.currentTurn < turn.SYSTEM_TURN){

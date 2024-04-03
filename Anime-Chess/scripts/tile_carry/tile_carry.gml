@@ -1,5 +1,5 @@
 function set_tile_carry(position, carry){
-	//if carry.object_index = obj_temp_peice
+	//if carry.object_index = obj_temp_piece
 	var x_coordinate = position[0];
 	var y_coordinate = position[1];
 	if (instance_exists(obj_tile_manager)){//safegard

@@ -13,6 +13,7 @@ plannedAction = action.idle
 
 movementRestriction = []
 attackRestriction = []
+attackSelectableTargets = 1;
 
 buttongroup = new buttonGroup(self);
 	 buttongroup.addToButtonGroup(new selectionButton(spr_actionSelectionButton, action.move));
@@ -27,9 +28,7 @@ initiateAction = function (_action){
 			break;
 		case(action.move):
 			global.select_state = selectState.tilesSelect
-			movementRestriction = array_union(tile_get_restriction(carrier.coordinate, tileRestriction.X),
-												tile_get_restriction(carrier.coordinate, tileRestriction.Y),
-												tile_get_restriction(carrier.coordinate, tileRestriction.Z));
+			movementRestriction = tile_get_restriction(carrier.coordinate, tileRestriction.XYZ)
 			highlight_tiles(movementRestriction);
 			break;
 		case(action.attack):	

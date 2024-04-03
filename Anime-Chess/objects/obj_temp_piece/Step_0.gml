@@ -15,13 +15,17 @@ switch(currentAction){
 		return;		
 	case action.move:
 		if (instance_exists(global.selectedTiles[|0])){
-			move_peice_to(self, global.selectedTiles[|0].coordinate, movementRestriction);
+			move_piece_to(self, global.selectedTiles[|0].coordinate, movementRestriction);
 		}
 		break;
 	
 	case action.attack:
-		if (instance_exists(global.selectedTiles[|0])){
-			attack_peice(global.selectedTiles[|0].coordinate, 1, attackRestriction)
+		if (instance_exists(global.selectedTiles[|attackSelectableTargets-1])){
+			var attackTilesPos = [] 
+			for(var i = 0; i < attackSelectableTargets; i ++ ){
+				attackTilesPos[i] = global.selectedTiles[i].coordinate;
+			}
+			attack_pieces(attackTilesPos, 1, attackRestriction)
 			currentAction = action.reset;
 			global.select_state = selectState.deselect;
 		}

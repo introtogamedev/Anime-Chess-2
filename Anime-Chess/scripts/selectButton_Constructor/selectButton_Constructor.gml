@@ -42,7 +42,7 @@ function buttonGroup(association) constructor{
 				buttonInstances[i] = instance_create_layer(_xx, _yy, "Buttons", obj_actionSelection_button, group[i]);
 				buttonInstances[i].button_group = self;
 				buttonInstances[i].associate = self.associate;
-				show_debug_message("CREATED BUTTON at {0} at angle {1} in array {2}", [_xx, _yy], angle_shift, buttonInstances);
+				if (DEBUG_MODE_CONSTRUCTOR){show_debug_message("CREATED BUTTON at {0} at angle {1} in array {2}", [_xx, _yy], angle_shift, buttonInstances);}
 			}
 		}
 	}

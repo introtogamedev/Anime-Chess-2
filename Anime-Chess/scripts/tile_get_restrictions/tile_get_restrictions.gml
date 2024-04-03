@@ -1,8 +1,9 @@
 enum tileRestriction{
-	X, Y, Z,
+	X, Y, Z, XYZ,
 	//Z axis is the horizontal axis with coordinates, (x,y) -> (x+1, y+1)
 	surrounding
 }
+
 function tile_get_restriction(position, restriction){
     var x_coordinate = position[0];
     var y_coordinate = position[1];
@@ -62,6 +63,17 @@ function tile_get_restriction(position, restriction){
 						}
 					}
 				}
+				break;
+			case(tileRestriction.XYZ):
+				var xArray = []; 
+					xArray = tile_get_restriction(position, tileRestriction.X);
+				var yArray = [];
+					yArray = tile_get_restriction(position, tileRestriction.Y);
+				var zArray = [];
+					zArray = tile_get_restriction(position, tileRestriction.Z);
+				
+				restriction_coordinates = array_union(xArray, yArray, zArray);
+																								
 				break;
 				
 			case(tileRestriction.surrounding):

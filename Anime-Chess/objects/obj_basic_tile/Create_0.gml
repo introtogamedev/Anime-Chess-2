@@ -9,3 +9,5 @@ enum tileDisplay{
 	highlight
 }
 display = tileDisplay.original;
+
+name = coordinate;

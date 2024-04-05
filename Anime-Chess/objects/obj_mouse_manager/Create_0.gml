@@ -6,6 +6,7 @@ global.selectedTile = noone;//initialize to noone
 global.selectedUnit = noone;//initialize to noone
 
 global.selectedTiles = ds_list_create();
+global.selectRestriction = [];
 
 enum selectState{
 	idle,

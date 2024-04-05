@@ -25,10 +25,9 @@ switch(currentAction){
 			for(var i = 0; i < attackSelectableTargets; i ++ ){
 				attackTilesPos[i] = global.selectedTiles[i].coordinate;
 			}
-			attack_pieces(attackTilesPos, 1, attackRestriction)
-			currentAction = action.reset;
-			global.select_state = selectState.deselect;
+					executeAttackFunction(attackTilesPos);
 		}
+
 		break;
 		
 	case action.reset:

@@ -5,6 +5,7 @@ switch(global.select_state){
 	case (selectState.deselect):
 		deslect_all_tiles();
 		global.select_state++;
+		global.selectRestriction = [];
 		break;
 }
 

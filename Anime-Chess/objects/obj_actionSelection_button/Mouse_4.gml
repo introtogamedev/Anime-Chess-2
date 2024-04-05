@@ -3,7 +3,7 @@ if (mouse_x < x + sprite_width/2 && mouse_x > x - sprite_width/2 &&
 	
 	associate.initiateAction(action_representation);
 	
-	if (DEBUG_MODE_SELECT){show_debug_message("Selected action :{0} from {1}", action_representation, self);}
+	if (DEBUG_MODE_SELECT){show_debug_message("Selected action :{0}", action_representation);}
 	
 	associate.buttongroup.clearButtonGroupDisplay();
 }

@@ -1,4 +1,3 @@
-
 enum action{
 	idle,
 	selectAction,
@@ -7,6 +6,8 @@ enum action{
 	special,
 	reset
 }
+name = "";
+	name += pieceName(real(teamAssignment));
 
 currentAction = action.idle
 plannedAction = action.idle
@@ -19,6 +20,10 @@ buttongroup = new buttonGroup(self);
 	 buttongroup.addToButtonGroup(new selectionButton(spr_actionSelectionButton, action.move));
 	 buttongroup.addToButtonGroup(new selectionButton(spr_actionSelectionButton1, action.attack));
 	 buttongroup.addToButtonGroup(new selectionButton(spr_actionSelectionButton2, action.special));
+	 
+atk = 10;
+def = 10; 
+hp = 10;
 
 
 initiateAction = function (_action){
@@ -30,6 +35,7 @@ initiateAction = function (_action){
 			global.select_state = selectState.tilesSelect
 			movementRestriction = tile_get_restriction(carrier.coordinate, tileRestriction.XYZ)
 			highlight_tiles(movementRestriction);
+			global.selectRestriction = movementRestriction;
 			break;
 		case(action.attack):	
 			global.select_state = selectState.tilesSelect
@@ -40,3 +46,8 @@ initiateAction = function (_action){
 	}
 	currentAction = _action
 }
+
+executeAttackFunction = function (selection){
+	attack_pieces(self, selection, atk * 100, attackRestriction)
+}
+show_debug_message(name)

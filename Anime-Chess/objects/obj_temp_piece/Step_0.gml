@@ -15,6 +15,7 @@ switch(currentAction){
 		return;		
 	case action.move:
 		if (instance_exists(global.selectedTiles[|0])){
+			var movementRestriction = movementRestrictionFunction();
 			move_piece_to(self, global.selectedTiles[|0].coordinate, movementRestriction);
 		}
 		break;
@@ -23,9 +24,9 @@ switch(currentAction){
 		if (instance_exists(global.selectedTiles[|attackSelectableTargets-1])){
 			var attackTilesPos = [] 
 			for(var i = 0; i < attackSelectableTargets; i ++ ){
-				attackTilesPos[i] = global.selectedTiles[i].coordinate;
+				attackTilesPos[i] = global.selectedTiles[|i].coordinate;
 			}
-					executeAttackFunction(attackTilesPos);
+			executeAttackFunction(attackTilesPos);
 		}
 
 		break;

@@ -12,8 +12,14 @@ name = "";
 currentAction = action.idle
 plannedAction = action.idle
 
-movementRestriction = []
-attackRestriction = []
+movementRestrictionFunction = function(){
+	return tile_get_restriction(carrier.coordinate, tileRestriction.XYZ)
+}
+
+
+attackRestrictionFunction = function(){
+	 return tile_get_restriction(carrier.coordinate, tileRestriction.surrounding)
+}
 attackSelectableTargets = 1;
 
 buttongroup = new buttonGroup(self);
@@ -33,21 +39,21 @@ initiateAction = function (_action){
 			break;
 		case(action.move):
 			global.select_state = selectState.tilesSelect
-			movementRestriction = tile_get_restriction(carrier.coordinate, tileRestriction.XYZ)
+			var movementRestriction = movementRestrictionFunction();
 			highlight_tiles(movementRestriction);
 			global.selectRestriction = movementRestriction;
 			break;
 		case(action.attack):	
 			global.select_state = selectState.tilesSelect
-			attackRestriction = tile_get_restriction(carrier.coordinate, tileRestriction.surrounding)
+			var attackRestriction = attackRestrictionFunction();
 			highlight_tiles(attackRestriction);
-		break;
-	
+			global.selectRestriction = attackRestriction;
+			break;
 	}
 	currentAction = _action
 }
 
 executeAttackFunction = function (selection){
-	attack_pieces(self, selection, atk * 100, attackRestriction)
+	var attackRestriction = attackRestrictionFunction();
+	attack_pieces(self, selection, atk * 100, attackRestriction);
 }
-show_debug_message(name)

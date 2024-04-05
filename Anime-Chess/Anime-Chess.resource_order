@@ -1,6 +1,5 @@
 {
   "FolderOrderSettings":[
-    {"name":"Game Scene","order":10,"path":"folders/Game Scene.yy",},
     {"name":"Constructors","order":9,"path":"folders/Game Scene/Constructors.yy",},
     {"name":"Pieces","order":6,"path":"folders/Game Scene/Pieces.yy",},
     {"name":"Scrips","order":5,"path":"folders/Game Scene/Scrips.yy",},
@@ -13,12 +12,12 @@
     {"name":"obj_mouse_manager","order":7,"path":"objects/obj_mouse_manager/obj_mouse_manager.yy",},
     {"name":"obj_tile_manager","order":1,"path":"objects/obj_tile_manager/obj_tile_manager.yy",},
     {"name":"obj_turn_manager","order":4,"path":"objects/obj_turn_manager/obj_turn_manager.yy",},
-    {"name":"attack_piece","order":8,"path":"scripts/attack_piece/attack_piece.yy",},
-    {"name":"DEBUG_MODE","order":7,"path":"scripts/DEBUG_MODE/DEBUG_MODE.yy",},
+    {"name":"attack_piece","order":7,"path":"scripts/attack_piece/attack_piece.yy",},
+    {"name":"DEBUG_MODE","order":1,"path":"scripts/DEBUG_MODE/DEBUG_MODE.yy",},
     {"name":"highlight_tiles","order":6,"path":"scripts/highlight_tiles/highlight_tiles.yy",},
     {"name":"mouse_check_outOfBounds","order":2,"path":"scripts/mouse_check_outOfBounds/mouse_check_outOfBounds.yy",},
     {"name":"move_piece","order":5,"path":"scripts/move_piece/move_piece.yy",},
-    {"name":"pieceName","order":9,"path":"scripts/pieceName/pieceName.yy",},
+    {"name":"pieceName","order":8,"path":"scripts/pieceName/pieceName.yy",},
     {"name":"select_Tile","order":3,"path":"scripts/select_Tile/select_Tile.yy",},
     {"name":"tile_carry","order":1,"path":"scripts/tile_carry/tile_carry.yy",},
     {"name":"tile_get_restrictions","order":4,"path":"scripts/tile_get_restrictions/tile_get_restrictions.yy",},

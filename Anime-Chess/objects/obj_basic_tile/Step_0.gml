@@ -1,8 +1,10 @@
-if (selected){
-	display = tileDisplay.selected;
-}else if (display = tileDisplay.selected and selected == false){
-	display = tileDisplay.original;
+if (selected and display != tileDisplay.selected){
+	savedDisplay = display;
+	display = tileDisplay.selected	
+}else if (not selected and display == tileDisplay.selected){
+	display = savedDisplay;	
 }
+
 
 switch(display){
 	case(tileDisplay.original):

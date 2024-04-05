@@ -6,7 +6,7 @@ function select_tile(position, selectedTile){
 		
 		/*tile deselect*/
 		if(instance.selected == true){
-			if (DEBUG_MODE_SELECT){show_debug_message("Unselected Tile at {0}", selectedTile.name);}
+			if (DEBUG_MODE_SELECT){show_debug_message("Unselected Tile at {0}", position);}
 			instance.selected = false;
 			//selectedTile = noone;
 			return noone;
@@ -31,7 +31,7 @@ function addTile_ToList(list, position, restriction = []){
 	var x_coordinate = position[0];
 	var y_coordinate = position[1];
 	
-	if (restriction != []){
+	if (array_length(restriction) != 0){
 		var withinRestriction = false
 		for (var i = 0; i < array_length(restriction); i ++){
 			if (position == restriction[i].coordinate){

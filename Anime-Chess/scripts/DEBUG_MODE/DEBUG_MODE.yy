@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"DEBUG_MODE",
   "parent":{
-    "name":"Scrips",
-    "path":"folders/Game Scene/Scrips.yy",
+    "name":"Anime-Chess",
+    "path":"Anime-Chess.yyp",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

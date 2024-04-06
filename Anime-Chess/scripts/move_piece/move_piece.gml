@@ -23,18 +23,18 @@ function move_piece_to(piece, position, movementRestriction = tile_get_restricti
 			set_tile_carry(moveTo, piece);
 
 			if (DEBUG_MODE_ACTION){show_debug_message("Sucessfully moved piece at {1} to {2}. {0}", piece.name, moveFrom, moveTo);}
+			return true
 		}else{
 			if (DEBUG_MODE_ACTION){show_debug_message("Failed to move piece at {1} due to tile {2} being occupied.{0} "
 								, piece.name, moveFrom, moveTo)}
+			return false
 		}
 		
 	}else{
 		if (DEBUG_MODE_ACTION){show_debug_message("Cannot move piece at {1} because Movement Restriction." +
 							"piece can move to {2} instead. {0}", 
 							piece, moveFrom, movementRestriction);}
+		return false
 	}
-	piece.currentAction = action.reset;
-	global.select_state = selectState.deselect;
-	
 }
 	

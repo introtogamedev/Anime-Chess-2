@@ -9,12 +9,12 @@ function set_tile_carry(position, carry){
 			carry.x = carrier.x;
 			carry.y = carrier.y;
 			carry.carrier = carrier;
-			if (DEBUG_MODE_SELECT){show_debug_message("Tile at {0} is now carrying instance: {1}", position, carry.name);}
+			if (DEBUG_MODE_CARRY){show_debug_message("Tile at {0} is now carrying instance: {1}", position, carry.name);}
 		}else if (carry == noone){
 			carrier.carry = carry;
-			if (DEBUG_MODE_SELECT){show_debug_message("Cleared carry at Tile: {0}", position);}
+			if (DEBUG_MODE_CARRY){show_debug_message("Cleared carry at Tile: {0}", position);}
 		}else{
-			if (DEBUG_MODE_SELECT){show_debug_message("Tile at {0} attempted to carry {1}, but the tile was already carrying {2}", 
+			if (DEBUG_MODE_CARRY){show_debug_message("Tile at {0} attempted to carry {1}, but the tile was already carrying {2}", 
 			position, carry.name, carrier.carry);}
 		}
 	}

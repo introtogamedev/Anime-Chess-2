@@ -4,23 +4,16 @@ enum action{
 	move,
 	attack,
 	special,
-	reset
+	reset,
+	actionExecuted
 }
 name = "";
-	name += pieceName(real(teamAssignment));
+	name += string(type) +" "+ pieceName(real(teamAssignment));
 
 currentAction = action.idle
-plannedAction = action.idle
 
-movementRestrictionFunction = function(){
-	return tile_get_restriction(carrier.coordinate, tileRestriction.XYZ)
-}
-
-
-attackRestrictionFunction = function(){
-	 return tile_get_restriction(carrier.coordinate, tileRestriction.surrounding)
-}
-attackSelectableTargets = 1;
+actionCount = 0;//counts actions taken in one turn
+actionLimit = 1;//the max action that this piece can take in one turn
 
 buttongroup = new buttonGroup(self);
 	 buttongroup.addToButtonGroup(new selectionButton(spr_actionSelectionButton, action.move));
@@ -29,13 +22,13 @@ buttongroup = new buttonGroup(self);
 	 
 atk = 10;
 def = 10; 
-hp = 10;
-
+hp = maxHealth;
 
 initiateAction = function (_action){
 	switch(_action){
 		case(action.selectAction):
 			buttongroup.createButtonObjects();//initiate action selection
+			global.select_state = selectState.idle;
 			break;
 		case(action.move):
 			global.select_state = selectState.tilesSelect
@@ -49,11 +42,40 @@ initiateAction = function (_action){
 			highlight_tiles(attackRestriction);
 			global.selectRestriction = attackRestriction;
 			break;
+		case (action.actionExecuted):
+			actionCount++;
+			reset();
+			//do nothing
+		break;
 	}
 	currentAction = _action
 }
 
-executeAttackFunction = function (selection){
-	var attackRestriction = attackRestrictionFunction();
-	attack_pieces(self, selection, atk * 100, attackRestriction);
+reset = function (){
+	global.select_state = selectState.deselect;
+	buttongroup.clearButtonGroupDisplay();
 }
+
+//OPTIONAL OVERRIDE
+takeDamage = function (damage){
+	hp -= damage;
+}
+
+//OVERRIDE
+AttackFunction = function (selection){
+	var attackRestriction = attackRestrictionFunction();
+	var attackResult = attack_pieces(self, selection, atk * 0.7, attackRestriction);
+	return attackResult;
+}
+
+//OVERRIDE 
+movementRestrictionFunction = function(){
+	return tile_get_restriction(carrier.coordinate, tileRestriction.XYZ)
+}
+
+//OVERRIDE
+attackRestrictionFunction = function(){
+	 return tile_get_restriction(carrier.coordinate, tileRestriction.surrounding)
+}
+//OVERRIDE
+attackSelectableTargets = 1;

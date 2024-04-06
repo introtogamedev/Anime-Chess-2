@@ -61,7 +61,6 @@ function create_grid(){
 		}else{
 			positionRED = [HORIZONTAL_GRID_LENGTH + VERTICAL_GRID_HEIGHT/4, HORIZONTAL_GRID_LENGTH + VERTICAL_GRID_HEIGHT/4];
 		}
-		show_debug_message(positionRED)
 		set_tile_carry(positionRED, carryRED);
 		carryRED.teamAssignment = team.TEAM_RED;
 		carryRED.sprite_index = spr_temp_piece1;

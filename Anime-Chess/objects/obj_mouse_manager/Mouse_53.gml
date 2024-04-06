@@ -1,3 +1,7 @@
+///@description Select
+if (not activated){
+	return;	
+}
 switch (global.select_state){
 	case(selectState.tileSelect):
 		if (mouse_check_outOfBounds() == false){
@@ -13,4 +17,5 @@ switch (global.select_state){
 		//do nothing. 
 	break;
 }
+select_activate_cooldown();
 

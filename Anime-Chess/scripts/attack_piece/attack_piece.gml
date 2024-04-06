@@ -9,21 +9,21 @@ function attack_pieces(attacker, tilesPos, damage, attackRestriction){
 			if (foundPiece){
 				continue;
 			}else{
-				show_debug_message("Matching:" + string(tilesPos[i]) + "" + string(attackRestriction[j].coordinate));
+				if (DEBUG_MODE_ACTION){show_debug_message("Matching:" + string(tilesPos[i]) + "" + string(attackRestriction[j].coordinate));}
 				if (tilesPos[i] == attackRestriction[j].coordinate){
 					foundPiece = true;
 					var attackedTile = grid[tilesPos[i][0], tilesPos[i][1]];
 					var attackedPiece = get_tile_carry(tilesPos[i]);
 					if (instance_exists(attackedPiece)){
 						if (DEBUG_MODE_ACTION){show_debug_message("Piece Found! Attack!");}
-						instance_destroy(attackedPiece);//temporary
+						attackedPiece.takeDamage(damage);
+						return true
 					}else{
 						if (DEBUG_MODE_ACTION){show_debug_message("Piece at {0} not found!", tilesPos[i]);}
+						return false
 					}
 				}
 			}
 		}
 	}
-	attacker.currentAction = action.reset;
-	global.select_state = selectState.deselect;
 }

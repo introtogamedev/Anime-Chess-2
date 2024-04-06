@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"create_piece",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_piece",
+  "parent":{
+    "name":"Anime-Chess",
+    "path":"Anime-Chess.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

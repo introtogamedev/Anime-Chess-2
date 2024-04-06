@@ -1,6 +1,9 @@
-//reset the state if the unit is not selected/deselected
-if(global.selectedUnit == self and carrier.selected == false){
-	currentAction = action.reset;
+///@description Action Execution
+if (global.select_state == selectState.idle){
+	return;
+}if (global.currentTurn != teamAssignment){
+	actionCount = 0;
+	return;
 }
 
 switch(currentAction){
@@ -12,11 +15,17 @@ switch(currentAction){
 		return;
 	case action.selectAction:
 		//terminate the rest of the step function. Do nothing
+		//wait for action to be selected
 		return;		
 	case action.move:
 		if (instance_exists(global.selectedTiles[|0])){
 			var movementRestriction = movementRestrictionFunction();
-			move_piece_to(self, global.selectedTiles[|0].coordinate, movementRestriction);
+			var moveResult = move_piece_to(self, global.selectedTiles[|0].coordinate, movementRestriction);
+			if (moveResult == true){
+				initiateAction(action.actionExecuted)
+			}else{
+				currentAction = action.reset;
+			}
 		}
 		break;
 	
@@ -26,20 +35,27 @@ switch(currentAction){
 			for(var i = 0; i < attackSelectableTargets; i ++ ){
 				attackTilesPos[i] = global.selectedTiles[|i].coordinate;
 			}
-			executeAttackFunction(attackTilesPos);
+			var attackResult = AttackFunction(attackTilesPos);
+			if(attackResult == true){
+				initiateAction(action.actionExecuted)
+			}else{
+				currentAction = action.reset;
+			}
 		}
 
 		break;
 		
 	case action.reset:
-		global.select_state = selectState.deselect;
-		buttongroup.clearButtonGroupDisplay();
+		reset();
 		currentAction = action.idle;
 		break;
-		
+	case (action.actionExecuted):
+		//if actions not at limit, continue actions. 
+		if (actionCount < actionLimit){
+			currentAction = action.idle
+		}
+		break;
 	default: 
-		
+		//do nothing
 		break;
 }
-
-plannedAction = currentAction;

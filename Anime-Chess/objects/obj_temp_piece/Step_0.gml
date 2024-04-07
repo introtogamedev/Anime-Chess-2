@@ -1,12 +1,16 @@
 ///@description Action Execution
 if (global.select_state == selectState.idle){
 	return;
-}if (global.currentTurn != teamAssignment){
-	actionCount = 0;
-	return;
 }
 
 switch(currentAction){
+	case action.deactivated:
+		// do nothing. Wait until updated to another state
+		if (global.turnsystem.currentTurn == teamAssignment){
+			currentAction = action.idle;
+		}
+		actionCount = 0;
+	return;
 	case action.idle:
 		if(global.selectedUnit == noone and global.selectedTile = carrier){
 			global.selectedUnit = self;

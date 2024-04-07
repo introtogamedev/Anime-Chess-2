@@ -6,7 +6,6 @@ function selectionButton(icon, action_representation) constructor{
 function buttonGroup(association) constructor{
 	associate = association;
 	group = array_create(0);
-	buttonInstances = [0];
 	
 	addToButtonGroup = function(button){
 		if (is_instanceof(button, selectionButton)){
@@ -34,20 +33,21 @@ function buttonGroup(association) constructor{
 		}else{//even amount of buttons
 			//do nothing
 		}
-		if (buttonInstances[0] == 0){
-			for (var i = 0; i < amount_of_buttons; i ++){
-				var angle_shift = (angleDifference * -i + floor(amount_of_buttons/2) * angleDifference - angle_offset);
-				var _xx = origin_x + lengthdir_x(h_offset, angle_shift);
-				var _yy = origin_y + lengthdir_y(h_offset, angle_shift);
-				buttonInstances[i] = instance_create_layer(_xx, _yy, "Buttons", obj_actionSelection_button, group[i]);
-				buttonInstances[i].button_group = self;
-				buttonInstances[i].associate = self.associate;
-				if (DEBUG_MODE_CONSTRUCTOR){show_debug_message("CREATED BUTTON at {0} at angle {1} in array {2}", [_xx, _yy], angle_shift, buttonInstances);}
-			}
+		for (var i = 0; i < amount_of_buttons; i ++){
+			var angle_shift = (angleDifference * -i + floor(amount_of_buttons/2) * angleDifference - angle_offset);
+			var _xx = origin_x + lengthdir_x(h_offset, angle_shift);
+			var _yy = origin_y + lengthdir_y(h_offset, angle_shift);
+			var buttonInstance= instance_create_layer(_xx, _yy, "Buttons", obj_actionSelection_button, group[i]);
+			buttonInstance.button_group = self;
+			buttonInstance.associate = self.associate;
+			if (DEBUG_MODE_CONSTRUCTOR){show_debug_message("CREATED BUTTON at {0} at angle {1}", [_xx, _yy], angle_shift);}
 		}
 	}
-	
+}
+
+	/*
 	clearButtonGroupDisplay = function(){
+		show_debug_message(buttonInstances)
 		if (buttonInstances[0] == 0){
 			if (DEBUG_MODE_CONSTRUCTOR){show_debug_message("ERROR! NO INSTANCES INITIATED TO CLEAR: {0}", buttonInstances);}
 			return;	
@@ -58,5 +58,4 @@ function buttonGroup(association) constructor{
 			}
 			buttonInstances = [0];//reset
 		}
-	}
-}
+	}*/

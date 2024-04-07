@@ -36,3 +36,5 @@
 	Display and realtime object sprite change updates
 */
 #macro DEBUG_MODE_DISPLAY false
+
+#macro DEBUG_MODE_TURN false

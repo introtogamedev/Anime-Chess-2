@@ -1,4 +1,5 @@
 enum action{
+	deactivated,
 	idle,
 	selectAction,
 	move,
@@ -10,6 +11,8 @@ enum action{
 name = "";
 	name += string(type) +" "+ pieceName(real(teamAssignment));
 
+activated = false;
+
 currentAction = action.idle
 
 actionCount = 0;//counts actions taken in one turn
@@ -18,11 +21,13 @@ actionLimit = 1;//the max action that this piece can take in one turn
 buttongroup = new buttonGroup(self);
 	 buttongroup.addToButtonGroup(new selectionButton(spr_actionSelectionButton, action.move));
 	 buttongroup.addToButtonGroup(new selectionButton(spr_actionSelectionButton1, action.attack));
-	 buttongroup.addToButtonGroup(new selectionButton(spr_actionSelectionButton2, action.special));
+	 buttongroup.addToButtonGroup(new selectionButton(spr_actionSelectionButton2, action.reset));
 	 
 atk = 10;
 def = 10; 
 hp = maxHealth;
+
+//global.turnsystem.addPieceToTeam(self, teamAssignment)
 
 initiateAction = function (_action){
 	switch(_action){
@@ -49,11 +54,12 @@ initiateAction = function (_action){
 		break;
 	}
 	currentAction = _action
+	show_debug_message(self)
 }
 
 reset = function (){
 	global.select_state = selectState.deselect;
-	buttongroup.clearButtonGroupDisplay();
+	//buttongroup.clearButtonGroupDisplay();
 }
 
 //OPTIONAL OVERRIDE

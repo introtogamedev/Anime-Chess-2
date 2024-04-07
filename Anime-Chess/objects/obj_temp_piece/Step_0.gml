@@ -50,7 +50,7 @@ switch(currentAction){
 		break;
 		
 	case action.reset:
-		reset();
+		global.select_state = selectState.deselect;
 		currentAction = action.idle;
 		break;
 	case (action.actionExecuted):

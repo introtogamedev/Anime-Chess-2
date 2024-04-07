@@ -39,7 +39,7 @@ function create_grid(){
 	}
 	
 	#region Create Initial Pieces
-		var carryBLUE = instance_create_depth(0, 0, 0, obj_temp_piece);
+		var carryBLUE = instance_create_depth(0, 0, 0, obj_piece_King);
 		var positionBLUE =[];
 		if (VERTICAL_GRID_HEIGHT < 3){
 			positionBLUE = [0,0]
@@ -52,7 +52,7 @@ function create_grid(){
 		carryBLUE.teamAssignment = team.TEAM_BLUE;
 		carryBLUE.sprite_index = spr_temp_piece;
 		
-		var carryRED = instance_create_depth(0, 0, 0, obj_temp_piece);
+		var carryRED = instance_create_depth(0, 0, 0, obj_piece_King);
 		var positionRED =[];
 		if (VERTICAL_GRID_HEIGHT <= 2){
 			positionRED = [HORIZONTAL_GRID_LENGTH-1, HORIZONTAL_GRID_LENGTH-1];

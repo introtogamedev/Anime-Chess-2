@@ -10,8 +10,8 @@
   "name":"obj_actionSelection_button",
   "overriddenProperties":[],
   "parent":{
-    "name":"Pieces",
-    "path":"folders/Game Scene/Pieces.yy",
+    "name":"Objects",
+    "path":"folders/Game Scene/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

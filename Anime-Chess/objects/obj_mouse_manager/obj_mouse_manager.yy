@@ -14,8 +14,8 @@
   "name":"obj_mouse_manager",
   "overriddenProperties":[],
   "parent":{
-    "name":"Game Scene",
-    "path":"folders/Game Scene.yy",
+    "name":"Managers",
+    "path":"folders/Game Scene/Managers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

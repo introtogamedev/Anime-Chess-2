@@ -19,7 +19,7 @@ function turnManager() constructor{
 	
 	turn_next = function(){
 		//reset all piece states to default
-		obj_temp_piece.reset();
+		//obj_temp_piece.reset();
 		
 		currentTurn ++;
 	

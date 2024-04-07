@@ -9,7 +9,7 @@ enum action{
 	actionExecuted
 }
 name = "";
-	name += string(type) +" "+ pieceName(real(teamAssignment));
+	name += string(object_get_name(object_index)) +" "+ pieceName(real(teamAssignment));
 
 activated = false;
 
@@ -22,12 +22,10 @@ buttongroup = new buttonGroup(self);
 	 buttongroup.addToButtonGroup(new selectionButton(spr_actionSelectionButton, action.move));
 	 buttongroup.addToButtonGroup(new selectionButton(spr_actionSelectionButton1, action.attack));
 	 buttongroup.addToButtonGroup(new selectionButton(spr_actionSelectionButton2, action.reset));
-	 
-atk = 10;
-def = 10; 
-hp = maxHealth;
 
-//global.turnsystem.addPieceToTeam(self, teamAssignment)
+atk = startingATK;
+def = startingDEF; 
+hp = maxHealth;
 
 initiateAction = function (_action){
 	switch(_action){
@@ -49,17 +47,15 @@ initiateAction = function (_action){
 			break;
 		case (action.actionExecuted):
 			actionCount++;
-			reset();
+			global.select_state = selectState.deselect;
 			//do nothing
+		break;
+		case action.reset:
+			global.select_state = selectState.deselect;
+			currentAction = action.idle;
 		break;
 	}
 	currentAction = _action
-	show_debug_message(self)
-}
-
-reset = function (){
-	global.select_state = selectState.deselect;
-	//buttongroup.clearButtonGroupDisplay();
 }
 
 //OPTIONAL OVERRIDE
@@ -70,7 +66,7 @@ takeDamage = function (damage){
 //OVERRIDE
 AttackFunction = function (selection){
 	var attackRestriction = attackRestrictionFunction();
-	var attackResult = attack_pieces(self, selection, atk * 0.7, attackRestriction);
+	var attackResult = attack_pieces(self, selection, atk, attackRestriction);
 	return attackResult;
 }
 

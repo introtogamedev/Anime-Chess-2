@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"DEBUG_MODE",
+  "%Name":"pieceName",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"DEBUG_MODE",
+  "name":"pieceName",
   "parent":{
-    "name":"Anime-Chess",
-    "path":"Anime-Chess.yyp",
+    "name":"Scrips",
+    "path":"folders/Game Scene/Scrips.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

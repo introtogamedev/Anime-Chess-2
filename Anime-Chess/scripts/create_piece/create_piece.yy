@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"Script6",
+  "%Name":"create_piece",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Script6",
+  "name":"create_piece",
   "parent":{
-    "name":"Scrips",
-    "path":"folders/Game Scene/Scrips.yy",
+    "name":"Anime-Chess",
+    "path":"Anime-Chess.yyp",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

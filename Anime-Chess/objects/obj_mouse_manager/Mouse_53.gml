@@ -1,3 +1,7 @@
+///@description Select
+if (not activated){
+	return;	
+}
 switch (global.select_state){
 	case(selectState.tileSelect):
 		if (mouse_check_outOfBounds() == false){
@@ -6,11 +10,12 @@ switch (global.select_state){
 		break;
 	case (selectState.tilesSelect):
 		if (mouse_check_outOfBounds() == false){
-			global.selectedTiles = addTile_ToList(global.selectedTiles,global.mouse_coordinate)
+			global.selectedTiles = addTile_ToList(global.selectedTiles,global.mouse_coordinate, global.selectRestriction)
 		}
 		break;
 	default:
 		//do nothing. 
 	break;
 }
+select_activate_cooldown();
 

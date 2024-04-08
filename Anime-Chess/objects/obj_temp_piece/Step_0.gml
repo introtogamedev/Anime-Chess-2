@@ -1,9 +1,16 @@
-//reset the state if the unit is not selected/deselected
-if(global.selectedUnit == self and carrier.selected == false){
-	currentAction = action.reset;
+///@description Action Execution
+if (global.select_state == selectState.idle){
+	return;
 }
 
 switch(currentAction){
+	case action.deactivated:
+		// do nothing. Wait until updated to another state
+		if (global.turnsystem.currentTurn == teamAssignment){
+			currentAction = action.idle;
+		}
+		actionCount = 0;
+	return;
 	case action.idle:
 		if(global.selectedUnit == noone and global.selectedTile = carrier){
 			global.selectedUnit = self;
@@ -12,10 +19,17 @@ switch(currentAction){
 		return;
 	case action.selectAction:
 		//terminate the rest of the step function. Do nothing
+		//wait for action to be selected
 		return;		
 	case action.move:
 		if (instance_exists(global.selectedTiles[|0])){
-			move_piece_to(self, global.selectedTiles[|0].coordinate, movementRestriction);
+			var movementRestriction = movementRestrictionFunction();
+			var moveResult = move_piece_to(self, global.selectedTiles[|0].coordinate, movementRestriction);
+			if (moveResult == true){
+				initiateAction(action.actionExecuted)
+			}else{
+				currentAction = action.reset;
+			}
 		}
 		break;
 	
@@ -23,23 +37,29 @@ switch(currentAction){
 		if (instance_exists(global.selectedTiles[|attackSelectableTargets-1])){
 			var attackTilesPos = [] 
 			for(var i = 0; i < attackSelectableTargets; i ++ ){
-				attackTilesPos[i] = global.selectedTiles[i].coordinate;
+				attackTilesPos[i] = global.selectedTiles[|i].coordinate;
 			}
-			attack_pieces(attackTilesPos, 1, attackRestriction)
-			currentAction = action.reset;
-			global.select_state = selectState.deselect;
+			var attackResult = AttackFunction(attackTilesPos);
+			if(attackResult == true){
+				initiateAction(action.actionExecuted)
+			}else{
+				currentAction = action.reset;
+			}
 		}
+
 		break;
 		
 	case action.reset:
 		global.select_state = selectState.deselect;
-		buttongroup.clearButtonGroupDisplay();
 		currentAction = action.idle;
 		break;
-		
+	case (action.actionExecuted):
+		//if actions not at limit, continue actions. 
+		if (actionCount < actionLimit){
+			currentAction = action.idle
+		}
+		break;
 	default: 
-		
+		//do nothing
 		break;
 }
-
-plannedAction = currentAction;

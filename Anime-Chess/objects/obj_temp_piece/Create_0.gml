@@ -1,42 +1,83 @@
-
 enum action{
+	deactivated,
 	idle,
 	selectAction,
 	move,
 	attack,
 	special,
-	reset
+	reset,
+	actionExecuted
 }
+name = "";
+	name += string(object_get_name(object_index)) +" "+ pieceName(real(teamAssignment));
+
+activated = false;
 
 currentAction = action.idle
-plannedAction = action.idle
 
-movementRestriction = []
-attackRestriction = []
-attackSelectableTargets = 1;
+actionCount = 0;//counts actions taken in one turn
+actionLimit = 1;//the max action that this piece can take in one turn
 
 buttongroup = new buttonGroup(self);
 	 buttongroup.addToButtonGroup(new selectionButton(spr_actionSelectionButton, action.move));
 	 buttongroup.addToButtonGroup(new selectionButton(spr_actionSelectionButton1, action.attack));
-	 buttongroup.addToButtonGroup(new selectionButton(spr_actionSelectionButton2, action.special));
+	 buttongroup.addToButtonGroup(new selectionButton(spr_actionSelectionButton2, action.reset));
 
+atk = startingATK;
+def = startingDEF; 
+hp = maxHealth;
 
 initiateAction = function (_action){
 	switch(_action){
 		case(action.selectAction):
 			buttongroup.createButtonObjects();//initiate action selection
+			global.select_state = selectState.idle;
 			break;
 		case(action.move):
 			global.select_state = selectState.tilesSelect
-			movementRestriction = tile_get_restriction(carrier.coordinate, tileRestriction.XYZ)
+			var movementRestriction = movementRestrictionFunction();
 			highlight_tiles(movementRestriction);
+			global.selectRestriction = movementRestriction;
 			break;
 		case(action.attack):	
 			global.select_state = selectState.tilesSelect
-			attackRestriction = tile_get_restriction(carrier.coordinate, tileRestriction.surrounding)
+			var attackRestriction = attackRestrictionFunction();
 			highlight_tiles(attackRestriction);
+			global.selectRestriction = attackRestriction;
+			break;
+		case (action.actionExecuted):
+			actionCount++;
+			global.select_state = selectState.deselect;
+			//do nothing
 		break;
-	
+		case action.reset:
+			global.select_state = selectState.deselect;
+			currentAction = action.idle;
+		break;
 	}
 	currentAction = _action
 }
+
+//OPTIONAL OVERRIDE
+takeDamage = function (damage){
+	hp -= damage;
+}
+
+//OVERRIDE
+AttackFunction = function (selection){
+	var attackRestriction = attackRestrictionFunction();
+	var attackResult = attack_pieces(self, selection, atk, attackRestriction);
+	return attackResult;
+}
+
+//OVERRIDE 
+movementRestrictionFunction = function(){
+	return tile_get_restriction(carrier.coordinate, tileRestriction.XYZ)
+}
+
+//OVERRIDE
+attackRestrictionFunction = function(){
+	 return tile_get_restriction(carrier.coordinate, tileRestriction.surrounding)
+}
+//OVERRIDE
+attackSelectableTargets = 1;

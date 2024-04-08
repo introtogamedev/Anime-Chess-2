@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"end_turn",
+  "%Name":"Object11",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":16,"eventType":9,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"end_turn",
+  "name":"Object11",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Game Scene/Objects.yy",
+    "name":"Anime-Chess",
+    "path":"Anime-Chess.yyp",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -29,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"turn_button",
-    "path":"sprites/turn_button/turn_button.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

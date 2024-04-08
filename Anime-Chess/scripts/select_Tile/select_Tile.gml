@@ -6,7 +6,7 @@ function select_tile(position, selectedTile){
 		
 		/*tile deselect*/
 		if(instance.selected == true){
-			if (DEBUG_MODE_SELECT){show_debug_message("Unselected Tile at {1}: {0}", selectedTile, position);}
+			if (DEBUG_MODE_SELECT){show_debug_message("Unselected Tile at {0}", position);}
 			instance.selected = false;
 			//selectedTile = noone;
 			return noone;
@@ -16,20 +16,35 @@ function select_tile(position, selectedTile){
 		if (selectedTile == noone){
 			instance.selected = true;
 			selectedTile = instance;
-			if (DEBUG_MODE_SELECT){show_debug_message("Tile Selected at {1}: {0}", selectedTile, position);}
+			if (DEBUG_MODE_SELECT){show_debug_message("Tile Selected at {0}", selectedTile.name);}
 		}else if (instance != selectedTile){
 			instance.selected = true;
 			selectedTile.selected = false;
 			selectedTile = instance;
-			if (DEBUG_MODE_SELECT){show_debug_message("Changed Selected Tile to {1}: {0}", selectedTile, position);}
+			if (DEBUG_MODE_SELECT){show_debug_message("Changed Selected Tile to {0}", selectedTile.name);}
 		}
 		return selectedTile;
 	}
 }
 
-function addTile_ToList(list, position){
+function addTile_ToList(list, position, restriction = []){
 	var x_coordinate = position[0];
 	var y_coordinate = position[1];
+	
+	if (array_length(restriction) != 0){
+		var withinRestriction = false
+		for (var i = 0; i < array_length(restriction); i ++){
+			if (position == restriction[i].coordinate){
+				withinRestriction = true
+			}
+		}
+		if (withinRestriction == false){
+			if (DEBUG_MODE_SELECT){show_debug_message("Failed to add Tile at {0} due to being not complying with restriction {1}.", position, restriction);}
+			return list 
+		}
+	}
+		
+	
 	
 	var tile = select_tile(position, noone);
 	
@@ -38,11 +53,11 @@ function addTile_ToList(list, position){
 			var instance = obj_tile_manager.grid[x_coordinate, y_coordinate];
 			var editIndex = ds_list_find_index(list, instance);
 			ds_list_delete(list, editIndex);
-			if (DEBUG_MODE_SELECT){show_debug_message("Removed Tile at {1} from selection: {0}", instance, instance.coordinate);}
+			if (DEBUG_MODE_SELECT){show_debug_message("Removed Tile {0} from selection", instance.name);}
 		}
 	}else{
 		ds_list_add(list, tile);
-		if (DEBUG_MODE_SELECT){show_debug_message("Added Tile at {1} to selection: {0} ", tile, tile.coordinate);}
+		if (DEBUG_MODE_SELECT){show_debug_message("Added Tile {0} to selection", tile.name);}
 	}
 	return list;
 }

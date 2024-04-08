@@ -3,7 +3,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+/*
 movementRestrictionFunction = function(){
 	return tile_get_restriction(carrier.coordinate, tileRestriction.surrounding)
-}
+}*/

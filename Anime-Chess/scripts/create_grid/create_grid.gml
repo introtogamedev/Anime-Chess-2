@@ -50,7 +50,7 @@ function create_grid(){
 		}
 		set_tile_carry(positionBLUE, carryBLUE);
 		carryBLUE.teamAssignment = team.TEAM_BLUE;
-		carryBLUE.sprite_index = spr_temp_piece;
+		carryBLUE.sprite_index = spr_blue_king;
 		
 		var carryRED = instance_create_depth(0, 0, 0, obj_piece_King);
 		var positionRED =[];
@@ -63,7 +63,7 @@ function create_grid(){
 		}
 		set_tile_carry(positionRED, carryRED);
 		carryRED.teamAssignment = team.TEAM_RED;
-		carryRED.sprite_index = spr_temp_piece1;
+		carryRED.sprite_index = spr_red_king;
 	#endregion
 }
 

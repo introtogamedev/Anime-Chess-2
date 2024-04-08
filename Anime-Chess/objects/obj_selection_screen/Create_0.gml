@@ -1,2 +1,2 @@
 global.selectedUnitType = 0;
-global.unitArray = [spr_temp_piece, spr_temp_piece1];
+unitArray = [obj_piece_test_pufferfish, obj_piece_test_bunny];

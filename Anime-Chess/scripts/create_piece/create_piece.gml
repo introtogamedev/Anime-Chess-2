@@ -2,12 +2,12 @@
 function create_piece(){
 	if (not mouse_check_outOfBounds()){
 		if (get_tile_carry(global.mouse_coordinate) == noone){
-			var carry = instance_create_depth(0, 0, 0, obj_piece_Pawn);
+			//var unitType = obj_selection_screen.unitArray[global.selectedUnitType];
+			var carry = instance_create_depth(0, 0, 0, global.selectedUnitType);
 			if (global.turnsystem.currentTurn == turn.BLUE_TURN){
 				carry.teamAssignment = team.TEAM_BLUE;
-				carry.sprite_index = spr_temp_piece;
+				carry.image_xscale = -1;
 			} else {
-				carry.sprite_index = spr_temp_piece1;
 				carry.teamAssignment = team.TEAM_RED;
 			}
 			set_tile_carry(global.mouse_coordinate, carry);

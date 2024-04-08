@@ -14,6 +14,8 @@
     {"name":"obj_piece_King","order":1,"path":"objects/obj_piece_King/obj_piece_King.yy",},
     {"name":"obj_piece_Pawn","order":2,"path":"objects/obj_piece_Pawn/obj_piece_Pawn.yy",},
     {"name":"obj_piece_Pufferfish","order":3,"path":"objects/obj_piece_Pufferfish/obj_piece_Pufferfish.yy",},
+    {"name":"obj_piece_test_pufferfish","order":4,"path":"objects/obj_piece_test_pufferfish/obj_piece_test_pufferfish.yy",},
+    {"name":"obj_piece_test_bunny","order":5,"path":"objects/obj_piece_test_bunny/obj_piece_test_bunny.yy",},
     {"name":"obj_puffer_icon","order":11,"path":"objects/obj_puffer_icon/obj_puffer_icon.yy",},
     {"name":"obj_selection_screen","order":10,"path":"objects/obj_selection_screen/obj_selection_screen.yy",},
     {"name":"obj_tile_manager","order":1,"path":"objects/obj_tile_manager/obj_tile_manager.yy",},

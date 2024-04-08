@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_temp_peice",
-    "path":"sprites/spr_temp_peice/spr_temp_peice.yy",
+    "name":"spr_temp_piece",
+    "path":"sprites/spr_temp_piece/spr_temp_piece.yy",
   },
   "spriteMaskId":null,
   "visible":true,

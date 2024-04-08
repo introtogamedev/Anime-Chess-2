@@ -3,11 +3,10 @@ if (not mouse_check_outOfBounds()){
 		var carry = instance_create_depth(0, 0, 0, obj_temp_piece);
 		if (global.currentTurn == turn.BLUE_TURN){
 			carry.teamAssignment = team.TEAM_BLUE;
-			carry.sprite_index = spr_temp_peice;
 		} else {
-			carry.sprite_index = spr_temp_peice1;
 			carry.teamAssignment = team.TEAM_RED;
 		}
+		carry.sprite_index = global.unitArray[global.selectedUnitType];
 		set_tile_carry(global.mouse_coordinate, carry);
 	}else{
 		//ERROR MESSAGE
@@ -19,5 +18,3 @@ if (not mouse_check_outOfBounds()){
 }else{
 	show_debug_message("Mouse Index Out of Bounds!");
 }
-
-

@@ -1,7 +1,8 @@
 enum tileRestriction{
 	X, Y, Z, XYZ,
 	//Z axis is the horizontal axis with coordinates, (x,y) -> (x+1, y+1)
-	surrounding
+	surrounding,
+	horse
 }
 
 function tile_get_restriction(position, restriction){
@@ -78,6 +79,23 @@ function tile_get_restriction(position, restriction){
 				
 			case(tileRestriction.surrounding):
 				var relative_coordinates_to_check = [[-1, 0], [-1, -1], [0, -1], [1, 0], [1, 1], [0, 1]];
+		        for (var i = 0; i < 6; i++){
+					var surrounding_x_coordinate = x_coordinate + relative_coordinates_to_check[i][0];
+		            var surrounding_y_coordinate = y_coordinate + relative_coordinates_to_check[i][1];
+		            if (surrounding_x_coordinate < array_length(obj_tile_manager.grid)
+						&& surrounding_x_coordinate >= 0
+						&& surrounding_y_coordinate < array_length(obj_tile_manager.grid[surrounding_x_coordinate])
+						&& surrounding_y_coordinate >= 0){
+		                if (obj_tile_manager.grid[surrounding_x_coordinate][surrounding_y_coordinate] != 0){
+		                    var tile = obj_tile_manager.grid[surrounding_x_coordinate, surrounding_y_coordinate];
+		                    array_push(restriction_coordinates, tile);
+		                }
+		            }
+		        } 
+				break;
+				
+			case(tileRestriction.horse):
+				var relative_coordinates_to_check = [[-2, -1], [-1, -2], [1, -1], [2, 1], [1, 2], [-1, 1]];
 		        for (var i = 0; i < 6; i++){
 					var surrounding_x_coordinate = x_coordinate + relative_coordinates_to_check[i][0];
 		            var surrounding_y_coordinate = y_coordinate + relative_coordinates_to_check[i][1];

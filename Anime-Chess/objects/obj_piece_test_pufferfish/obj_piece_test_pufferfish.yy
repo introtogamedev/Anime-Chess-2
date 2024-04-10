@@ -3,20 +3,21 @@
   "%Name":"obj_piece_test_pufferfish",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_piece_test_pufferfish",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_temp_piece","path":"objects/obj_temp_piece/obj_temp_piece.yy",},"propertyId":{"name":"startingATK","path":"objects/obj_temp_piece/obj_temp_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
-    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_temp_piece","path":"objects/obj_temp_piece/obj_temp_piece.yy",},"propertyId":{"name":"maxHealth","path":"objects/obj_temp_piece/obj_temp_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"4",},
+    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_piece","path":"objects/obj_piece/obj_piece.yy",},"propertyId":{"name":"startingATK","path":"objects/obj_piece/obj_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_piece","path":"objects/obj_piece/obj_piece.yy",},"propertyId":{"name":"maxHealth","path":"objects/obj_piece/obj_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"4",},
   ],
   "parent":{
     "name":"Pieces",
     "path":"folders/Game Scene/Pieces.yy",
   },
   "parentObjectId":{
-    "name":"obj_temp_piece",
-    "path":"objects/obj_temp_piece/obj_temp_piece.yy",
+    "name":"obj_piece",
+    "path":"objects/obj_piece/obj_piece.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

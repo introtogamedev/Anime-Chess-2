@@ -1,6 +1,6 @@
 {
   "$GMObject":"",
-  "%Name":"obj_temp_piece",
+  "%Name":"obj_piece",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
@@ -9,7 +9,7 @@
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_temp_piece",
+  "name":"obj_piece",
   "overriddenProperties":[],
   "parent":{
     "name":"Pieces",
@@ -31,7 +31,7 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"","%Name":"carrier","filters":[],"listItems":[],"multiselect":false,"name":"carrier","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"obj_basic_tile","varType":5,},
-    {"$GMObjectProperty":"","%Name":"teamAssignment","filters":[],"listItems":[],"multiselect":false,"name":"teamAssignment","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"team.TEAM_RED","varType":0,},
+    {"$GMObjectProperty":"","%Name":"teamAssignment","filters":[],"listItems":[],"multiselect":false,"name":"teamAssignment","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"","%Name":"maxHealth","filters":[],"listItems":[],"multiselect":false,"name":"maxHealth","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"10","varType":0,},
     {"$GMObjectProperty":"","%Name":"startingATK","filters":[],"listItems":[],"multiselect":false,"name":"startingATK","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"10","varType":0,},
     {"$GMObjectProperty":"","%Name":"startingDEF","filters":[],"listItems":[],"multiselect":false,"name":"startingDEF","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},

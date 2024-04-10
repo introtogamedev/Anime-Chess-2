@@ -10,8 +10,8 @@
   "name":"obj_actionSelection_button",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Game Scene/Objects.yy",
+    "name":"Other Objects",
+    "path":"folders/Game Scene/Other Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -40,7 +40,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_actionSelectionButton",
+    "path":"sprites/spr_actionSelectionButton/spr_actionSelectionButton.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

@@ -20,6 +20,7 @@
 		- Was the carry executed?
 		- Was there conflict?
 		- Selection and errors
+		- Piece creation code and logs
 */
 #macro DEBUG_MODE_CARRY false
 

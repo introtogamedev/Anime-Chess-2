@@ -27,6 +27,8 @@ atk = startingATK;
 def = startingDEF; 
 hp = maxHealth;
 
+carrier.selected = false;
+
 initiateAction = function (_action){
 	switch(_action){
 		case(action.selectAction):

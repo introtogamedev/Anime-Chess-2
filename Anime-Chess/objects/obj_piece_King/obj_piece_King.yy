@@ -8,17 +8,17 @@
   "managed":true,
   "name":"obj_piece_King",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_temp_piece","path":"objects/obj_temp_piece/obj_temp_piece.yy",},"propertyId":{"name":"maxHealth","path":"objects/obj_temp_piece/obj_temp_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"5",},
-    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_temp_piece","path":"objects/obj_temp_piece/obj_temp_piece.yy",},"propertyId":{"name":"startingATK","path":"objects/obj_temp_piece/obj_temp_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
-    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_temp_piece","path":"objects/obj_temp_piece/obj_temp_piece.yy",},"propertyId":{"name":"startingDEF","path":"objects/obj_temp_piece/obj_temp_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0",},
+    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_piece","path":"objects/obj_piece/obj_piece.yy",},"propertyId":{"name":"maxHealth","path":"objects/obj_piece/obj_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"5",},
+    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_piece","path":"objects/obj_piece/obj_piece.yy",},"propertyId":{"name":"startingATK","path":"objects/obj_piece/obj_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_piece","path":"objects/obj_piece/obj_piece.yy",},"propertyId":{"name":"startingDEF","path":"objects/obj_piece/obj_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0",},
   ],
   "parent":{
     "name":"Pieces",
     "path":"folders/Game Scene/Pieces.yy",
   },
   "parentObjectId":{
-    "name":"obj_temp_piece",
-    "path":"objects/obj_temp_piece/obj_temp_piece.yy",
+    "name":"obj_piece",
+    "path":"objects/obj_piece/obj_piece.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -37,7 +37,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_blue_king",
+    "path":"sprites/spr_blue_king/spr_blue_king.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

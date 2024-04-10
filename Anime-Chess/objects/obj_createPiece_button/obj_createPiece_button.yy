@@ -1,11 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_selection_screen",
+  "%Name":"obj_createPiece_button",
   "eventList":[
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_selection_screen",
+  "name":"obj_createPiece_button",
   "overriddenProperties":[],
   "parent":{
     "name":"Anime-Chess",
@@ -25,13 +26,15 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"","%Name":"pieceAssignment","filters":[],"listItems":[],"multiselect":false,"name":"pieceAssignment","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"obj_piece_Pawn","varType":5,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_temp",
-    "path":"sprites/spr_temp/spr_temp.yy",
+    "name":"spr_createPieceButton_TEMP",
+    "path":"sprites/spr_createPieceButton_TEMP/spr_createPieceButton_TEMP.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,4 +1,3 @@
-
 switch(global.select_state){
 	case (selectState.idle):
 			//do nothing

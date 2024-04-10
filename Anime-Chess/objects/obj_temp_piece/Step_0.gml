@@ -20,6 +20,7 @@ switch(currentAction){
 	case action.selectAction:
 		//terminate the rest of the step function. Do nothing
 		//wait for action to be selected
+		
 		return;		
 	case action.move:
 		if (instance_exists(global.selectedTiles[|0])){

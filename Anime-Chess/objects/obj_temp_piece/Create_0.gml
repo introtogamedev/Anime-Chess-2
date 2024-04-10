@@ -7,12 +7,12 @@ enum action{
 	special,
 	reset,
 	actionExecuted
-}
+} 
 name = "";
 	name += string(object_get_name(object_index)) +" "+ pieceName(real(teamAssignment));
 
 activated = false;
-
+//when created, default to already taken its action. 
 currentAction = action.actionExecuted
 
 actionLimit = 1;//the max action that this piece can take in one turn

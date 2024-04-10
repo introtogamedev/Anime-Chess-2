@@ -13,10 +13,10 @@ name = "";
 
 activated = false;
 
-currentAction = action.idle
+currentAction = action.actionExecuted
 
-actionCount = 0;//counts actions taken in one turn
 actionLimit = 1;//the max action that this piece can take in one turn
+actionCount = actionLimit;//counts actions taken in one turn
 
 buttongroup = new buttonGroup(self);
 	 buttongroup.addToButtonGroup(new selectionButton(spr_actionSelectionButton, action.move));

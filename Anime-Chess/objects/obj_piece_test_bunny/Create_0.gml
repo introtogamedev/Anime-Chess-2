@@ -5,5 +5,5 @@
 event_inherited();
 
 movementRestrictionFunction = function(){
-	return tile_get_restriction(carrier.coordinate, tileRestriction.surrounding);
+	return tile_get_restriction(carrier.coordinate, tileRestriction.pao);
 }

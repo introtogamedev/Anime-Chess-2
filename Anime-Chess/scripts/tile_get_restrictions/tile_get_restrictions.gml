@@ -2,7 +2,8 @@ enum tileRestriction{
 	X, Y, Z, XYZ,
 	//Z axis is the horizontal axis with coordinates, (x,y) -> (x+1, y+1)
 	surrounding,
-	horse
+	horse,
+	pao
 }
 
 function tile_get_restriction(position, restriction){
@@ -111,10 +112,41 @@ function tile_get_restriction(position, restriction){
 		        } 
 				break;
 				
+			case(tileRestriction.pao):
+				var relative_coordinates_to_check = [[-1, 0, -2, 0], [-1, -1, -2, -2], [0, -1, 0, -2], [1, 0, 2, 0], [1, 1, 2, 2], [0, 1, 0, 2]];
+		        for (var i = 0; i < 6; i++){
+					var surrounding_x_coordinate = x_coordinate + relative_coordinates_to_check[i][0];
+		            var surrounding_y_coordinate = y_coordinate + relative_coordinates_to_check[i][1];
+					var hopping_to_x_coordinate = x_coordinate + relative_coordinates_to_check[i][2];
+					var hopping_to_y_coordinate = y_coordinate + relative_coordinates_to_check[i][3];
+		            if (detect_tile_exists(surrounding_x_coordinate, surrounding_y_coordinate)){
+						var hopping_over = obj_tile_manager.grid[surrounding_x_coordinate][surrounding_y_coordinate];
+						if (hopping_over.carry !=  noone){
+							if (detect_tile_exists(hopping_to_x_coordinate, hopping_to_y_coordinate)){
+								var tile = obj_tile_manager.grid[hopping_to_x_coordinate, hopping_to_y_coordinate];
+								array_push(restriction_coordinates, tile);
+							}
+						}
+		            }
+		        }
+				break;
+				
 			default:
 				//do nothing
 			break;
 		}
     }
 	 return restriction_coordinates;
+}
+
+function detect_tile_exists(x_coordinate, y_coordinate){
+	if (x_coordinate < array_length(obj_tile_manager.grid)
+		&& x_coordinate >= 0
+		&& y_coordinate < array_length(obj_tile_manager.grid[x_coordinate])
+		&& y_coordinate >= 0
+		&& obj_tile_manager.grid[x_coordinate][y_coordinate] != 0){
+		return true;
+	}else{
+		return false;
+	}
 }

@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Buttons",
-    "path":"folders/Game Scene/Buttons.yy",
+    "path":"folders/Game Scene/Objects/Buttons.yy",
   },
   "parentObjectId":null,
   "persistent":false,

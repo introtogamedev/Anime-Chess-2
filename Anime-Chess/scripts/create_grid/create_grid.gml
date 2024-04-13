@@ -30,7 +30,7 @@ function create_grid(){
 				y_coordinate: y_coordinate + i
 			}
 			
-			var obj = instance_create_layer(x_position, y_position, "GRID", obj_basic_tile, variable_assignment);
+			var obj = instance_create_layer(x_position, y_position, "Board", obj_basic_tile, variable_assignment);
 			grid[variable_assignment.x_coordinate][variable_assignment.y_coordinate] = obj;
 
 		}
@@ -38,7 +38,8 @@ function create_grid(){
 	}
 	
 	#region Create Initial Pieces
-		var carryBLUE = instance_create_depth(0, 0, 0, obj_piece_King);
+
+		//var carryBLUE = instance_create_layer(0, 0, "Pieces", obj_piece_King);
 		var positionBLUE =[];
 		if (VERTICAL_GRID_HEIGHT < 3){
 			positionBLUE = [0,0]
@@ -47,11 +48,13 @@ function create_grid(){
 		}else{
 			positionBLUE = [round(VERTICAL_GRID_HEIGHT/4),round(VERTICAL_GRID_HEIGHT/4)];
 		}
-		set_tile_carry(positionBLUE, carryBLUE);
-		carryBLUE.teamAssignment = teamsEnum.TEAM_BLUE;
-		carryBLUE.sprite_index = spr_blue_king;
+		global.turnsystem.teams[global.turnsystem.currentTurn].create_piece(obj_piece_King, positionBLUE)
+		//set_tile_carry(positionBLUE, carryBLUE);
+		//carryBLUE.teamAssignment = teamsEnum.TEAM_BLUE;
+		//carryBLUE.sprite_index = spr_blue_king;
 		
-		var carryRED = instance_create_depth(0, 0, 0, obj_piece_King);
+		global.turnsystem.turn_next();
+		//var carryRED = instance_create_layer(0, 0, "Pieces", obj_piece_King);
 		var positionRED =[];
 		if (VERTICAL_GRID_HEIGHT <= 2){
 			positionRED = [HORIZONTAL_GRID_LENGTH-1, HORIZONTAL_GRID_LENGTH-1];
@@ -60,9 +63,12 @@ function create_grid(){
 		}else{
 			positionRED = [HORIZONTAL_GRID_LENGTH + VERTICAL_GRID_HEIGHT/4, HORIZONTAL_GRID_LENGTH + VERTICAL_GRID_HEIGHT/4];
 		}
-		set_tile_carry(positionRED, carryRED);
-		carryRED.teamAssignment = teamsEnum.TEAM_RED;
-		carryRED.sprite_index = spr_red_king;
+		global.turnsystem.teams[global.turnsystem.currentTurn].create_piece(obj_piece_King, positionRED)
+		//set_tile_carry(positionRED, carryRED);
+		//carryRED.teamAssignment = teamsEnum.TEAM_RED;
+		//carryRED.sprite_index = spr_red_king;
+		
+		global.turnsystem.turn_next();
 	#endregion
 }
 

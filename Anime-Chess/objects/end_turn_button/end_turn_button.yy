@@ -3,14 +3,13 @@
   "%Name":"end_turn_button",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"end_turn_button",
   "overriddenProperties":[],
   "parent":{
     "name":"Buttons",
-    "path":"folders/Game Scene/Buttons.yy",
+    "path":"folders/Game Scene/Objects/Buttons.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"turn_button",
-    "path":"sprites/turn_button/turn_button.yy",
+    "name":"spr_end_turn_button",
+    "path":"sprites/spr_end_turn_button/spr_end_turn_button.yy",
   },
   "spriteMaskId":null,
   "visible":true,

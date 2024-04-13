@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Managers",
-    "path":"folders/Game Scene/Managers.yy",
+    "path":"folders/Game Scene/Objects/Managers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

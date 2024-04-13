@@ -13,7 +13,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Pieces",
-    "path":"folders/Game Scene/Pieces.yy",
+    "path":"folders/Game Scene/Objects/Pieces.yy",
   },
   "parentObjectId":null,
   "persistent":false,

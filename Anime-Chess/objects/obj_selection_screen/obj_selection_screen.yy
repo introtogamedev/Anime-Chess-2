@@ -8,8 +8,8 @@
   "name":"obj_selection_screen",
   "overriddenProperties":[],
   "parent":{
-    "name":"Game Scene",
-    "path":"folders/Game Scene.yy",
+    "name":"Objects",
+    "path":"folders/Game Scene/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_temp",
-    "path":"sprites/spr_temp/spr_temp.yy",
+    "name":"spr_temp_unitSelectionPanel",
+    "path":"sprites/spr_temp_unitSelectionPanel/spr_temp_unitSelectionPanel.yy",
   },
   "spriteMaskId":null,
   "visible":true,

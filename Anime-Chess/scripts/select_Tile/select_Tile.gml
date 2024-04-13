@@ -31,21 +31,7 @@ function addTile_ToList(list, position, restriction = []){
 	var x_coordinate = position[0];
 	var y_coordinate = position[1];
 	
-	if (array_length(restriction) != 0){
-		var withinRestriction = false
-		for (var i = 0; i < array_length(restriction); i ++){
-			if (position == restriction[i].coordinate){
-				withinRestriction = true
-			}
-		}
-		if (withinRestriction == false){
-			if (DEBUG_MODE_SELECT){show_debug_message("Failed to add Tile at {0} due to being not complying with restriction {1}.", position, restriction);}
-			global.selectedUnit.currentAction = action.reset;
-			//global.select_state  = selectState.deselect// not necessary
-			if (DEBUG_MODE_SELECT){show_debug_message("Reset Selection Mode and reset action of unit {0}.", global.selectedUnit.name);}
-			return list 
-		}
-	}
+	 
 		
 	
 	

@@ -28,7 +28,7 @@ function team(_teamAssignment) constructor{
 		currentEnergy = 0;
 	}
 	
-	function create_piece(piece = global.createUnitType, position = global.mouse_coordinate){
+	create_piece = function (piece = global.createUnitType, position = [], restricted = true){
 		if(not createdPieces < createPiece_limit and canAct()){
 			if (DEBUG_MODE_ACTION){ show_debug_message("Unable to created piece becausae reached turn creation limit");}
 			return;
@@ -40,25 +40,31 @@ function team(_teamAssignment) constructor{
 			return;
 		}
 
-		if (position == global.mouse_coordinate){
+		if (array_length(position) == 0){
 			if (mouse_check_outOfBounds()){
 				if (DEBUG_MODE_CARRY){show_debug_message("Mouse out of bounds! unable to create piece at location!");}
 				return;
 			}else{
+				position = global.mouse_coordinate;
 				if (DEBUG_MODE_CARRY){show_debug_message("Attempting to create piece at default position: {0}....", position);}
 			}
 		}else{
 			if (DEBUG_MODE_CARRY){show_debug_message("Attempting to create piece at indicated position: {0}....", position);}
 		}	
 
+		//EXECUTE RESTRICTIONS
+		
+		
 		if (get_tile_carry(position) == noone){
 			var variableAssignment = {
 				teamAssignment : global.turnsystem.currentTurn
 			}
-			var carry = instance_create_depth(0, 0, 0, global.createUnitType, variableAssignment);
+			var carry = instance_create_layer(0, 0, "Pieces", piece, variableAssignment);
 			set_tile_carry(position, carry);
 			actionCompleted();
 			createdPieces ++;
+			if (DEBUG_MODE_CARRY or DEBUG_MODE_ACTION){
+				show_debug_message("Piece {0} created at position: {1}", carry.name, position);}
 		}else{
 			//ERROR MESSAGE
 			if (DEBUG_MODE_CARRY){show_debug_message_ext(
@@ -69,7 +75,7 @@ function team(_teamAssignment) constructor{
 	}
 
 	
-	function pieceName(){
+	pieceName = function (){
 	    static teamNames = 0;
 		return teamNames ++;
 	}

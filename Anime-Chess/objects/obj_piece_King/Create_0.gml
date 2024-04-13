@@ -3,7 +3,14 @@
 
 // Inherit the parent event
 event_inherited();
+
+currentAction = action.idle
+
+actionLimit = 1;//the max action that this piece can take in one turn
+actionCount = 0;//counts actions taken in one turn
+
 /*
 movementRestrictionFunction = function(){
 	return tile_get_restriction(carrier.coordinate, tileRestriction.surrounding)
 }*/
+

@@ -6,7 +6,7 @@
   "name":"selectButton_Constructor",
   "parent":{
     "name":"Constructors",
-    "path":"folders/Game Scene/Constructors.yy",
+    "path":"folders/Game Scene/Objects/Constructors.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

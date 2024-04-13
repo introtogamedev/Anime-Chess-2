@@ -9,8 +9,8 @@
   "name":"obj_createPiece_button",
   "overriddenProperties":[],
   "parent":{
-    "name":"Anime-Chess",
-    "path":"Anime-Chess.yyp",
+    "name":"Buttons",
+    "path":"folders/Game Scene/Buttons.yy",
   },
   "parentObjectId":null,
   "persistent":false,

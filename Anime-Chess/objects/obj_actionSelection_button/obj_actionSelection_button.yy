@@ -10,8 +10,8 @@
   "name":"obj_actionSelection_button",
   "overriddenProperties":[],
   "parent":{
-    "name":"Other Objects",
-    "path":"folders/Game Scene/Other Objects.yy",
+    "name":"Buttons",
+    "path":"folders/Game Scene/Buttons.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -33,7 +33,7 @@
       ],"listItems":[],"multiselect":false,"name":"icon","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_actionSelectionButton","varType":5,},
     {"$GMObjectProperty":"","%Name":"associate","filters":[
         "GMObject",
-      ],"listItems":[],"multiselect":false,"name":"associate","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"obj_temp_piece","varType":5,},
+      ],"listItems":[],"multiselect":false,"name":"associate","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"obj_piece","varType":5,},
     {"$GMObjectProperty":"","%Name":"action_representation","filters":[],"listItems":[],"multiselect":false,"name":"action_representation","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"action.move","varType":4,},
     {"$GMObjectProperty":"","%Name":"button_group","filters":[],"listItems":[],"multiselect":true,"name":"button_group","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":6,},
   ],

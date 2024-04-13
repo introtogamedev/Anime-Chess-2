@@ -1,0 +1,1 @@
+global.turnsystem.teams[global.turnsystem.currentTurn].create_piece();

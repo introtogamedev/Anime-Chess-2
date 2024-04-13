@@ -6,15 +6,18 @@ if (global.select_state == selectState.idle){
 switch(currentAction){
 	case action.deactivated:
 		// do nothing. Wait until updated to another state
+		image_index = 2;
 		if (global.turnsystem.currentTurn == teamAssignment){
 			currentAction = action.idle;
 			actionCount = 0;
+			image_index = 0;
 		}
 	return;
 	case action.idle:
 		if(global.selectedUnit == noone and global.selectedTile = carrier){
 			global.selectedUnit = self;
 			initiateAction(action.selectAction);
+			image_index = 1;
 		}
 		return;
 	case action.selectAction:
@@ -53,12 +56,14 @@ switch(currentAction){
 	case action.reset:
 		global.select_state = selectState.deselect;
 		currentAction = action.idle;
+		image_index = 0;
 		break;
 	case (action.actionExecuted):
 		//if actions not at limit, continue actions. 
 		if (actionCount < actionLimit){
 			currentAction = action.idle
 		}
+		image_index = 2;
 		break;
 	default: 
 		//do nothing

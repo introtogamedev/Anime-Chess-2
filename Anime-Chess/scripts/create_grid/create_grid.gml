@@ -2,7 +2,6 @@
 function create_grid(){
 	var y_position = STARTING_Y_POSITION;
 	var x_cor_offset = floor( (VERTICAL_GRID_HEIGHT -1)/2);
-	show_debug_message(x_cor_offset)
 	for (var h = 0 ; h < VERTICAL_GRID_HEIGHT ; h++){
 		
 		var x_coordinate = 0
@@ -49,7 +48,7 @@ function create_grid(){
 			positionBLUE = [round(VERTICAL_GRID_HEIGHT/4),round(VERTICAL_GRID_HEIGHT/4)];
 		}
 		set_tile_carry(positionBLUE, carryBLUE);
-		carryBLUE.teamAssignment = team.TEAM_BLUE;
+		carryBLUE.teamAssignment = teamsEnum.TEAM_BLUE;
 		carryBLUE.sprite_index = spr_blue_king;
 		
 		var carryRED = instance_create_depth(0, 0, 0, obj_piece_King);
@@ -62,7 +61,7 @@ function create_grid(){
 			positionRED = [HORIZONTAL_GRID_LENGTH + VERTICAL_GRID_HEIGHT/4, HORIZONTAL_GRID_LENGTH + VERTICAL_GRID_HEIGHT/4];
 		}
 		set_tile_carry(positionRED, carryRED);
-		carryRED.teamAssignment = team.TEAM_RED;
+		carryRED.teamAssignment = teamsEnum.TEAM_RED;
 		carryRED.sprite_index = spr_red_king;
 	#endregion
 }

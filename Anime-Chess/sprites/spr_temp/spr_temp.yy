@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Anime-Chess",
-    "path":"Anime-Chess.yyp",
+    "name":"Temporary",
+    "path":"folders/Temporary.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

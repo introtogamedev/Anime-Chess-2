@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Game Scene/Sprites.yy",
+    "name":"Tiles",
+    "path":"folders/Game Scene/Sprites/Tiles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

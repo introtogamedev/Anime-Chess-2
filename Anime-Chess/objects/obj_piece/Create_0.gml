@@ -9,7 +9,8 @@ enum action{
 	actionExecuted
 } 
 name = "";
-	name += string(object_get_name(object_index)) +" "+ pieceName(real(teamAssignment));
+	var teamName = global.turnsystem.teams[global.turnsystem.currentTurn].pieceName();
+	name += string(object_get_name(object_index)) +" "+ string(teamName);
 
 activated = false;
 //when created, default to already taken its action. 
@@ -49,6 +50,7 @@ initiateAction = function (_action){
 			break;
 		case (action.actionExecuted):
 			actionCount++;
+			global.turnsystem.teams[global.turnsystem.currentTurn].actionCompleted();
 			global.select_state = selectState.deselect;
 			//do nothing
 		break;
@@ -83,3 +85,7 @@ attackRestrictionFunction = function(){
 }
 //OVERRIDE
 attackSelectableTargets = 1;
+
+//OVERRIDE
+sprite_index = sprite_team[teamAssignment];
+image_speed = 0;//temorary

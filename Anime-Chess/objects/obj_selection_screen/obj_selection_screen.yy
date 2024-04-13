@@ -8,8 +8,8 @@
   "name":"obj_selection_screen",
   "overriddenProperties":[],
   "parent":{
-    "name":"Anime-Chess",
-    "path":"Anime-Chess.yyp",
+    "name":"Game Scene",
+    "path":"folders/Game Scene.yy",
   },
   "parentObjectId":null,
   "persistent":false,

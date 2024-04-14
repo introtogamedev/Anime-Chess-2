@@ -1,4 +1,4 @@
-function move_piece_to(piece, position, movementRestriction = tile_get_restriction(piece.carrier.coordinate, tileRestriction.surrounding)){
+function move_piece_to(piece, position, movementRestriction = []){
 	var x_coordinate = position[0];
     var y_coordinate = position[1];
     if (not instance_exists(obj_tile_manager)){
@@ -9,11 +9,14 @@ function move_piece_to(piece, position, movementRestriction = tile_get_restricti
 	var moveFrom = piece.carrier.coordinate;
 	
 	var canMove = false;
-	
-	for (var i = 0; i < array_length(movementRestriction); i ++){
-		if (moveToTILE == movementRestriction[i]){
-			canMove = true;
-			break;
+	if (array_length(movementRestriction) <= 0){
+		canMove = true;	
+	}else{
+		for (var i = 0; i < array_length(movementRestriction); i ++){
+			if (moveToTILE == movementRestriction[i]){
+				canMove = true;
+				break;
+			}
 		}
 	}
 	

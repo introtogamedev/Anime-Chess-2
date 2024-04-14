@@ -26,9 +26,15 @@ switch(currentAction){
 		
 		return;		
 	case action.move:
-		if (instance_exists(global.selectedTiles[|0])){
+		if (instance_exists(global.selectedTiles[|0]) or moveOverride){
 			var movementRestriction = movementRestrictionFunction();
-			var moveResult = move_piece_to(self, global.selectedTiles[|0].coordinate, movementRestriction);
+			var moveResult = false;
+			if (moveOverride){
+				 moveResult = move_piece_to(self,movementRestriction);
+			}else{
+				moveResult = move_piece_to(self, global.selectedTiles[|0].coordinate, movementRestriction);
+			}
+			
 			if (moveResult == true){
 				initiateAction(action.actionExecuted)
 			}else{
@@ -43,7 +49,7 @@ switch(currentAction){
 			for(var i = 0; i < attackSelectableTargets; i ++ ){
 				attackTilesPos[i] = global.selectedTiles[|i].coordinate;
 			}
-			var attackResult = AttackFunction(attackTilesPos);
+			var attackResult = attackFunction(attackTilesPos);
 			if(attackResult == true){
 				initiateAction(action.actionExecuted)
 			}else{
@@ -62,8 +68,10 @@ switch(currentAction){
 		//if actions not at limit, continue actions. 
 		if (actionCount < actionLimit){
 			currentAction = action.idle
+			image_index = 0;
+		}else{
+			image_index = 2;
 		}
-		image_index = 2;
 		break;
 	default: 
 		//do nothing

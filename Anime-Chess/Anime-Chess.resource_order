@@ -1,14 +1,14 @@
 {
   "FolderOrderSettings":[
-    {"name":"Constructors","order":1,"path":"folders/Game Scene/Objects/Constructors.yy",},
     {"name":"Objects","order":2,"path":"folders/Game Scene/Objects.yy",},
+    {"name":"Constructors","order":1,"path":"folders/Game Scene/Objects/Constructors.yy",},
     {"name":"Managers","order":2,"path":"folders/Game Scene/Objects/Managers.yy",},
     {"name":"Pieces","order":3,"path":"folders/Game Scene/Objects/Pieces.yy",},
     {"name":"Scrips","order":4,"path":"folders/Game Scene/Objects/Scrips.yy",},
+    {"name":"Tiles","order":5,"path":"folders/Game Scene/Objects/Tiles.yy",},
     {"name":"Sprites","order":3,"path":"folders/Game Scene/Sprites.yy",},
     {"name":"Pieces","order":1,"path":"folders/Game Scene/Sprites/Pieces.yy",},
     {"name":"Tiles","order":2,"path":"folders/Game Scene/Sprites/Tiles.yy",},
-    {"name":"Tiles","order":5,"path":"folders/Game Scene/Objects/Tiles.yy",},
     {"name":"Temporary","order":7,"path":"folders/Temporary.yy",},
   ],
   "ResourceOrderSettings":[
@@ -18,7 +18,6 @@
     {"name":"obj_piece_Pawn","order":2,"path":"objects/obj_piece_Pawn/obj_piece_Pawn.yy",},
     {"name":"obj_piece_Pufferfish","order":3,"path":"objects/obj_piece_Pufferfish/obj_piece_Pufferfish.yy",},
     {"name":"obj_piece_test_bunny","order":5,"path":"objects/obj_piece_test_bunny/obj_piece_test_bunny.yy",},
-    {"name":"obj_piece_test_pufferfish","order":4,"path":"objects/obj_piece_test_pufferfish/obj_piece_test_pufferfish.yy",},
     {"name":"obj_selection_screen","order":6,"path":"objects/obj_selection_screen/obj_selection_screen.yy",},
     {"name":"obj_tile_manager","order":1,"path":"objects/obj_tile_manager/obj_tile_manager.yy",},
     {"name":"obj_turn_manager","order":2,"path":"objects/obj_turn_manager/obj_turn_manager.yy",},
@@ -34,7 +33,6 @@
     {"name":"tile_carry","order":1,"path":"scripts/tile_carry/tile_carry.yy",},
     {"name":"tile_get_restrictions","order":4,"path":"scripts/tile_get_restrictions/tile_get_restrictions.yy",},
     {"name":"turnManager_Constructor","order":1,"path":"scripts/turnManager_Constructor/turnManager_Constructor.yy",},
-    {"name":"ezgif_5_12b9a03402","order":8,"path":"sprites/ezgif_5_12b9a03402/ezgif_5_12b9a03402.yy",},
     {"name":"spr_actionSelectionButton1","order":1,"path":"sprites/spr_actionSelectionButton1/spr_actionSelectionButton1.yy",},
     {"name":"spr_actionSelectionButton2","order":2,"path":"sprites/spr_actionSelectionButton2/spr_actionSelectionButton2.yy",},
     {"name":"spr_basic_tile_1","order":1,"path":"sprites/spr_basic_tile_1/spr_basic_tile_1.yy",},

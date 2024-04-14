@@ -33,6 +33,7 @@ def = startingDEF;
 hp = maxHealth;
 
 isSubUnit = false
+moveOverride = false;
 
 carrier.selected = false;
 
@@ -44,9 +45,11 @@ initiateAction = function (_action){
 			break;
 		case(action.move):
 			global.select_state = selectState.tilesSelect
-			var movementRestriction = movementRestrictionFunction();
-			highlight_tiles(movementRestriction);
-			global.selectRestriction = movementRestriction;
+			if (not moveOverride){
+				var movementRestriction = movementRestrictionFunction();
+				highlight_tiles(movementRestriction);
+				global.selectRestriction = movementRestriction;
+			}
 			break;
 		case(action.attack):	
 			global.select_state = selectState.tilesSelect
@@ -58,6 +61,7 @@ initiateAction = function (_action){
 			actionCount++;
 			global.turnsystem.teams[global.turnsystem.currentTurn].actionCompleted();
 			global.select_state = selectState.deselect;
+			deselect_unit();
 			//do nothing
 			break;
 		case action.reset:
@@ -70,10 +74,22 @@ initiateAction = function (_action){
 			if (isSubUnit == false){
 				global.turnsystem.teams[teamAssignment].createdPieces --;
 			}
+			onDeathFunction();
 			instance_destroy(self);
 			break;
 	}
 	currentAction = _action
+}
+
+setActionLimit = function(number,setMin = true){
+	var difference =  number - actionLimit
+	actionLimit = number;	
+	
+	if ( setMin and difference < 0){
+		actionCount += difference;
+	}else if (setMin == false){
+		actionCount = actionLimit;
+	}
 }
 
 //OPTIONAL OVERRIDE
@@ -86,9 +102,9 @@ takeDamage = function (damage, defIgnored){
 }
 
 //OVERRIDE
-AttackFunction = function (selection){
+attackFunction = function (selection){
 	var attackRestriction = attackRestrictionFunction();
-	var attackResult = attack_pieces(self, selection, atk, attackRestriction, true);
+	var attackResult = attack_pieces(self, selection, atk, attackRestriction, false);
 	return attackResult;
 }
 
@@ -104,4 +120,8 @@ attackRestrictionFunction = function(){
 //OVERRIDE
 attackSelectableTargets = 1;
 
+//OVERRIDE
+onDeathFunction = function (){
+	//do nothing. 
+}
 

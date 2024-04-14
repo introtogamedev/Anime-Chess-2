@@ -1,6 +1,6 @@
-global.createUnitType = obj_piece_test_pufferfish;//temporary
+global.createUnitType = obj_piece_Pufferfish;//temporary
 unitArray = [
-	obj_piece_test_pufferfish, 
+	obj_piece_Pufferfish, 
 	obj_piece_test_bunny, 
 	obj_piece_Pawn
 	];

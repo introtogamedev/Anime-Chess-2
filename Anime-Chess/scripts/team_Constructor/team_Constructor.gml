@@ -34,6 +34,7 @@ function team(_teamAssignment) constructor{
 	}
 	
 	create_piece = function (piece = global.createUnitType, position = [], restricted = true){
+		#region Creation Checks
 		if (createdPieces >= createdPiecesLimit){
 			if (DEBUG_MODE_ACTION){ show_debug_message("Unable to created piece because exceeds creation limit");}
 			return;
@@ -57,10 +58,10 @@ function team(_teamAssignment) constructor{
 			if (DEBUG_MODE_CARRY){show_debug_message("Attempting to create piece at indicated position: {0}....", position);}
 		}	
 
-		//EXECUTE RESTRICTIONS
-		
+		//PUT RESTRICTION CODE HERE. ------------------------------------------------------------------------------------------
 		
 		if (get_tile_carry(position) == noone){
+			
 			var variableAssignment = {
 				teamAssignment : global.turnsystem.currentTurn
 			}
@@ -76,6 +77,7 @@ function team(_teamAssignment) constructor{
 			actionCompleted();
 			createdPieces ++;
 			currentEnergy -= piece.cost
+			
 			if (DEBUG_MODE_CARRY or DEBUG_MODE_ACTION){
 				show_debug_message("Piece {0} created at position: {1}", carry.name, position);}
 		}else{

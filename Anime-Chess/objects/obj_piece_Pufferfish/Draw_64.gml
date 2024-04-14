@@ -4,6 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
-movementRestrictionFunction = function(){
-	return tile_get_restriction(carrier.coordinate, tileRestriction.surrounding);
-}
+draw_text(10, y, actionCount)
+
+draw_text(10, y+10, actionLimit)

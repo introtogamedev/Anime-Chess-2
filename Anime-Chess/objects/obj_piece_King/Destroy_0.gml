@@ -4,4 +4,5 @@
 // Inherit the parent event
 event_inherited();
 
+show_debug_message("KING KILLED! ROOM RESTARTING....");
 game_restart();

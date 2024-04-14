@@ -2,6 +2,7 @@ global.createUnitType = obj_piece_test_pufferfish;//temporary
 unitArray = [
 	obj_piece_test_pufferfish, 
 	obj_piece_test_bunny, 
+	obj_piece_Pawn
 	];
 		
 create_selection_screen = function (width, height){
@@ -26,7 +27,7 @@ create_selection_screen = function (width, height){
 		
 		instance.x = placementx;
 		instance.y = placementy;
-					show_debug_message([placementx, placementy])
+		//show_debug_message([placementx, placementy])
 		
 	}
 }

@@ -1,6 +1,6 @@
 ///@description State Detect/Update
 if (hp <= 0){
-	instance_destroy(self);
+	initiateAction(action.death);
 }
 
 if(global.turnsystem.currentTurn != teamAssignment){

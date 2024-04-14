@@ -6,11 +6,15 @@ enum action{
 	attack,
 	special,
 	reset,
-	actionExecuted
+	actionExecuted,
+	death
 } 
 name = "";
-	var teamName = global.turnsystem.teams[global.turnsystem.currentTurn].pieceName();
-	name += string(object_get_name(object_index)) +" "+ string(teamName);
+	var teamName = global.turnsystem.teams[teamAssignment].pieceName();
+	name += "[" + string(string(teamAssignment) + "| " + object_get_name(object_index)) +"| "+ string(teamName) + "]";
+
+sprite_index = sprite_team[teamAssignment];
+image_speed = 0;//temorary
 
 activated = false;
 //when created, default to already taken its action. 
@@ -27,6 +31,8 @@ buttongroup = new buttonGroup(self);
 atk = startingATK;
 def = startingDEF; 
 hp = maxHealth;
+
+isSubUnit = false
 
 carrier.selected = false;
 
@@ -53,24 +59,36 @@ initiateAction = function (_action){
 			global.turnsystem.teams[global.turnsystem.currentTurn].actionCompleted();
 			global.select_state = selectState.deselect;
 			//do nothing
-		break;
+			break;
 		case action.reset:
 			global.select_state = selectState.deselect;
 			currentAction = action.idle;
-		break;
+			break;
+		case (action.death):
+			global.select_state = selectState.deselect;
+			set_tile_carry(carrier.coordinate, noone);
+			if (isSubUnit == false){
+				global.turnsystem.teams[teamAssignment].createdPieces --;
+			}
+			instance_destroy(self);
+			break;
 	}
 	currentAction = _action
 }
 
 //OPTIONAL OVERRIDE
-takeDamage = function (damage){
-	hp -= damage;
+takeDamage = function (damage, defIgnored){
+	if (defIgnored){
+		hp -= damage;
+	}else{
+		hp -= (damage-def);
+	}
 }
 
 //OVERRIDE
 AttackFunction = function (selection){
 	var attackRestriction = attackRestrictionFunction();
-	var attackResult = attack_pieces(self, selection, atk, attackRestriction);
+	var attackResult = attack_pieces(self, selection, atk, attackRestriction, true);
 	return attackResult;
 }
 
@@ -86,6 +104,4 @@ attackRestrictionFunction = function(){
 //OVERRIDE
 attackSelectableTargets = 1;
 
-//OVERRIDE
-sprite_index = sprite_team[teamAssignment];
-image_speed = 0;//temorary
+

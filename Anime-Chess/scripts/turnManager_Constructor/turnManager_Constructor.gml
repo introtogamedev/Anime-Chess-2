@@ -23,12 +23,16 @@ function turnManager() constructor{
 		//reset all piece states to default
 		//obj_temp_piece.reset();
 		
+		teams[currentTurn].increaseMaxEnergy();
+		teams[currentTurn].reset();
+		
 		currentTurn ++;
 		if (currentTurn >= turn.SYSTEM_TURN){
 			currentTurn = 0;
 		}
-		teams[currentTurn].reset();
-	
+		
+
+
 		//reset tile highlights
 		obj_basic_tile.display = tileDisplay.original
 		

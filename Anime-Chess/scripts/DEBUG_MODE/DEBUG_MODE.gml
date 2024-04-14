@@ -4,7 +4,7 @@
 		- Attack states and errors
 		- special abilities: its execution states and errors
 */
-#macro DEBUG_MODE_ACTION false
+#macro DEBUG_MODE_ACTION true
 
 /*
 	Any Select related function and warning.

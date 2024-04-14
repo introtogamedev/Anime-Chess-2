@@ -1,4 +1,4 @@
-function attack_pieces(attacker, tilesPos, damage, attackRestriction){
+function attack_pieces(attacker, tilesPos, damage, attackRestriction, defIgnore = false,){
     if (not instance_exists(obj_tile_manager)){
 		return;
 	}
@@ -9,15 +9,15 @@ function attack_pieces(attacker, tilesPos, damage, attackRestriction){
 			if (foundPiece){
 				continue;
 			}else{
-				if (DEBUG_MODE_ACTION){show_debug_message("Matching:" + string(tilesPos[i]) + "" + string(attackRestriction[j].coordinate));}
+				//if (DEBUG_MODE_ACTION){show_debug_message("Matching:" + string(tilesPos[i]) + "" + string(attackRestriction[j].coordinate));}
 				if (tilesPos[i] == attackRestriction[j].coordinate){
 					foundPiece = true;
 					var attackedTile = grid[tilesPos[i][0], tilesPos[i][1]];
 					var attackedPiece = get_tile_carry(tilesPos[i]);
 					if (instance_exists(attackedPiece)){
 						if (attackedPiece.teamAssignment != attacker.teamAssignment){
-							if (DEBUG_MODE_ACTION){show_debug_message("Piece Found! Attack!");}
-							attackedPiece.takeDamage(damage);
+							if (DEBUG_MODE_ACTION){show_debug_message("Piece Found! Attack! {0}, {1}, {2}", attackedPiece.name, attacker.name, defIgnore);}
+							attackedPiece.takeDamage(damage, defIgnore);
 							return true
 						}else{
 							if (DEBUG_MODE_ACTION){show_debug_message("Piece Found! Not attacked because Piece is ally!");}

@@ -1,14 +1,13 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function team(_teamAssignment) constructor{
 	maxAllowedActions =  10;
 	currentActions = 0;
 	
-	maxEnergy = 10;
+	maxEnergyCap = 10;
+	maxEnergy = 0;
 	currentEnergy = 0;
 
-	createPiece_limit = 1;
-	createdPieces = 0;
+	createdPiecesLimit = 5;
+	createdPieces = -1;//1 reserved for the King.
 	
 	actionCompleted = function(){
 		currentActions ++;
@@ -22,15 +21,21 @@ function team(_teamAssignment) constructor{
 		return false
 	}
 	
+	increaseMaxEnergy = function(){
+		if (maxEnergy < maxEnergyCap){
+			maxEnergy ++;
+			if (DEBUG_MODE_TURN){show_debug_message("Increased Max Energy to {0}", maxEnergy);}
+		}
+	}
+	
 	reset = function(){
 		currentActions = 0;
-		createdPieces = 0;
-		currentEnergy = 0;
+		currentEnergy = maxEnergy;
 	}
 	
 	create_piece = function (piece = global.createUnitType, position = [], restricted = true){
-		if(not createdPieces < createPiece_limit and canAct()){
-			if (DEBUG_MODE_ACTION){ show_debug_message("Unable to created piece becausae reached turn creation limit");}
+		if (createdPieces >= createdPiecesLimit){
+			if (DEBUG_MODE_ACTION){ show_debug_message("Unable to created piece because exceeds creation limit");}
 			return;
 		}
 		if (object_get_parent(piece) = obj_piece or object_get_parent(piece) == -100){
@@ -60,9 +65,17 @@ function team(_teamAssignment) constructor{
 				teamAssignment : global.turnsystem.currentTurn
 			}
 			var carry = instance_create_layer(0, 0, "Pieces", piece, variableAssignment);
+			
+			if (carry.cost > currentEnergy){
+				if (DEBUG_MODE_ACTION){ show_debug_message("Unable to created piece because exceeds current energy");}
+				instance_destroy(carry)
+				return;
+			}
+			
 			set_tile_carry(position, carry);
 			actionCompleted();
 			createdPieces ++;
+			currentEnergy -= piece.cost
 			if (DEBUG_MODE_CARRY or DEBUG_MODE_ACTION){
 				show_debug_message("Piece {0} created at position: {1}", carry.name, position);}
 		}else{
@@ -74,11 +87,10 @@ function team(_teamAssignment) constructor{
 		}
 	}
 
-	
+	//returns the piece number. This includes all pieces created which called this function. 
 	pieceName = function (){
 	    static teamNames = 0;
 		return teamNames ++;
 	}
 }
-
 

@@ -40,6 +40,7 @@
     {"id":{"name":"obj_piece_King","path":"objects/obj_piece_King/obj_piece_King.yy",},},
     {"id":{"name":"obj_piece_Pawn","path":"objects/obj_piece_Pawn/obj_piece_Pawn.yy",},},
     {"id":{"name":"obj_piece_Pufferfish","path":"objects/obj_piece_Pufferfish/obj_piece_Pufferfish.yy",},},
+    {"id":{"name":"obj_piece_Infantry","path":"objects/obj_piece_Infantry/obj_piece_Infantry.yy",},},
     {"id":{"name":"obj_piece_test_bunny","path":"objects/obj_piece_test_bunny/obj_piece_test_bunny.yy",},},
     {"id":{"name":"obj_piece","path":"objects/obj_piece/obj_piece.yy",},},
     {"id":{"name":"obj_selection_screen","path":"objects/obj_selection_screen/obj_selection_screen.yy",},},

@@ -9,15 +9,17 @@ movementRestrictionFunction = function(){
 }
 
 attackFunction = function (selection){
-	for (var i = 0; i < array_length(selection); i ++){
-		if (instance_exists(get_tile_carry(selection[i]))){
-			if (get_tile_carry(selection[i]).object_index == obj_piece_King){
-				instance_destroy(get_tile_carry(selection[i]))
-			break;
-			}
-		}
-	}
 	var attackRestriction = attackRestrictionFunction();
 	var attackResult = attack_pieces(self, selection, atk, attackRestriction, true);
 	return attackResult;
+}
+
+onDeathFunction = function(){
+	if (DEBUG_MODE_ACTION){ show_debug_message("TRIGGERED ON DEATH of {0} ", self.name);}
+	var onDeathAttackRestriction = tile_get_restriction(carrier.coordinate, tileRestriction.surrounding);
+	for(var i = 0; i < array_length(onDeathAttackRestriction); i ++ ){
+		if (get_tile_carry(onDeathAttackRestriction[i].coordinate) != noone){
+			instance_destroy(get_tile_carry(onDeathAttackRestriction[i].coordinate));
+		}
+	}
 }

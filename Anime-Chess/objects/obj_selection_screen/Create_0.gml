@@ -2,7 +2,8 @@ global.createUnitType = obj_piece_Pufferfish;//temporary
 unitArray = [
 	obj_piece_Pufferfish, 
 	obj_piece_test_bunny, 
-	obj_piece_Pawn
+	obj_piece_Pawn,
+	obj_piece_Infantry
 	];
 		
 create_selection_screen = function (width, height){

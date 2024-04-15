@@ -56,4 +56,3 @@ onDeathFunction = function(){
 	if (DEBUG_MODE_ACTION){ show_debug_message("TRIGGERED ON DEATH of {0} ", self.name);}
 	attackFunction(carrier.coordinate, true);
 }
-//Deathrattle: Deal 1 damage to all surrounding tiles, ignore defence

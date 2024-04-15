@@ -11,6 +11,7 @@ switch(currentAction){
 			currentAction = action.idle;
 			actionCount = 0;
 			image_index = 0;
+			currentChainActionSequencePosition = 0;
 		}
 	return;
 	case action.idle:
@@ -27,10 +28,10 @@ switch(currentAction){
 		return;		
 	case action.move:
 		if (instance_exists(global.selectedTiles[|0]) or moveOverride){
-			var movementRestriction = movementRestrictionFunction();
 			var moveResult = false;
 			if (moveOverride){
 				 moveResult = move_piece_to(self,movementRestriction);
+
 			}else{
 				moveResult = move_piece_to(self, global.selectedTiles[|0].coordinate, movementRestriction);
 			}
@@ -44,10 +45,12 @@ switch(currentAction){
 		break;
 	
 	case action.attack:
-		if (instance_exists(global.selectedTiles[|attackSelectableTargets-1])){
+		if (instance_exists(global.selectedTiles[|attackSelectableTargets-1]) or attackOverride){
 			var attackTilesPos = [] 
-			for(var i = 0; i < attackSelectableTargets; i ++ ){
-				attackTilesPos[i] = global.selectedTiles[|i].coordinate;
+			if(not attackOverride){
+				for(var i = 0; i < attackSelectableTargets; i ++ ){
+					attackTilesPos[i] = global.selectedTiles[|i].coordinate;
+				}
 			}
 			var attackResult = attackFunction(attackTilesPos);
 			if(attackResult == true){

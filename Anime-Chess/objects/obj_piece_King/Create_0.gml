@@ -3,10 +3,10 @@
 
 // Inherit the parent event
 event_inherited();
-
+hasActionSequence = false
 currentAction = action.idle
 
-actionLimit = 1;//the max action that this piece can take in one turn
+//actionLimit = 1;//the max action that this piece can take in one turn
 actionCount = 0;//counts actions taken in one turn
 
 /*

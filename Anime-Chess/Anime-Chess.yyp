@@ -55,7 +55,6 @@
     {"id":{"name":"mouse_check_outOfBounds","path":"scripts/mouse_check_outOfBounds/mouse_check_outOfBounds.yy",},},
     {"id":{"name":"move_piece","path":"scripts/move_piece/move_piece.yy",},},
     {"id":{"name":"select_Tile","path":"scripts/select_Tile/select_Tile.yy",},},
-    {"id":{"name":"selectButton_Constructor","path":"scripts/selectButton_Constructor/selectButton_Constructor.yy",},},
     {"id":{"name":"team_Constructor","path":"scripts/team_Constructor/team_Constructor.yy",},},
     {"id":{"name":"tile_carry","path":"scripts/tile_carry/tile_carry.yy",},},
     {"id":{"name":"tile_get_restrictions","path":"scripts/tile_get_restrictions/tile_get_restrictions.yy",},},

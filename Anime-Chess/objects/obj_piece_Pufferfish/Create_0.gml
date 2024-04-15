@@ -5,11 +5,9 @@
 event_inherited();
 
 setActionLimit(2, false);
+chainActionSequence = [action.move];
+hasActionSequence = false;
 
-buttongroup = new buttonGroup(self);
-	 buttongroup.addToButtonGroup(new selectionButton(spr_actionSelectionButton, action.move));
-	 buttongroup.addToButtonGroup(new selectionButton(spr_actionSelectionButton2, action.reset));
-	 
 attackRestrictionFunction = function(position){
 	return tile_get_restriction(position, tileRestriction.surrounding)
 }

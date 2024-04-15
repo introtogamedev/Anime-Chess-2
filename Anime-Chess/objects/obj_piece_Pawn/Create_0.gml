@@ -3,15 +3,18 @@
 
 // Inherit the parent event
 event_inherited();
-
+chainActionSequence = [action.move, action.move]
 movementRestrictionFunction = function(){
 	return tile_get_restriction(carrier.coordinate, tileRestriction.surrounding);
 }
 
-AttackFunction = function (selection){
+attackFunction = function (selection){
 	for (var i = 0; i < array_length(selection); i ++){
-		if (get_tile_carry(selection[i]).object_index == obj_piece_King){
-			instance_destroy(get_tile_carry(selection[i]))
+		if (instance_exists(get_tile_carry(selection[i]))){
+			if (get_tile_carry(selection[i]).object_index == obj_piece_King){
+				instance_destroy(get_tile_carry(selection[i]))
+			break;
+			}
 		}
 	}
 	var attackRestriction = attackRestrictionFunction();

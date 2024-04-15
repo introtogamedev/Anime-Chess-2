@@ -3,7 +3,7 @@ switch(global.select_state){
 			//do nothing
 		return;
 	case (selectState.deselect):
-		deslect_all_tiles();
+		deselect_all_tiles();
 		global.select_state++;
 		global.selectRestriction = [];
 		break;

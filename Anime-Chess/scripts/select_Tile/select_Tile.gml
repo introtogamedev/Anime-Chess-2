@@ -51,7 +51,7 @@ function addTile_ToList(list, position, restriction = []){
 	return list;
 }
 
-function deslect_all_tiles(){
+function deselect_all_tiles(){
 	reset_grid_selectionState();
 	deselect_tiles();
 	deselect_tile();

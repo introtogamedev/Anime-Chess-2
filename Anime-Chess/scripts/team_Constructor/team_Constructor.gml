@@ -3,7 +3,7 @@ function team(_teamAssignment) constructor{
 	currentActions = 0;
 	
 	maxEnergyCap = 10;
-	maxEnergy = 10;
+	maxEnergy = 0;
 	currentEnergy = 0;
 
 	createdPiecesLimit = 5;
@@ -66,7 +66,7 @@ function team(_teamAssignment) constructor{
 				teamAssignment : global.turnsystem.currentTurn
 			}
 			var carry = instance_create_layer(0, 0, "Pieces", piece, variableAssignment);
-			
+
 			if (carry.cost > currentEnergy){
 				if (DEBUG_MODE_ACTION){ show_debug_message("Unable to created piece because exceeds current energy");}
 				instance_destroy(carry)

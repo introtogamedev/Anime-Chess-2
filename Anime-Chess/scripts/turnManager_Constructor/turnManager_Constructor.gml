@@ -12,6 +12,7 @@ enum teamsEnum{
 	TEAM_RED
 }
 
+
 function turnManager() constructor{
 	static currentTurn = 0;
 	
@@ -26,12 +27,19 @@ function turnManager() constructor{
 		teams[currentTurn].increaseMaxEnergy();
 		teams[currentTurn].reset();
 		
+		//increase visual amount of energy
+		
 		currentTurn ++;
 		if (currentTurn >= turn.SYSTEM_TURN){
 			currentTurn = 0;
 		}
 		
-
+		//change screen background
+		if (currentTurn == 0){
+			obj_manual_background.index = 0;
+		} else if (currentTurn == 1){
+			obj_manual_background.index = 1;
+		}
 
 		//reset tile highlights
 		obj_basic_tile.display = tileDisplay.original

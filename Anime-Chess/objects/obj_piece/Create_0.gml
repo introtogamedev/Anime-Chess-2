@@ -37,7 +37,7 @@ hasActionSequence = true;
 chainActionSequence = [action.move, action.attack]
 currentChainActionSequencePosition = 0;
 
-actionLimit = 3;//the max action that this piece can take in one turn
+actionLimit = 1;//the max action that this piece can take in one turn
 actionCount = actionLimit;//counts actions taken in one turn
 
 initiateAction = function (_action){
@@ -206,5 +206,7 @@ onDeathFunction = function (){
 	//do nothing. 
 }
 
+//landing animation
+instance_create_layer(x, y, "Buttons", obj_landing_animation);
 
 

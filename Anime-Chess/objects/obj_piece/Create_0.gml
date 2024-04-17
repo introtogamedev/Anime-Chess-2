@@ -15,7 +15,7 @@ name = "";
 
 sprite_index = sprite_team[teamAssignment];
 image_speed = 0;//temorary
-carrier.selected = false;//when created, des elect the current tile. 
+carrier.selected = false;//when created, deselect the current tile. 
 
 
 activated = false;

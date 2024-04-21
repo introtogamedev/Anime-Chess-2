@@ -7,7 +7,7 @@ event_inherited();
 
 chainActionSequence = [action.move, action.attack]
 movementRestrictionFunction = function(){
-	return tile_get_restriction(carrier.coordinate, tileRestriction.horse);
+	return tile_get_restriction(carrier.coordinate, tileRestriction.XYZ);
 }
 
 attackFunction = function (selection){

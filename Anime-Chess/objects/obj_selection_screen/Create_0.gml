@@ -3,7 +3,7 @@ unitArray = [
 	[obj_piece_Pufferfish, spr_cost_1], 
 	[obj_piece_test_bunny, spr_cost_2], 
 	[obj_piece_Pawn, spr_cost_2],
-	[obj_piece_Infantry, spr_cost_3]
+	[obj_piece_cavalry, spr_cost_3]
 	];
 		
 create_selection_screen = function (width, height){

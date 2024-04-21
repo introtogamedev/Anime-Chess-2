@@ -1,6 +1,7 @@
 #macro MOUSE_OUT_OF_BOUNDS -1
 #macro MOUSE_DESELECT_TIMER 10
 global.mouse_coordinate = [-1, -1];
+team_color = 0;
 
 global.selectedTile = noone;//initialize to noone
 global.selectedUnit = noone;//initialize to noone
@@ -17,11 +18,11 @@ enum selectState{
 }
 
 global.select_state = selectState.tileSelect;
-activated = true
+activated = true;
 
 //custom cursor
 window_set_cursor(cr_none);
-cursor_sprite = spr_custom_cursor;
+//cursor_sprite = spr_custom_cursor;
 
 select_activate_cooldown = function(){
 	if (activated){

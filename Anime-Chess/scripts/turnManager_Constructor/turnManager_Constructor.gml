@@ -37,8 +37,12 @@ function turnManager() constructor{
 		//change screen background
 		if (currentTurn == 0){
 			obj_manual_background.index = 0;
+			obj_mouse_manager.team_color = 0;
+			end_turn_button._turn = 0;
 		} else if (currentTurn == 1){
 			obj_manual_background.index = 1;
+			obj_mouse_manager.team_color = 1;
+			end_turn_button._turn = 1;
 		}
 
 		//reset tile highlights

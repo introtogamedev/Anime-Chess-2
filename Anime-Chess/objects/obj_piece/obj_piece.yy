@@ -37,6 +37,8 @@
     {"$GMObjectProperty":"","%Name":"cost","filters":[],"listItems":[],"multiselect":false,"name":"cost","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"","%Name":"sprite_team[0]","filters":[],"listItems":[],"multiselect":false,"name":"sprite_team[0]","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_temp_piece","varType":5,},
     {"$GMObjectProperty":"","%Name":"sprite_team[1]","filters":[],"listItems":[],"multiselect":false,"name":"sprite_team[1]","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_temp_piece","varType":5,},
+    {"$GMObjectProperty":"","%Name":"image_x","filters":[],"listItems":[],"multiselect":false,"name":"image_x","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"","%Name":"image_y","filters":[],"listItems":[],"multiselect":false,"name":"image_y","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

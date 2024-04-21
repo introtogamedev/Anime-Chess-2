@@ -74,9 +74,13 @@ function team(_teamAssignment) constructor{
 			}
 			
 			set_tile_carry(position, carry);
+			
+			//landing animation
+			var landing = instance_create_layer(0, 1, "Buttons", obj_landing_animation, variableAssignment);
+			set_landing_animation(position, landing);
 			actionCompleted();
 			createdPieces ++;
-			currentEnergy -= piece.cost
+			currentEnergy -= piece.cost;
 			
 			if (DEBUG_MODE_CARRY or DEBUG_MODE_ACTION){
 				show_debug_message("Piece {0} created at position: {1}", carry.name, position);}

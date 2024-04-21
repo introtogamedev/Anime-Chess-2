@@ -1,2 +1,2 @@
 toggle_activate_game();
-toggle_activate_Transition()
+toggle_activate_Transition();

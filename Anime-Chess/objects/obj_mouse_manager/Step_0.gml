@@ -12,4 +12,3 @@ switch(global.select_state){
 if (global.select_state >= selectState.deselect){
 	global.select_state = selectState.tileSelect;
 }
-

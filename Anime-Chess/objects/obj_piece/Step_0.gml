@@ -3,6 +3,13 @@ if (global.select_state == selectState.idle){
 	return;
 }
 
+if (activated = false){
+	var rand_x = irandom_range(-10, 10);
+	var rand_y = irandom_range(-10, 10);
+	x = image_x + rand_x;
+	y = image_y + rand_y;
+}
+
 switch(currentAction){
 	case action.deactivated:
 		// do nothing. Wait until updated to another state

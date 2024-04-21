@@ -9,6 +9,7 @@ enum action{
 	actionExecuted,
 	death
 } 
+
 name = "";
 	var teamName = global.turnsystem.teams[teamAssignment].pieceName();
 	name += "[" + string(string(teamAssignment) + "| " + object_get_name(object_index)) +"| "+ string(teamName) + "]";
@@ -206,7 +207,8 @@ onDeathFunction = function (){
 	//do nothing. 
 }
 
-//landing animation
-instance_create_layer(x, y, "Buttons", obj_landing_animation);
+
+/*landing animation
+instance_create_layer(x, y, "Buttons", obj_landing_animation);*/
 
 

@@ -29,6 +29,7 @@
     {"name":"start_turn_button","order":3,"path":"objects/start_turn_button/start_turn_button.yy",},
     {"name":"End_Screen","order":4,"path":"rooms/End_Screen/End_Screen.yy",},
     {"name":"attack_piece","order":7,"path":"scripts/attack_piece/attack_piece.yy",},
+    {"name":"check_legal_landing","order":9,"path":"scripts/check_legal_landing/check_legal_landing.yy",},
     {"name":"DEBUG_MODE","order":1,"path":"scripts/DEBUG_MODE/DEBUG_MODE.yy",},
     {"name":"highlight_tiles","order":6,"path":"scripts/highlight_tiles/highlight_tiles.yy",},
     {"name":"layers_Activation","order":8,"path":"scripts/layers_Activation/layers_Activation.yy",},
@@ -45,6 +46,7 @@
     {"name":"spr_basic_tile_1","order":1,"path":"sprites/spr_basic_tile_1/spr_basic_tile_1.yy",},
     {"name":"spr_basic_tile_2","order":2,"path":"sprites/spr_basic_tile_2/spr_basic_tile_2.yy",},
     {"name":"spr_basic_tile_3","order":3,"path":"sprites/spr_basic_tile_3/spr_basic_tile_3.yy",},
+    {"name":"spr_basic_tile_landing_is_ok","order":5,"path":"sprites/spr_basic_tile_landing_is_ok/spr_basic_tile_landing_is_ok.yy",},
     {"name":"spr_blue_win","order":7,"path":"sprites/spr_blue_win/spr_blue_win.yy",},
     {"name":"spr_cost_1","order":7,"path":"sprites/spr_cost_1/spr_cost_1.yy",},
     {"name":"spr_cost_2","order":9,"path":"sprites/spr_cost_2/spr_cost_2.yy",},
@@ -68,5 +70,6 @@
     {"name":"spr_temp_unitSelectionPanel","order":1,"path":"sprites/spr_temp_unitSelectionPanel/spr_temp_unitSelectionPanel.yy",},
     {"name":"spr_transition_pufferfish_blue","order":9,"path":"sprites/spr_transition_pufferfish_blue/spr_transition_pufferfish_blue.yy",},
     {"name":"spr_transition_pufferfish_red","order":11,"path":"sprites/spr_transition_pufferfish_red/spr_transition_pufferfish_red.yy",},
+    {"name":"spr_units_count","order":12,"path":"sprites/spr_units_count/spr_units_count.yy",},
   ],
 }

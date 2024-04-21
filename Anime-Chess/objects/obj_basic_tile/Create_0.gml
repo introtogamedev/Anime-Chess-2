@@ -7,7 +7,8 @@ enum tileDisplay{
 	original,
 	selected,
 	highlight_moveable,
-	highlight_nonmovable
+	highlight_nonmovable,
+	highlight_landable
 }
 display = tileDisplay.original;
 savedDisplay = tileDisplay.original;

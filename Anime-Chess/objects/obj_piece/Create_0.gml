@@ -18,6 +18,7 @@ sprite_index = sprite_team[teamAssignment];
 image_speed = 0;//temorary
 carrier.selected = false;//when created, deselect the current tile. 
 
+highlight_landing(false);
 
 activated = false;
 //when created, default to already taken its action. 

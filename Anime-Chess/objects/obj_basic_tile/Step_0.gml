@@ -19,6 +19,9 @@ switch(display){
 	case(tileDisplay.highlight_nonmovable):
 		sprite_index = spr_basic_tile_3;
 		break;
+	case(tileDisplay.highlight_landable):
+		sprite_index = spr_basic_tile_landing_is_ok;
+		break;
 	default:
 		sprite_index = spr_basic_tile
 		break;

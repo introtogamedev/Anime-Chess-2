@@ -57,33 +57,36 @@ function team(_teamAssignment) constructor{
 		}else{
 			if (DEBUG_MODE_CARRY){show_debug_message("Attempting to create piece at indicated position: {0}....", position);}
 		}	
-
-		//PUT RESTRICTION CODE HERE. ------------------------------------------------------------------------------------------
 		
+		//PUT RESTRICTION CODE HERE. ------------------------------------------------------------------------------------------
 		if (get_tile_carry(position) == noone){
 			
 			var variableAssignment = {
 				teamAssignment : global.turnsystem.currentTurn
 			}
-			var carry = instance_create_layer(0, 0, "Pieces", piece, variableAssignment);
 
-			if (carry.cost > currentEnergy){
-				if (DEBUG_MODE_ACTION){ show_debug_message("Unable to created piece because exceeds current energy");}
-				instance_destroy(carry)
-				return;
+			if (check_legal_landing(position, piece)){
+				var carry = instance_create_layer(0, 0, "Pieces", piece, variableAssignment);
+
+				if (carry.cost > currentEnergy){
+					if (DEBUG_MODE_ACTION){ show_debug_message("Unable to created piece because exceeds current energy");}
+					instance_destroy(carry)
+					return;
+				}
+			
+				set_tile_carry(position, carry);
+			
+				//landing animation
+				var landing = instance_create_layer(0, 1, "Buttons", obj_landing_animation, variableAssignment);
+				set_landing_animation(position, landing);
+				actionCompleted();
+				createdPieces ++;
+				currentEnergy -= piece.cost;
+			
+				if (DEBUG_MODE_CARRY or DEBUG_MODE_ACTION){
+					show_debug_message("Piece {0} created at position: {1}", carry.name, position);
+				}
 			}
-			
-			set_tile_carry(position, carry);
-			
-			//landing animation
-			var landing = instance_create_layer(0, 1, "Buttons", obj_landing_animation, variableAssignment);
-			set_landing_animation(position, landing);
-			actionCompleted();
-			createdPieces ++;
-			currentEnergy -= piece.cost;
-			
-			if (DEBUG_MODE_CARRY or DEBUG_MODE_ACTION){
-				show_debug_message("Piece {0} created at position: {1}", carry.name, position);}
 		}else{
 			//ERROR MESSAGE
 			if (DEBUG_MODE_CARRY){show_debug_message_ext(

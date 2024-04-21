@@ -206,9 +206,3 @@ attackSelectableTargets = 1;
 onDeathFunction = function (){
 	//do nothing. 
 }
-
-
-/*landing animation
-instance_create_layer(x, y, "Buttons", obj_landing_animation);*/
-
-

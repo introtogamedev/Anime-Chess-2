@@ -3,7 +3,7 @@ if (global.select_state == selectState.idle){
 	return;
 }
 
-if (activated = false){
+if (activated == false && actionCount < actionLimit && global.turnsystem.currentTurn == teamAssignment){
 	var rand_x = irandom_range(-10, 10);
 	var rand_y = irandom_range(-10, 10);
 	x = image_x + rand_x;

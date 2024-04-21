@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-setActionLimit(2, false);
+setActionLimit(1, false);
 chainActionSequence = [action.move];
 hasActionSequence = false;
 

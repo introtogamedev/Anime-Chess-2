@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_piece_pufferrfish2",
   "bboxMode":0,
-  "bbox_bottom":80,
+  "bbox_bottom":82,
   "bbox_left":0,
   "bbox_right":91,
   "bbox_top":10,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"8c1d3952-da34-402c-899d-24e7039b82d0","name":"8c1d3952-da34-402c-899d-24e7039b82d0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"3d1e345f-285e-497a-8e5f-11d4e62c0450","name":"3d1e345f-285e-497a-8e5f-11d4e62c0450","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"8f965b6e-42f3-41ec-929b-cded7586677a","name":"8f965b6e-42f3-41ec-929b-cded7586677a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"1c4dccb4-e94c-4caf-b0b8-7c6f44ec87a4","name":"1c4dccb4-e94c-4caf-b0b8-7c6f44ec87a4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"e20f3cf5-752e-40b5-a37c-118eab7b2d72","name":"e20f3cf5-752e-40b5-a37c-118eab7b2d72","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"c1e150eb-8ec6-4ea9-af74-5c4ebcb91a04","name":"c1e150eb-8ec6-4ea9-af74-5c4ebcb91a04","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -71,14 +71,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8c1d3952-da34-402c-899d-24e7039b82d0","path":"sprites/spr_piece_pufferrfish2/spr_piece_pufferrfish2.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"12fda5e3-56db-43a3-ba41-ddba1d976c1d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1c4dccb4-e94c-4caf-b0b8-7c6f44ec87a4","path":"sprites/spr_piece_pufferrfish2/spr_piece_pufferrfish2.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"0b0a01b4-852d-4809-9520-8560ac2fc06a","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3d1e345f-285e-497a-8e5f-11d4e62c0450","path":"sprites/spr_piece_pufferrfish2/spr_piece_pufferrfish2.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"723ded39-817d-44f1-9165-1ae74ead4eb9","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e20f3cf5-752e-40b5-a37c-118eab7b2d72","path":"sprites/spr_piece_pufferrfish2/spr_piece_pufferrfish2.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"970c7626-fe8b-41a3-9801-ff7fbc2158de","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8f965b6e-42f3-41ec-929b-cded7586677a","path":"sprites/spr_piece_pufferrfish2/spr_piece_pufferrfish2.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9ffdd063-faea-4a85-a526-d6fdb74498d8","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c1e150eb-8ec6-4ea9-af74-5c4ebcb91a04","path":"sprites/spr_piece_pufferrfish2/spr_piece_pufferrfish2.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"558db321-5a9c-4d80-af47-34ff98f4389b","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

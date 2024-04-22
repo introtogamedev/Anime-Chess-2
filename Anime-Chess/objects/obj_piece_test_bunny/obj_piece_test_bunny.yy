@@ -39,8 +39,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_piece_bunny1",
-    "path":"sprites/spr_piece_bunny1/spr_piece_bunny1.yy",
+    "name":"spr_piece_bunny2",
+    "path":"sprites/spr_piece_bunny2/spr_piece_bunny2.yy",
   },
   "spriteMaskId":null,
   "visible":true,

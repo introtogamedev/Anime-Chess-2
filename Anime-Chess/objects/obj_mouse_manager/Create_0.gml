@@ -22,7 +22,7 @@ activated = true;
 
 //custom cursor
 window_set_cursor(cr_none);
-//cursor_sprite = spr_custom_cursor;
+//cursor_sprite = spr_custom_cursor;//temporary
 
 select_activate_cooldown = function(){
 	if (activated){

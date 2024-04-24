@@ -9,8 +9,8 @@
   "name":"start_turn_button",
   "overriddenProperties":[],
   "parent":{
-    "name":"Buttons",
-    "path":"folders/Game Scene/Objects/Buttons.yy",
+    "name":"Anime-Chess",
+    "path":"Anime-Chess.yyp",
   },
   "parentObjectId":null,
   "persistent":false,

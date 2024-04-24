@@ -18,7 +18,7 @@ sprite_index = sprite_team[teamAssignment];
 image_speed = 0;//temorary
 carrier.selected = false;//when created, deselect the current tile. 
 
-highlight_landing(false);
+//highlight_landing(false);//temporary
 
 activated = false;
 //when created, default to already taken its action. 
@@ -32,8 +32,8 @@ isSubUnit = false
 moveOverride = false;
 attackOverride = false;
 //saved for consistancy when randomized. 
-movementRestriction = [];//temporary
-attackRestriction = []; //temporary
+movementRestriction = [];//initialization
+attackRestriction = []; //initialization
 
 hasActionSequence = true;
 chainActionSequence = [action.move, action.attack]

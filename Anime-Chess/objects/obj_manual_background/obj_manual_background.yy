@@ -9,8 +9,8 @@
   "name":"obj_manual_background",
   "overriddenProperties":[],
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Game Scene/Sprites.yy",
+    "name":"Temporary",
+    "path":"folders/Temporary.yy",
   },
   "parentObjectId":null,
   "persistent":false,

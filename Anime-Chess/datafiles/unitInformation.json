@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Pufferfish",
+    "cost": 1,
+    "startingHealth": 3,
+    "startingATK": 1,
+    "startingDEF": 0,
+    "icon": "",
+    "sprites": [
+      "spr_piece_pufferfish1",
+      "spr_piece_pufferfish2"
+    ]
+  },
+  {
+    "name": "King",
+    "cost": -10,
+    "startingHealth": 6,
+    "startingATK": 2,
+    "startingDEF": 0.8,
+    "icon": "",
+    "sprites": [
+      "spr_piece_King1",
+      "spr_piece_King2"
+    ]
+  },
+  {
+    "name": "Pawn",
+    "cost": 2,
+    "startingHealth": 4,
+    "startingATK": 1,
+    "startingDEF": 0,
+    "icon": "",
+    "sprites": [
+      "spr_piece_clam1",
+      "spr_piece_clam2"
+    ]
+  },
+  {
+    "name": "Bunny",
+    "cost": 2,
+    "startingHealth": 4,
+    "startingATK": 1,
+    "startingDEF": 0,
+    "icon": "",
+    "sprites": [
+      "spr_piece_bunny1",
+      "spr_piece_bunny2"
+    ]
+  },
+  {
+    "name": "Cavalry",
+    "cost": 2,
+    "startingHealth": 4,
+    "startingATK": 1,
+    "startingDEF": 0,
+    "icon": "",
+    "sprites": [
+      "spr_piece_cavalry1",
+      "spr_piece_cavalry2"
+    ]
+  }
+]

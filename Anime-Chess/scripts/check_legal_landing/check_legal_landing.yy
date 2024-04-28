@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"check_legal_landing",
   "parent":{
-    "name":"Anime-Chess",
-    "path":"Anime-Chess.yyp",
+    "name":"Temporary",
+    "path":"folders/Temporary.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

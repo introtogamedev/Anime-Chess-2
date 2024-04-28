@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"layers_Activation",
+  "%Name":"JSON_loader",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"layers_Activation",
+  "name":"JSON_loader",
   "parent":{
     "name":"Anime-Chess",
     "path":"Anime-Chess.yyp",

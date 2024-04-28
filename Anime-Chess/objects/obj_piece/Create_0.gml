@@ -121,8 +121,6 @@ initiateAction = function (_action){
 				actionCount++;
 				global.turnsystem.teams[global.turnsystem.currentTurn].actionCompleted();
 			}
-			
-			//do nothing
 			break;
 		case (action.death):
 			global.select_state = selectState.deselect;

@@ -5,14 +5,14 @@ unitArray = [
 	[obj_piece_Pawn, spr_cost_2],
 	[obj_piece_cavalry, spr_cost_3]
 	];
-		
+
 create_selection_screen = function (width, height){
 	var button_distance_offset = 20;
 	var placementx = x; 
 	var placementy = y;
 	
 	for(var i = 0; i < array_length(unitArray); i ++){
-		var instance = instance_create_layer(x, y, "Buttons", obj_createPiece_button, {pieceAssignment: unitArray[i][0]});
+		var instance = instance_create_depth(x, y, layer-1, obj_createPiece_button, {pieceAssignment: unitArray[i][0]});
 		if (i == 0 ){
 			placementx += instance.sprite_width/2;
 			placementy += instance.sprite_height/2;
@@ -29,10 +29,13 @@ create_selection_screen = function (width, height){
 		instance.x = placementx;
 		instance.y = placementy;
 		var cost_icon = layer_sprite_create("cost_sprites", placementx + 40, placementy + 40, unitArray[i][1]);
-		//show_debug_message([placementx, placementy])
 		
 	}
 }
 
 create_selection_screen(sprite_width, sprite_height);
-show_debug_message([sprite_width, sprite_height])
+
+max_energy = 1;
+energy_x = 1000;
+units_x = 1000;
+selection = false;

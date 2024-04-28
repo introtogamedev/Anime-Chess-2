@@ -5,8 +5,8 @@
 event_inherited();
 
 setActionLimit(1, false);
-chainActionSequence = [action.move];
-hasActionSequence = false;
+chainActionSequence = [action.move, action.move];
+hasActionSequence = true;
 
 attackRestrictionFunction = function(position){
 	return tile_get_restriction(position, tileRestriction.surrounding)
@@ -30,7 +30,7 @@ movementRestrictionFunction = function(){
 				y_coordinate += ranI;
 			if (get_tile_carry([x_coordinate, y_coordinate]) == noone){
 				attackFunction([x_coordinate, y_coordinate], false);
-				return [x_coordinate, y_coordinate]
+				return [x_coordinate, y_coordinate];
 			}
 		}
 	}

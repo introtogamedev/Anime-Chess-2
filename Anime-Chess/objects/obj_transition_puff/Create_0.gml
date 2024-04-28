@@ -1,7 +1,13 @@
-if (end_turn_button._turn == 0){
+currentTurn = global.turnsystem.currentTurn;
+
+image_index = currentTurn
+if (currentTurn %2 == 0){
+	x = room_width + sprite_width;
+	_direction = -1;
+	image_xscale = -1;
+}else{
 	x = -sprite_width;
-	sprite_index = spr_transition_pufferfish_blue;
-} else if (end_turn_button._turn == 1){
-	x = room_width;
-	sprite_index = spr_transition_pufferfish_red;
+	_direction = 1;
 }
+y = 0;
+

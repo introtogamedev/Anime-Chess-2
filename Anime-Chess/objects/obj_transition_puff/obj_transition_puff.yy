@@ -26,13 +26,15 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"","%Name":"spd","filters":[],"listItems":[],"multiselect":false,"name":"spd","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"50","varType":0,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_transition_pufferfish_blue",
-    "path":"sprites/spr_transition_pufferfish_blue/spr_transition_pufferfish_blue.yy",
+    "name":"spr_transition_pufferfish",
+    "path":"sprites/spr_transition_pufferfish/spr_transition_pufferfish.yy",
   },
   "spriteMaskId":null,
   "visible":true,

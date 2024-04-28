@@ -34,16 +34,9 @@ function turnManager() constructor{
 			currentTurn = 0;
 		}
 		
-		//change screen background
-		if (currentTurn == 0){
-			obj_manual_background.index = 0;
-			obj_mouse_manager.team_color = 0;
-			end_turn_button._turn = 0;
-		} else if (currentTurn == 1){
-			obj_manual_background.index = 1;
-			obj_mouse_manager.team_color = 1;
-			end_turn_button._turn = 1;
-		}
+		//change color scheme
+		var layer_background = layer_background_get_id("Background");
+		layer_background_index(layer_background, currentTurn);
 
 		//reset tile highlights
 		obj_basic_tile.display = tileDisplay.original

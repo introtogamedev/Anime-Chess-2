@@ -109,6 +109,7 @@
     {"id":{"name":"spr_temp_unitSelectionPanel","path":"sprites/spr_temp_unitSelectionPanel/spr_temp_unitSelectionPanel.yy",},},
     {"id":{"name":"spr_transition_pufferfish","path":"sprites/spr_transition_pufferfish/spr_transition_pufferfish.yy",},},
     {"id":{"name":"spr_units_count","path":"sprites/spr_units_count/spr_units_count.yy",},},
+    {"id":{"name":"spr_temp_attack_animation","path":"sprites/spr_temp_attack_animation/spr_temp_attack_animation.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",

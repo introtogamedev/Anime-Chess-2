@@ -55,6 +55,7 @@
     {"name":"spr_basic_tile_landing_is_ok","order":5,"path":"sprites/spr_basic_tile_landing_is_ok/spr_basic_tile_landing_is_ok.yy",},
     {"name":"spr_blue_win","order":6,"path":"sprites/spr_blue_win/spr_blue_win.yy",},
     {"name":"spr_cavalry_deathrattle_explosion","order":14,"path":"sprites/spr_cavalry_deathrattle_explosion/spr_cavalry_deathrattle_explosion.yy",},
+    {"name":"spr_cavalry_deathrattle_explosion","order":19,"path":"sprites/spr_cavalry_deathrattle_explosion/spr_cavalry_deathrattle_explosion.yy",},
     {"name":"spr_costs","order":6,"path":"sprites/spr_costs/spr_costs.yy",},
     {"name":"spr_custom_cursor","order":4,"path":"sprites/spr_custom_cursor/spr_custom_cursor.yy",},
     {"name":"spr_doll1","order":2,"path":"sprites/spr_doll1/spr_doll1.yy",},

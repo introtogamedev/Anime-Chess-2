@@ -5,8 +5,8 @@ if (global.select_state == selectState.idle){
 
 //jiggle code. 
 if (activated == false && actionCount < 1 && global.turnsystem.currentTurn == teamAssignment){
-	var rand_x = irandom_range(-10, 10);
-	var rand_y = irandom_range(-10, 10);
+	var rand_x = irandom_range(-3, 3);
+	var rand_y = irandom_range(-3, 3);
 	x = image_x + rand_x;
 	y = image_y + rand_y;
 }

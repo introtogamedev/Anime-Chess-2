@@ -3,7 +3,7 @@ function team(_teamAssignment) constructor{
 	currentActions = 0;
 	
 	maxEnergyCap = 10;
-	maxEnergy = 0;
+	maxEnergy = 10;
 	currentEnergy = 0;
 
 	createdPiecesLimit = 5;

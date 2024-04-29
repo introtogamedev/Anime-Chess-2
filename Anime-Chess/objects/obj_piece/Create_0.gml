@@ -9,6 +9,10 @@ enum action{
 	actionExecuted,
 	death
 } 
+atk = startingATK;
+def = startingDEF; 
+hp = startingHealth;
+
 //LOAD JSON SCRIPT VALUES
 if (ID < array_length(global.unitInformation)){
 	if (global.unitInformation[ID].object == object_get_name(object_index)){
@@ -45,10 +49,6 @@ activated = false;
 //when created, default to already taken its action. 
 currentAction = action.actionExecuted
 
-atk = startingATK;
-def = startingDEF; 
-hp = startingHealth;
-
 isSubUnit = false
 moveOverride = false;
 attackOverride = false;
@@ -66,13 +66,9 @@ actionCount = actionLimit;//counts actions taken in one turn
 initiateAction = function (_action){
 	switch(_action){
 		case(action.selectAction):
-			var availibleActions = [];
-			if (actionCount < actionLimit-1 or hasActionSequence == false){
-				availibleActions = array_unique(chainActionSequence);
-			}else{
-				availibleActions = [chainActionSequence[currentChainActionSequencePosition]];
-			}
-			//array_push(availibleActions, action.reset);//reset is always avaible
+		
+			var availibleActions = array_unique(chainActionSequence);
+			array_push(availibleActions, action.reset);//reset is always avaible
 			createButtonObjects(availibleActions);//initiate action selection
 			global.select_state = selectState.idle;
 			break;
@@ -136,7 +132,7 @@ initiateAction = function (_action){
 					global.selectedTile = select_tile(carrier.coordinate, global.selectedTile);
 					global.selectedUnit = self;
 					initiateAction(action.selectAction);
-					return
+					return;
 				}
 			}else{
 				actionCount++;
@@ -188,7 +184,30 @@ createButtonObjects = function(actions, h_offset = sprite_width, maxAngle = 180)
 		var angle_shift = (angleDifference * -i + floor(amount_of_buttons/2) * angleDifference - angle_offset);
 		var _xx = origin_x + lengthdir_x(h_offset, angle_shift);
 		var _yy = origin_y + lengthdir_y(h_offset, angle_shift);
-		var buttonInstance= instance_create_layer(_xx, _yy, "Buttons", obj_actionSelection_button, {action_representation : actions[i]});
+		var variableAssignment = {
+			action_representation : actions[i],
+			highlight : false,
+			active : true,
+		}
+			if (currentChainActionSequencePosition != 0 and 
+				actions[i] == chainActionSequence[currentChainActionSequencePosition]){
+				variableAssignment.highlight = true;
+			}
+			if (actionCount = actionLimit - 1){
+				var actionseq = [];
+				actionseq = chainActionSequence;
+				for (var j = 0 ; j < array_length(actionseq); j ++){
+					if (actionseq[j] == actions[i]){
+						if (j < currentChainActionSequencePosition){
+							variableAssignment.active = false;
+						}else{
+							variableAssignment.active = true;
+						}
+					}
+				}
+			}
+		var buttonInstance= instance_create_layer(_xx, _yy, "Buttons", obj_actionSelection_button, variableAssignment);
+		
 		buttonInstance.associate = self;
 		if (DEBUG_MODE_CONSTRUCTOR){show_debug_message("CREATED BUTTON at {0} at angle {1}", [_xx, _yy], angle_shift);}
 	}

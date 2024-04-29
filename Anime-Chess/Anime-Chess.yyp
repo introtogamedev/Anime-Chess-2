@@ -84,7 +84,6 @@
     {"id":{"name":"spr_empty","path":"sprites/spr_empty/spr_empty.yy",},},
     {"id":{"name":"spr_end_turn_button","path":"sprites/spr_end_turn_button/spr_end_turn_button.yy",},},
     {"id":{"name":"spr_energy_shard","path":"sprites/spr_energy_shard/spr_energy_shard.yy",},},
-    {"id":{"name":"spr_piece_bunny_icon","path":"sprites/spr_piece_bunny_icon/spr_piece_bunny_icon.yy",},},
     {"id":{"name":"spr_piece_bunny1","path":"sprites/spr_piece_bunny1/spr_piece_bunny1.yy",},},
     {"id":{"name":"spr_piece_bunny2","path":"sprites/spr_piece_bunny2/spr_piece_bunny2.yy",},},
     {"id":{"name":"spr_piece_cavalry1","path":"sprites/spr_piece_cavalry1/spr_piece_cavalry1.yy",},},

@@ -9,3 +9,11 @@ switch(action_representation){
 		sprite_index = spr_actionSelectionButton2;
 	break;
 }
+
+if (not active){
+image_index = 2;	
+}
+
+if (highlight){
+image_index = 1;
+}

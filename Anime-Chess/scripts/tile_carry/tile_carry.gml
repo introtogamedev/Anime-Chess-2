@@ -7,8 +7,8 @@ function set_tile_carry(position, carry){
 		if (carrier.carry == noone){
 			carrier.carry = carry;
 			carry.x = carrier.x;
-			carry.image_x = carrier.x;
 			carry.y = carrier.y;
+			carry.image_x = carrier.x;
 			carry.image_y = carrier.y;
 			carry.carrier = carrier;
 			if (DEBUG_MODE_CARRY){show_debug_message("Tile at {0} is now carrying instance: {1}", position, carry.name);}

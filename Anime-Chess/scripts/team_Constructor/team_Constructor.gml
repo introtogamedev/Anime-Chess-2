@@ -3,7 +3,7 @@ function team(_teamAssignment) constructor{
 	currentActions = 0;
 	
 	maxEnergyCap = 10;
-	maxEnergy = 0;
+	maxEnergy = 10;
 	currentEnergy = 0;
 
 	createdPiecesLimit = 5;
@@ -65,7 +65,8 @@ function team(_teamAssignment) constructor{
 				teamAssignment : global.turnsystem.currentTurn
 			}
 
-			if (check_legal_landing(position, piece)){
+			//if (check_legal_landing(position, piece)){
+			
 				var carry = instance_create_layer(0, 0, "Pieces", piece, variableAssignment);
 
 				if (carry.cost > currentEnergy){
@@ -86,7 +87,7 @@ function team(_teamAssignment) constructor{
 				if (DEBUG_MODE_CARRY or DEBUG_MODE_ACTION){
 					show_debug_message("Piece {0} created at position: {1}", carry.name, position);
 				}
-			}
+			//}
 		}else{
 			//ERROR MESSAGE
 			if (DEBUG_MODE_CARRY){show_debug_message_ext(

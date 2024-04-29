@@ -1,4 +1,4 @@
-var currentTeam = global.turnsystem.teams[global.turnsystem.currentTurn];
+/*var currentTeam = global.turnsystem.teams[global.turnsystem.currentTurn];
 max_energy = currentTeam.maxEnergy;
 var current_energy = currentTeam.currentEnergy;
 draw_text(1000, 320, "Current Energy: " + string(currentTeam.currentEnergy) + "/" + string(max_energy));

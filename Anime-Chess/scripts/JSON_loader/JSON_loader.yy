@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"JSON_loader",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"JSON_loader",
+  "parent":{
+    "name":"Anime-Chess",
+    "path":"Anime-Chess.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -48,7 +48,7 @@ function create_grid(){
 		}else{
 			positionBLUE = [round(VERTICAL_GRID_HEIGHT/4),round(VERTICAL_GRID_HEIGHT/4)];
 		}
-		global.turnsystem.teams[global.turnsystem.currentTurn].create_piece(obj_piece_king, positionBLUE)
+		global.turnsystem.teams[global.turnsystem.currentTurn].create_piece(obj_piece_king, true, positionBLUE)
 		//set_tile_carry(positionBLUE, carryBLUE);
 		//carryBLUE.teamAssignment = teamsEnum.TEAM_BLUE;
 		//carryBLUE.sprite_index = spr_blue_king;
@@ -63,7 +63,7 @@ function create_grid(){
 		}else{
 			positionRED = [HORIZONTAL_GRID_LENGTH + VERTICAL_GRID_HEIGHT/4, HORIZONTAL_GRID_LENGTH + VERTICAL_GRID_HEIGHT/4];
 		}
-		global.turnsystem.teams[global.turnsystem.currentTurn].create_piece(obj_piece_king, positionRED)
+		global.turnsystem.teams[global.turnsystem.currentTurn].create_piece(obj_piece_king, true, positionRED)
 		//set_tile_carry(positionRED, carryRED);
 		//carryRED.teamAssignment = teamsEnum.TEAM_RED;
 		//carryRED.sprite_index = spr_red_king;

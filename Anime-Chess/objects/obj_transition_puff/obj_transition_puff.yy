@@ -9,8 +9,8 @@
   "name":"obj_transition_puff",
   "overriddenProperties":[],
   "parent":{
-    "name":"Temporary",
-    "path":"folders/Temporary.yy",
+    "name":"Objects",
+    "path":"folders/Game Scene/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

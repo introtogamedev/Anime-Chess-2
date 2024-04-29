@@ -7,7 +7,7 @@ function team(_teamAssignment) constructor{
 	currentEnergy = 0;
 
 	createdPiecesLimit = 5;
-	createdPieces = -1;//1 reserved for the King.
+	createdPieces = 0;
 	
 	actionCompleted = function(){
 		currentActions ++;
@@ -33,7 +33,7 @@ function team(_teamAssignment) constructor{
 		currentEnergy = maxEnergy;
 	}
 	
-	create_piece = function (piece = global.createUnitType, position = [], restricted = true){
+	create_piece = function (piece = global.createUnitType, SubUnit = false, position = [], restricted = true){
 		#region Creation Checks
 		if (createdPieces >= createdPiecesLimit){
 			if (DEBUG_MODE_ACTION){ show_debug_message("Unable to created piece because exceeds creation limit");}
@@ -62,7 +62,8 @@ function team(_teamAssignment) constructor{
 		if (get_tile_carry(position) == noone){
 			
 			var variableAssignment = {
-				teamAssignment : global.turnsystem.currentTurn
+				teamAssignment : global.turnsystem.currentTurn,
+				isSubUnit: SubUnit
 			}
 
 			if (check_legal_landing(position, piece)){
@@ -81,7 +82,9 @@ function team(_teamAssignment) constructor{
 				var landing = instance_create_layer(0, 1, "Buttons", obj_landing_animation, variableAssignment);
 				set_landing_animation(position, landing);
 				actionCompleted();
-				createdPieces ++;
+				if (not SubUnit){
+					createdPieces ++;
+				}
 				currentEnergy -= piece.cost;
 			
 				if (DEBUG_MODE_CARRY or DEBUG_MODE_ACTION){

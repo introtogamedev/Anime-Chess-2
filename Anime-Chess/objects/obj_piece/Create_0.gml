@@ -190,6 +190,7 @@ createButtonObjects = function(actions, h_offset = sprite_width, maxAngle = 180)
 			active : true,
 		}
 			if (currentChainActionSequencePosition != 0 and 
+				currentChainActionSequencePosition < array_length(chainActionSequence) and 
 				actions[i] == chainActionSequence[currentChainActionSequencePosition]){
 				variableAssignment.highlight = true;
 			}

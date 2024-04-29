@@ -9,6 +9,27 @@ enum action{
 	actionExecuted,
 	death
 } 
+//LOAD JSON SCRIPT VALUES
+if (ID < array_length(global.unitInformation)){
+	if (global.unitInformation[ID].object == object_get_name(object_index)){
+		var unitInfo = global.unitInformation[ID];
+		cost = unitInfo.cost;
+		startingHealth = unitInfo.startingHealth;
+		startingATK = unitInfo.startingATK;
+		startingDEF = unitInfo.startingDEF;
+		for(var i = 0 ; i < array_length(unitInfo.sprites); i ++){
+			var sprite = asset_get_index(unitInfo.sprites[i]);
+			if (sprite > -1){
+				sprite_team[i] = sprite;
+			}else{
+				if (DEBUG_MODE_FILELOADER){show_debug_message("ERROR LOADING SPRITE, USING DEFAULT");}
+			}
+		}
+	}else{
+		if (DEBUG_MODE_FILELOADER){show_debug_message("UNIT CREATION INFO MISMATCH! USING HARD-CODED IMPLEMENTATION INSTEAD!");}
+	}
+	
+}
 
 name = "";
 	var teamName = global.turnsystem.teams[teamAssignment].pieceName();
@@ -26,7 +47,7 @@ currentAction = action.actionExecuted
 
 atk = startingATK;
 def = startingDEF; 
-hp = maxHealth;
+hp = startingHealth;
 
 isSubUnit = false
 moveOverride = false;
@@ -205,3 +226,4 @@ attackSelectableTargets = 1;
 onDeathFunction = function (){
 	//do nothing. 
 }
+

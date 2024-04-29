@@ -11,7 +11,7 @@ movementRestrictionFunction = function(){
 attackFunction = function (selection){
 	for (var i = 0; i < array_length(selection); i ++){
 		if (instance_exists(get_tile_carry(selection[i]))){
-			if (get_tile_carry(selection[i]).object_index == obj_piece_King){
+			if (get_tile_carry(selection[i]).object_index == obj_piece_king){
 				instance_destroy(get_tile_carry(selection[i]))
 			break;
 			}

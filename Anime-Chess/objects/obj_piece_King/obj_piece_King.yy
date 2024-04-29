@@ -1,20 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_piece_King",
+  "%Name":"obj_piece_king",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_piece_King",
+  "name":"obj_piece_king",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_piece","path":"objects/obj_piece/obj_piece.yy",},"propertyId":{"name":"maxHealth","path":"objects/obj_piece/obj_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"6",},
+    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_piece","path":"objects/obj_piece/obj_piece.yy",},"propertyId":{"name":"startingHealth","path":"objects/obj_piece/obj_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"6",},
     {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_piece","path":"objects/obj_piece/obj_piece.yy",},"propertyId":{"name":"startingATK","path":"objects/obj_piece/obj_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
     {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_piece","path":"objects/obj_piece/obj_piece.yy",},"propertyId":{"name":"startingDEF","path":"objects/obj_piece/obj_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0.8",},
-    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_piece","path":"objects/obj_piece/obj_piece.yy",},"propertyId":{"name":"sprite_team[0]","path":"objects/obj_piece/obj_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_piece_King1",},
-    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_piece","path":"objects/obj_piece/obj_piece.yy",},"propertyId":{"name":"sprite_team[1]","path":"objects/obj_piece/obj_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_piece_King2",},
     {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_piece","path":"objects/obj_piece/obj_piece.yy",},"propertyId":{"name":"cost","path":"objects/obj_piece/obj_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-10",},
+    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_piece","path":"objects/obj_piece/obj_piece.yy",},"propertyId":{"name":"ID","path":"objects/obj_piece/obj_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
   ],
   "parent":{
     "name":"Pieces",

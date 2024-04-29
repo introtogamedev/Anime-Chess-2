@@ -1,4 +1,18 @@
 [
+ {
+    "name": "GENERAL PIECE",
+    "cost": 0,
+    "startingHealth": 10,
+    "startingATK": 10,
+    "startingDEF": 0,
+    "icon": "",
+    "sprites": [
+      "spr_piece_pufferfish1",
+      "spr_piece_pufferfish2"
+    ],
+    "object": "obj_piece",
+    "ID": 0
+  },
   {
     "name": "Pufferfish",
     "cost": 1,
@@ -9,7 +23,9 @@
     "sprites": [
       "spr_piece_pufferfish1",
       "spr_piece_pufferfish2"
-    ]
+    ],
+    "object": "obj_piece_pufferfish",
+    "ID": 1
   },
   {
     "name": "King",
@@ -21,7 +37,9 @@
     "sprites": [
       "spr_piece_King1",
       "spr_piece_King2"
-    ]
+    ],
+    "object": "obj_piece_king",
+    "ID": 2
   },
   {
     "name": "Pawn",
@@ -33,7 +51,9 @@
     "sprites": [
       "spr_piece_clam1",
       "spr_piece_clam2"
-    ]
+    ],
+    "object": "obj_piece_pawn",
+    "ID": 3
   },
   {
     "name": "Bunny",
@@ -45,7 +65,9 @@
     "sprites": [
       "spr_piece_bunny1",
       "spr_piece_bunny2"
-    ]
+    ],
+    "object": "obj_piece_bunny",
+    "ID": 4
   },
   {
     "name": "Cavalry",
@@ -57,6 +79,8 @@
     "sprites": [
       "spr_piece_cavalry1",
       "spr_piece_cavalry2"
-    ]
+    ],
+    "object": "obj_piece_cavalry",
+    "ID": 5
   }
 ]

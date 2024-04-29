@@ -1,17 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_piece_Pufferfish",
+  "%Name":"obj_piece_pufferfish",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_piece_Pufferfish",
+  "name":"obj_piece_pufferfish",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_piece","path":"objects/obj_piece/obj_piece.yy",},"propertyId":{"name":"maxHealth","path":"objects/obj_piece/obj_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"3",},
+    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_piece","path":"objects/obj_piece/obj_piece.yy",},"propertyId":{"name":"startingHealth","path":"objects/obj_piece/obj_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"3",},
     {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_piece","path":"objects/obj_piece/obj_piece.yy",},"propertyId":{"name":"startingATK","path":"objects/obj_piece/obj_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
-    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_piece","path":"objects/obj_piece/obj_piece.yy",},"propertyId":{"name":"sprite_team[0]","path":"objects/obj_piece/obj_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_piece_pufferfish1",},
-    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_piece","path":"objects/obj_piece/obj_piece.yy",},"propertyId":{"name":"sprite_team[1]","path":"objects/obj_piece/obj_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_piece_pufferrfish2",},
     {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_piece","path":"objects/obj_piece/obj_piece.yy",},"propertyId":{"name":"cost","path":"objects/obj_piece/obj_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_piece","path":"objects/obj_piece/obj_piece.yy",},"propertyId":{"name":"ID","path":"objects/obj_piece/obj_piece.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
   ],
   "parent":{
     "name":"Pieces",
@@ -34,9 +33,7 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"","%Name":"icon_sprite","filters":[],"listItems":[],"multiselect":false,"name":"icon_sprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_cost_1","varType":5,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,

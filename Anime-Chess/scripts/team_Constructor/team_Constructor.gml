@@ -66,6 +66,7 @@ function team(_teamAssignment) constructor{
 			}
 
 			//if (check_legal_landing(position, piece)){
+			
 				var carry = instance_create_layer(0, 0, "Pieces", piece, variableAssignment);
 
 				if (carry.cost > currentEnergy){

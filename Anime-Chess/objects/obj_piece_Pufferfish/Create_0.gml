@@ -43,7 +43,7 @@ attackFunction = function(moved_destination, ignoreDef){
 	for(var i = 0; i < array_length(attackRestriction); i ++ ){
 		if (attackRestriction[i].coordinate != currentPos){
 			if (get_tile_carry(attackRestriction[i].coordinate) != noone and 
-				get_tile_carry(attackRestriction[i].coordinate).object_index != obj_piece_Pufferfish){
+				get_tile_carry(attackRestriction[i].coordinate).object_index != obj_piece_pufferfish){
 				
 				array_push(attackTilesPos, attackRestriction[i].coordinate);
 			}

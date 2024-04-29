@@ -2,6 +2,7 @@ enum tileRestriction{
 	X, Y, Z, XYZ,
 	//Z axis is the horizontal axis with coordinates, (x,y) -> (x+1, y+1)
 	surrounding,
+	twotilesurrounding,
 	horse,
 	pao
 }
@@ -83,10 +84,7 @@ function tile_get_restriction(position, restriction){
 		        for (var i = 0; i < 6; i++){
 					var surrounding_x_coordinate = x_coordinate + relative_coordinates_to_check[i][0];
 		            var surrounding_y_coordinate = y_coordinate + relative_coordinates_to_check[i][1];
-		            if (surrounding_x_coordinate < array_length(obj_tile_manager.grid)
-						&& surrounding_x_coordinate >= 0
-						&& surrounding_y_coordinate < array_length(obj_tile_manager.grid[surrounding_x_coordinate])
-						&& surrounding_y_coordinate >= 0){
+		            if (detect_tile_exists(surrounding_x_coordinate, surrounding_y_coordinate)){
 		                if (obj_tile_manager.grid[surrounding_x_coordinate][surrounding_y_coordinate] != 0){
 		                    var tile = obj_tile_manager.grid[surrounding_x_coordinate, surrounding_y_coordinate];
 		                    array_push(restriction_coordinates, tile);
@@ -100,10 +98,7 @@ function tile_get_restriction(position, restriction){
 		        for (var i = 0; i < 6; i++){
 					var surrounding_x_coordinate = x_coordinate + relative_coordinates_to_check[i][0];
 		            var surrounding_y_coordinate = y_coordinate + relative_coordinates_to_check[i][1];
-		            if (surrounding_x_coordinate < array_length(obj_tile_manager.grid)
-						&& surrounding_x_coordinate >= 0
-						&& surrounding_y_coordinate < array_length(obj_tile_manager.grid[surrounding_x_coordinate])
-						&& surrounding_y_coordinate >= 0){
+		            if (detect_tile_exists(surrounding_x_coordinate, surrounding_y_coordinate)){
 		                if (obj_tile_manager.grid[surrounding_x_coordinate][surrounding_y_coordinate] != 0){
 		                    var tile = obj_tile_manager.grid[surrounding_x_coordinate, surrounding_y_coordinate];
 		                    array_push(restriction_coordinates, tile);
@@ -133,10 +128,7 @@ function tile_get_restriction(position, restriction){
 		        for (var i = 0; i < 6; i++){
 					var surrounding_x_coordinate = x_coordinate + surrounding_coordinates_to_check[i][0];
 		            var surrounding_y_coordinate = y_coordinate + surrounding_coordinates_to_check[i][1];
-		            if (surrounding_x_coordinate < array_length(obj_tile_manager.grid)
-						&& surrounding_x_coordinate >= 0
-						&& surrounding_y_coordinate < array_length(obj_tile_manager.grid[surrounding_x_coordinate])
-						&& surrounding_y_coordinate >= 0){
+		            if (detect_tile_exists(surrounding_x_coordinate, surrounding_y_coordinate)){
 		                if (obj_tile_manager.grid[surrounding_x_coordinate][surrounding_y_coordinate] != 0){
 		                    var tile = obj_tile_manager.grid[surrounding_x_coordinate, surrounding_y_coordinate];
 		                    array_push(restriction_coordinates, tile);
@@ -144,6 +136,25 @@ function tile_get_restriction(position, restriction){
 		            }
 		        } 
 				break;
+				
+			case(tileRestriction.twotilesurrounding):
+			var surrounding_coordinates_to_check = [[-1, 0], [-1, -1], [0, -1], [1, 0], [1, 1], [0, 1]];
+			var second_layer_surrounding_coordinates = [[-2, 0], [-2, -2], [0, -2], [2, 0], [2, 2], [0, 2]];
+			var second_middle_surrounding_coordinates = [[-2, -1], [-1, -2], [1, -1], [2, 1], [1, 2], [-1, 1]];
+			for (var i = 0; i < array_length(surrounding_coordinates_to_check); i++){
+				var surrounding_x_coordinate = x_coordinate + surrounding_coordinates_to_check[i][0];
+		        var surrounding_y_coordinate = y_coordinate + surrounding_coordinates_to_check[i][1];
+				if (detect_tile_exists(surrounding_x_coordinate, surrounding_y_coordinate)){
+					var tile = obj_tile_manager.grid[surrounding_x_coordinate, surrounding_y_coordinate];
+		            array_push(restriction_coordinates, tile);
+					var x_second_layer_of_surrounding_coordinates = x_coordinate + second_layer_surrounding_coordinates[i][0];
+					var y_second_layer_of_surrounding_coordinates = y_coordinate + second_layer_surrounding_coordinates[i][2];
+					if (tile.carry == noone && detect_tile_exists(x_second_layer_of_surrounding_coordinates, y_second_layer_of_surrounding_coordinates)){
+						var tile_2 = obj_tile_manager.grid[surrounding_x_coordinate, surrounding_y_coordinate];
+						array_push(restriction_coordinates, tile_2);
+					}
+				}
+			}
 				
 			default:
 				//do nothing

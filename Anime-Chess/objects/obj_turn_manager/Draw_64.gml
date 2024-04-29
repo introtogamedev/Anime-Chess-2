@@ -2,6 +2,7 @@ var currentTeam = global.turnsystem.teams[global.turnsystem.currentTurn];
 max_energy = currentTeam.maxEnergy;
 var current_energy = currentTeam.currentEnergy;
 draw_text(1000, 320, "Current Energy: " + string(currentTeam.currentEnergy) + "/" + string(max_energy));
+draw_text(1000, 470, "Press Shift to Deploy Units ");
 draw_text(1000, 500, "Current # of Pieces: " + string(currentTeam.createdPieces) + "/5");
 
 for (var i = 0; i < max_energy; i++){

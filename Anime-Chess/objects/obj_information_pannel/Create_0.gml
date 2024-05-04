@@ -39,7 +39,3 @@ create_selection_screen = function (width, height){
 
 create_selection_screen(sprite_width, sprite_height);
 
-max_energy = 1;
-energy_x = 1000;
-units_x = 1000;
-selection = false;

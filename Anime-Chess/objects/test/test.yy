@@ -1,16 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_selection_screen",
+  "%Name":"test",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_selection_screen",
+  "name":"test",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Game Scene/Objects.yy",
+    "name":"Anime-Chess",
+    "path":"Anime-Chess.yyp",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_temp_unitSelectionPanel",
-    "path":"sprites/spr_temp_unitSelectionPanel/spr_temp_unitSelectionPanel.yy",
+    "name":"spr_createPieceButton_TEMP",
+    "path":"sprites/spr_createPieceButton_TEMP/spr_createPieceButton_TEMP.yy",
   },
   "spriteMaskId":null,
   "visible":true,

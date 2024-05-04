@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Temporary",
-    "path":"folders/Temporary.yy",
+    "name":"Identifiers",
+    "path":"folders/Game Scene/Sprites/Identifiers.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

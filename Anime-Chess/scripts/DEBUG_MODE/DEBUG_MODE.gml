@@ -4,7 +4,7 @@
 		- Attack states and errors
 		- special abilities: its execution states and errors
 */
-#macro DEBUG_MODE_ACTION true
+#macro DEBUG_MODE_ACTION false
 
 /*
 	Any Select related function and warning.
@@ -22,7 +22,7 @@
 		- Selection and errors
 		- Piece creation code and logs
 */
-#macro DEBUG_MODE_CARRY false
+#macro DEBUG_MODE_CARRY true
 
 /*
 	Messages related to the creation of "structs"/constructors. 

@@ -19,7 +19,9 @@ function attack_pieces(attacker, tilesPos, damage, attackRestriction, defIgnore 
 						if (attackAlly or attackedPiece.teamAssignment != attacker.teamAssignment){
 							if (DEBUG_MODE_ACTION){show_debug_message("Attacked Piece: {0}, Attacker: {1}, defIgnored: {2}", attackedPiece.name, attacker.name, defIgnore);}
 							attackedPiece.takeDamage(damage, defIgnore);
-							attacked = true
+							var attack_anim = instance_create_layer(attackedPiece.x, attackedPiece.y, "Buttons", obj_landing_animation);
+							attack_anim.sprite_index = spr_temp_attack_animation;
+							attacked = true;
 						}else{
 							if (DEBUG_MODE_ACTION){show_debug_message("Piece Found! Not attacked because Piece is ally!");}
 						}

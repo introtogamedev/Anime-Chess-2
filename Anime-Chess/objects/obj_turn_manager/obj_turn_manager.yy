@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_empty",
-    "path":"sprites/spr_empty/spr_empty.yy",
+    "name":"spr_actionSelectionButton3",
+    "path":"sprites/spr_actionSelectionButton3/spr_actionSelectionButton3.yy",
   },
   "spriteMaskId":null,
   "visible":true,

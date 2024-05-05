@@ -29,6 +29,7 @@
   "properties":[
     {"$GMObjectProperty":"","%Name":"pieceAssignment","filters":[],"listItems":[],"multiselect":false,"name":"pieceAssignment","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"obj_piece_pawn","varType":5,},
     {"$GMObjectProperty":"","%Name":"pieceInformation","filters":[],"listItems":[],"multiselect":false,"name":"pieceInformation","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":6,},
+    {"$GMObjectProperty":"","%Name":"size","filters":[],"listItems":[],"multiselect":false,"name":"size","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"[0,0]","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

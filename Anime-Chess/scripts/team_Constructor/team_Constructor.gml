@@ -2,8 +2,8 @@ function team(_teamAssignment) constructor{
 	maxAllowedActions =  10;
 	currentActions = 0;
 	
-	maxEnergyCap = 10;
-	maxEnergy = 10;
+	maxEnergyCap = 5;
+	maxEnergy = 5;
 	currentEnergy = 0;
 
 	createdPiecesLimit = 5;
@@ -39,7 +39,10 @@ function team(_teamAssignment) constructor{
 			if (DEBUG_MODE_ACTION){ show_debug_message("Unable to created piece because exceeds creation limit");}
 			return;
 		}
-		if (object_get_parent(piece) = obj_piece or object_get_parent(piece) == -100){
+		if (piece == noone){
+			if (DEBUG_MODE_CARRY){show_debug_message("Piece creation Terminated because object type is empty! {0}", piece);}
+			return;
+		}else if (object_get_parent(piece) = obj_piece or object_get_parent(piece) == -100){
 			if (DEBUG_MODE_CARRY){show_debug_message("Valid Piece Creation: {0}. Continuing....", piece);}
 		}else{
 			if (DEBUG_MODE_CARRY){show_debug_message("Piece creation Terminated because object type not piece! {0}", piece);}

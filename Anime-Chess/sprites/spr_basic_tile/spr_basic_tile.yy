@@ -42,7 +42,7 @@
     ],
     "top":0,
   },
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"Tiles",
     "path":"folders/Game Scene/Sprites/Tiles.yy",
@@ -95,7 +95,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":45,
-    "yorigin":46,
+    "yorigin":45,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

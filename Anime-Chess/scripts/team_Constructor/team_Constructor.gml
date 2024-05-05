@@ -3,7 +3,7 @@ function team(_teamAssignment) constructor{
 	currentActions = 0;
 	
 	maxEnergyCap = 5;
-	maxEnergy = 5;
+	maxEnergy = 0;
 	currentEnergy = 0;
 
 	createdPiecesLimit = 5;
@@ -89,7 +89,7 @@ function team(_teamAssignment) constructor{
 					createdPieces ++;
 				}
 				currentEnergy -= piece.cost;
-			
+				global.createUnitType = noone;
 				if (DEBUG_MODE_CARRY or DEBUG_MODE_ACTION){
 					show_debug_message("Piece {0} created at position: {1}", carry.name, position);
 				}

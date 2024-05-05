@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"group1",
-    "path":"folders/group1.yy",
+    "name":"Anime-Chess",
+    "path":"Anime-Chess.yyp",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

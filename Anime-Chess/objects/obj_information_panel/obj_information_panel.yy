@@ -2,7 +2,7 @@
   "$GMObject":"",
   "%Name":"obj_information_panel",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_information_panel",
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_blue_button",
-    "path":"sprites/spr_blue_button/spr_blue_button.yy",
+    "name":"spr_info_panel",
+    "path":"sprites/spr_info_panel/spr_info_panel.yy",
   },
   "spriteMaskId":null,
   "visible":true,

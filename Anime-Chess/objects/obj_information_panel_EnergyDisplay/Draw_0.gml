@@ -9,7 +9,10 @@ var absolute_max_energy = currentTeam.maxEnergyCap
 var width = abs(sprite_width) 
 var height = abs(sprite_height)
 
-var drawn_sprite =  blue_crystal
+var drawn_sprite =  spr_blue_crystal
+if (global.turnsystem.currentTurn == 1){
+	drawn_sprite = spr_red_crystal
+}
 
 var energy_sprite_x_offset = sprite_get_width(drawn_sprite)
 var energy_x_offset_gap = (width - absolute_max_energy * energy_sprite_x_offset )/(absolute_max_energy+1)

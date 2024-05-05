@@ -7,7 +7,7 @@ if (visible != update_trigger){
 		instance_activate_object(obj_createPiece_button);
 	}else{
 		instance_deactivate_object(obj_createPiece_button);
-		global.createUnitType = noone;//temporary
+		//global.createUnitType = noone;//temporary
 	}
 	update_trigger = visible;
 }

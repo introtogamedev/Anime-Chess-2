@@ -3,8 +3,6 @@ if (global.select_state == selectState.idle){
 	return;
 }
 
-show_debug_message(y);
-
 //jiggle code. 
 if (activated == false && actionCount < 1 && global.turnsystem.currentTurn == teamAssignment){
 	var rand_x = irandom_range(-3, 3);

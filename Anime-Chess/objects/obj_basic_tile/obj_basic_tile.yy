@@ -37,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_basic_tile",
-    "path":"sprites/spr_basic_tile/spr_basic_tile.yy",
+    "name":"spr_tile",
+    "path":"sprites/spr_tile/spr_tile.yy",
   },
   "spriteMaskId":null,
   "visible":true,

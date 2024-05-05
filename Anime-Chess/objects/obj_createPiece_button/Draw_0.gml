@@ -1,4 +1,6 @@
 
+
+
 var turnSpriteIndex = global.turnsystem.currentTurn;
 var turnSprite = asset_get_index(pieceInformation.sprites[turnSpriteIndex]);
 if (turnSprite > -1){

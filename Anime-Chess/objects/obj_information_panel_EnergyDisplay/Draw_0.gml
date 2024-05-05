@@ -13,7 +13,12 @@ var drawn_sprite = spr_energy_shard
 
 var energy_sprite_x_offset = sprite_get_width(drawn_sprite)
 var energy_x_offset_gap = (width - absolute_max_energy * energy_sprite_x_offset )/(absolute_max_energy+1)
-
+/*if (global.selectedUnit.object_index == obj_piece_king){
+	
+	
+}else{
+	visible = false;
+}*/
 var energy_y_offset_gap = 5
 var energy_sprite_y = y  +  height - sprite_get_height(drawn_sprite) - energy_y_offset_gap;
 

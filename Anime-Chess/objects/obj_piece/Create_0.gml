@@ -168,6 +168,9 @@ setActionLimit = function(number,setMin = true){
 }
 
 createButtonObjects = function(actions, h_offset = sprite_width, maxAngle = 180){
+	//override
+	h_offset = 70
+	
 	var origin_x = x;
 	var origin_y = y;
 	

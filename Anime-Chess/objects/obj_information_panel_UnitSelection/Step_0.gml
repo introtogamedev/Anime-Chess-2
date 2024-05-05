@@ -1,9 +1,4 @@
-if (global.selectedUnit == obj_piece_king or global.selectedUnit == noone){
-	visible = true
-}else{
-	visible = false;
-}
-
+visible = not obj_information_panel_InformationDisplay.visible
 if (visible != update_trigger){
 	for (var i = 0; i < array_length(buttonArray); i ++){
 		buttonArray[i].visible = visible;

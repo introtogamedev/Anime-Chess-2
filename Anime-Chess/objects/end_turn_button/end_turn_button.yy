@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_end_turn_button",
-    "path":"sprites/spr_end_turn_button/spr_end_turn_button.yy",
+    "name":"spr_endTurn",
+    "path":"sprites/spr_endTurn/spr_endTurn.yy",
   },
   "spriteMaskId":null,
   "visible":true,

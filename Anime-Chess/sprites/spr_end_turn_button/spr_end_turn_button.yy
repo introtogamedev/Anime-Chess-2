@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Temporary",
-    "path":"folders/Temporary.yy",
+    "name":"group1",
+    "path":"folders/group1.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

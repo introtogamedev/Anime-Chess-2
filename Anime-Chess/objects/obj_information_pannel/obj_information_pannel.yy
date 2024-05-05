@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_temp_unitSelectionPanel",
-    "path":"sprites/spr_temp_unitSelectionPanel/spr_temp_unitSelectionPanel.yy",
+    "name":"spr_blue_button",
+    "path":"sprites/spr_blue_button/spr_blue_button.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -37,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_custom_cursor",
-    "path":"sprites/spr_custom_cursor/spr_custom_cursor.yy",
+    "name":"spr_custom_cursor1",
+    "path":"sprites/spr_custom_cursor1/spr_custom_cursor1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -72,7 +72,7 @@
   {
     "name": "Cavalry",
     "cost": 3,
-    "startingHealth": 4,
+    "startingHealth": 7,
     "startingATK": 1,
     "startingDEF": 0,
     "icon": "",

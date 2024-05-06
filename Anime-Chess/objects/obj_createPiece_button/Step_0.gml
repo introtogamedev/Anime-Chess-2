@@ -1,5 +1,5 @@
 if (display_timer >= 120){
-	obj_information_panel_InformationDisplay.hardDisplay = pieceAssignment
+	//obj_information_panel_InformationDisplay.hardDisplay = pieceAssignment
 }
 
 if (startTimer){

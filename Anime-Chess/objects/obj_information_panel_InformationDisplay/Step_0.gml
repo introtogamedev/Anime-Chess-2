@@ -12,10 +12,10 @@ if (global.selectedUnit != noone){
 		alarm[0] = 10
 	}
 	
-}else if (hardDisplay != noone){
+}/*else if (hardDisplay != noone){
 	display_unit = hardDisplay
 	visible = true;
-}else{
+}*/else{
 	return;
 }
 

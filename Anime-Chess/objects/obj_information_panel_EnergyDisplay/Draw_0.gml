@@ -29,6 +29,9 @@ var text_display_x = x + 1;
 var text_display_y = y + 1;
 draw_set_color(c_black);//temporary
 draw_text(text_display_x, text_display_y, "Current Energy: " + string(current_energy) + "/" + string(max_energy));
+var currentMaxUnits = global.turnsystem.teams[global.turnsystem.currentTurn].createdPiecesLimit 
+var currentPlacedUnits = global.turnsystem.teams[global.turnsystem.currentTurn].createdPieces
+draw_text(text_display_x, text_display_y - 30 , "Availible Units: " + string(currentMaxUnits - currentPlacedUnits) + "/" + string(currentMaxUnits));
 draw_set_color(c_white);//temporary
 
 for( var i = 0 ; i < max_energy; i ++){

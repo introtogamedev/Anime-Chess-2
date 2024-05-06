@@ -39,13 +39,17 @@ function team(_teamAssignment) constructor{
 			if (DEBUG_MODE_ACTION){ show_debug_message("Unable to created piece because exceeds creation limit");}
 			return;
 		}
-		if (piece == noone){
-			if (DEBUG_MODE_CARRY){show_debug_message("Piece creation Terminated because object type is empty! {0}", piece);}
+		if (piece == 0){
+			return	
+		}
+		var object = asset_get_index(piece.object)
+		if (piece == 0 or object == -1){
+			if (DEBUG_MODE_CARRY){show_debug_message("Piece creation Terminated because object type is empty! {0}", piece.name);}
 			return;
-		}else if (object_get_parent(piece) = obj_piece or object_get_parent(piece) == -100){
-			if (DEBUG_MODE_CARRY){show_debug_message("Valid Piece Creation: {0}. Continuing....", piece);}
+		}else if (object_get_parent(object) = obj_piece or object == -100){
+			if (DEBUG_MODE_CARRY){show_debug_message("Valid Piece Creation: {0}. Continuing....", piece.name);}
 		}else{
-			if (DEBUG_MODE_CARRY){show_debug_message("Piece creation Terminated because object type not piece! {0}", piece);}
+			if (DEBUG_MODE_CARRY){show_debug_message("Piece creation Terminated because object type not piece! {0}", piece.name);}
 			return;
 		}
 
@@ -68,17 +72,20 @@ function team(_teamAssignment) constructor{
 				teamAssignment : global.turnsystem.currentTurn,
 				isSubUnit: SubUnit
 			}
+			if (object == obj_piece_king){
+				var carry = instance_create_layer(0, 0, "Pieces", object, variableAssignment);
+				set_tile_carry(position, carry);
+			
+			}
 
 			if (check_legal_landing(position, piece)){
-			
-				var carry = instance_create_layer(0, 0, "Pieces", piece, variableAssignment);
-
-				if (carry.cost > currentEnergy){
+				var cost = piece.cost
+				if (cost > currentEnergy){
 					if (DEBUG_MODE_ACTION){ show_debug_message("Unable to created piece because exceeds current energy");}
-					instance_destroy(carry)
 					return;
 				}
-			
+				
+				var carry = instance_create_layer(0, 0, "Pieces", object, variableAssignment);
 				set_tile_carry(position, carry);
 			
 				//landing animation
@@ -89,7 +96,7 @@ function team(_teamAssignment) constructor{
 					createdPieces ++;
 				}
 				currentEnergy -= piece.cost;
-				global.createUnitType = noone;
+				global.createUnitType = 0;
 				if (DEBUG_MODE_CARRY or DEBUG_MODE_ACTION){
 					show_debug_message("Piece {0} created at position: {1}", carry.name, position);
 				}

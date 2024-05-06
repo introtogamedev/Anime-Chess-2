@@ -47,6 +47,16 @@ function turnManager() constructor{
 		if (DEBUG_MODE_TURN){show_debug_message("Advanced to Turn: {0}", currentTurn);}
 	}
 	
+	reset = function() {
+		for(var i = 0; i < array_length(teams); i ++){
+			teams[i].maxEnergy = 0;
+			teams[i].currentActions = 0;
+			teams[i].createdPieces = 0;
+			teams[i].currentEnergy = 0;
+		}
+	}
+	
+	
 }
 
 global.turnsystem = new turnManager();

@@ -12,6 +12,9 @@ if (global.selectedUnit != noone){
 		alarm[0] = 10
 	}
 	
+}else if (hardDisplay != noone){
+	display_unit = hardDisplay
+	visible = true;
 }else{
 	return;
 }
@@ -20,10 +23,10 @@ if (visible){
 	if (display_unit != noone){
 		var unit_type = display_unit.object_index;
 		var unit_name = object_get_name(unit_type)
-		var sprite_name = "spr_card_pufferfish"//string_replace(unit_name, "obj_piece", "spr_card") + string(global.turnsystem.currentTurn+1);
+		var sprite_name = string_replace(unit_name, "obj_piece", "spr_card") + string(global.turnsystem.currentTurn+1);
 		var sprite = asset_get_index(sprite_name)
 		sprite_index = sprite
-		show_debug_message(unit_name)
+		//show_debug_message(unit_name)
 		
 	}else{
 		//sprite_index = spr_card_pufferfish

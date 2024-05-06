@@ -42,9 +42,9 @@
     "ID": 2
   },
   {
-    "name": "Pawn",
+    "name": "Clam",
     "cost": 2,
-    "startingHealth": 4,
+    "startingHealth": 5,
     "startingATK": 1,
     "startingDEF": 0,
     "icon": "",
@@ -52,7 +52,7 @@
       "spr_piece_clam1",
       "spr_piece_clam2"
     ],
-    "object": "obj_piece_pawn",
+    "object": "obj_piece_clam",
     "ID": 3
   },
   {
@@ -71,7 +71,7 @@
   },
   {
     "name": "Cavalry",
-    "cost": 2,
+    "cost": 3,
     "startingHealth": 4,
     "startingATK": 1,
     "startingDEF": 0,

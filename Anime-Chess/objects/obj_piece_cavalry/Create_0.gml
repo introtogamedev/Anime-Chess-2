@@ -5,7 +5,8 @@
 event_inherited();
 
 
-chainActionSequence = [action.move, action.attack]
+chainActionSequence = [action.move, action.attack];
+actionLimit = 2;//the max action that this piece can take in one turn
 movementRestrictionFunction = function(){
 	return tile_get_restriction(carrier.coordinate, tileRestriction.XYZ);
 }

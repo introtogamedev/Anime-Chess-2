@@ -1,4 +1,4 @@
-global.createUnitType = noone;//temporary
+global.createUnitType =0;//temporary
 exclude_IDs = [0, 2]
 
 buttonArray = [];

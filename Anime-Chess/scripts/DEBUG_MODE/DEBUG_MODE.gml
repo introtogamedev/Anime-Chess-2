@@ -41,3 +41,5 @@
 #macro DEBUG_MODE_TURN false
 
 #macro DEBUG_MODE_FILELOADER true
+
+gpu_set_texfilter(false)
